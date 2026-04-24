@@ -49,6 +49,5 @@ var searchData=
   ['getz_46',['getZ',['../class_math_1_1_point.html#a208b81ae0377788fa3f647bb3093fc2e',1,'Math::Point::getZ()'],['../class_math_1_1_vector.html#af64cfcda62ff2d5fa0b2bd1613643276',1,'Math::Vector::getZ()']]],
   ['gui_47',['Gui',['../class_gui.html',1,'Gui'],['../class_gui.html#ad94e6b9ba678601536c5af482d7860c7',1,'Gui::Gui()=default'],['../class_gui.html#af1c8c5496c641bf4bd8c0780fb3cc781',1,'Gui::Gui(int width, int height)']]],
   ['gui_2ecpp_48',['Gui.cpp',['../_gui_8cpp.html',1,'']]],
-  ['gui_2ed_49',['Gui.d',['../_gui_8d.html',1,'']]],
-  ['gui_2ehpp_50',['Gui.hpp',['../_gui_8hpp.html',1,'']]]
+  ['gui_2ehpp_49',['Gui.hpp',['../_gui_8hpp.html',1,'']]]
 ];

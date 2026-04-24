@@ -142,36 +142,47 @@ void Gui::createImage(sf::Image &image, const std::vector<Color> &pixels, int wi
 void Gui::renderScene(int& eventKey)
 {
     while (_window.isOpen()) {
-        handleInput(eventKey);
-        _window.clear(sf::Color::Black);
-
-        createImage(_renderImage, _pixelsRender, _width, _height);
-        _renderTexture.update(_renderImage);
-
-        createImage(_fastRenderImage, _pixelsFastRender, _fastWidth, _fastHeight);
-        _fastRenderTexture.update(_fastRenderImage);
-
-        sf::RectangleShape border(sf::Vector2f(_fastWidth, _fastHeight));
-        border.setPosition(0, 0);
-        border.setOutlineThickness(2);
-        border.setOutlineColor(sf::Color::White);
-        border.setFillColor(sf::Color::Transparent);
-
-        _window.draw(_renderSprite);
-        _window.draw(border);
-        _window.draw(_fastRenderSprite);
-        for (auto &cursor: _transfomationCursors) {
-            if (cursor.get()->getType() == CursorType::TRANSLATE)
-                cursor->setCursorText(std::to_string(cursor->getPosCursor()) + "px");
-            else
-                cursor->setCursorText(std::to_string(cursor->getPosCursor()) + "deg");
-            _window.draw(cursor->getCursorLine().data(), cursor->getCursorLine().size(), sf::PrimitiveType::Lines);
-            _window.draw(cursor->getRectangle());
-            _window.draw(cursor->getText());
-            _window.draw(cursor->getCursorTitleText());
-        }
-        _window.display();
+        renderFrame(eventKey);
     }
+}
+
+/**
+ * @brief Renders a single frame in the GUI.
+ * Draws the scene to the window for one frame.
+ */
+void Gui::renderFrame(int& eventKey)
+{
+    if (!_window.isOpen())
+        return;
+    handleInput(eventKey);
+    _window.clear(sf::Color::Black);
+
+    createImage(_renderImage, _pixelsRender, _width, _height);
+    _renderTexture.update(_renderImage);
+
+    createImage(_fastRenderImage, _pixelsFastRender, _fastWidth, _fastHeight);
+    _fastRenderTexture.update(_fastRenderImage);
+
+    sf::RectangleShape border(sf::Vector2f(_fastWidth, _fastHeight));
+    border.setPosition(0, 0);
+    border.setOutlineThickness(2);
+    border.setOutlineColor(sf::Color::White);
+    border.setFillColor(sf::Color::Transparent);
+
+    _window.draw(_renderSprite);
+    _window.draw(border);
+    _window.draw(_fastRenderSprite);
+    for (auto &cursor: _transfomationCursors) {
+        if (cursor.get()->getType() == CursorType::TRANSLATE)
+            cursor->setCursorText(std::to_string(cursor->getPosCursor()) + "px");
+        else
+            cursor->setCursorText(std::to_string(cursor->getPosCursor()) + "deg");
+        _window.draw(cursor->getCursorLine().data(), cursor->getCursorLine().size(), sf::PrimitiveType::Lines);
+        _window.draw(cursor->getRectangle());
+        _window.draw(cursor->getText());
+        _window.draw(cursor->getCursorTitleText());
+    }
+    _window.display();
 }
 
 /**

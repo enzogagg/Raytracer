@@ -8,17 +8,33 @@
 ## ------------------------------------ ##
 ##              VARIABLES               ##
 
-CC                  := g++
+CXX                 := g++
 
-CFLAGS              := -Wall -Wextra -fPIC -std=c++20 -lconfig++ -ldl \
-                      -I./include -I./include/core -I./include/images \
-                      -I./include/interfaces -I./include/loader \
-                      -I./include/plugins -I./include/plugins/lights \
-                      -I./include/plugins/primitives \
-                      -I./include/transformations -I./include/render \
-                      -I./include/utilitaries -I./include/exceptions \
-					  -I./include/materials \
-					  -rdynamic
+# OS Detection
+UNAME_S := $(shell uname -s)
+
+CXXFLAGS            := -Wall -Wextra -fPIC -std=c++20 -Wno-deprecated-declarations -Wno-return-type-c-linkage \
+                       -I./include -I./include/core -I./include/images \
+                       -I./include/interfaces -I./include/loader \
+                       -I./include/plugins -I./include/plugins/lights \
+                       -I./include/plugins/primitives \
+                       -I./include/transformations -I./include/render \
+                       -I./include/utilitaries -I./include/exceptions \
+                       -I./include/materials
+
+LDFLAGS             := -lconfig++ -ldl
+
+ifeq ($(UNAME_S), Darwin)
+    # macOS specific setup
+    CXXFLAGS += -I/opt/homebrew/include
+    LDFLAGS  += -L/opt/homebrew/lib
+    PLUGIN_LDFLAGS := -shared -undefined dynamic_lookup
+else
+    # Linux specific setup
+    LDFLAGS  += -rdynamic
+    PLUGIN_LDFLAGS := -shared
+endif
+
 SFML_FLAGS          := -lsfml-graphics -lsfml-window -lsfml-system
 DFLAGS              := -g3
 TFLAGS				:= -lcriterion --coverage
@@ -37,8 +53,7 @@ SOURCES_FILES       := $(shell find $(SRCDIR) -name '*.cpp' ! \
 						-path "$(PLUGINSDIR)/*")
 OBJECTS_FILES       := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,\
 						$(SOURCES_FILES))
-PLUGIN_SOURCES      := $(shell find $(PLUGINSDIR) -name '*.cpp' ) \
-						$(SRCDIR)/core/PluginsManager.cpp
+PLUGIN_SOURCES      := $(shell find $(PLUGINSDIR) -name '*.cpp' )
 PLUGIN_OBJECTS      := $(patsubst $(PLUGINSDIR)/%.cpp,$(PLUGINS_OUTDIR)/%.so,\
 						$(PLUGIN_SOURCES))
 TEST_SOURCES        := $(filter-out $(SRCDIR)/Main.cpp, $(SOURCES_FILES))
@@ -52,7 +67,7 @@ RED                 := \033[31m
 
 DEBUG ?= 1
 ifeq ($(DEBUG), 1)
-    CFLAGS += $(DFLAGS)
+    CXXFLAGS += $(DFLAGS)
 endif
 
 ## ------------------------------------ ##
@@ -64,7 +79,7 @@ all: $(EXECUTABLE) plugins
 $(EXECUTABLE): $(OBJECTS_FILES)
 	@mkdir -p $(@D)
 	@echo "$(CYAN)[➜] Linking$(RESET)"
-	@$(CC) $(CFLAGS) $^ -o $@ $(SFML_FLAGS) -lconfig++
+	@$(CXX) $(CXXFLAGS) $^ -o $@ $(SFML_FLAGS) $(LDFLAGS)
 	@echo "$(GREEN)[✔] Executable created: $(EXECUTABLE)$(RESET)"
 
 -include $(OBJECTS_FILES:.o=.d)
@@ -72,7 +87,7 @@ $(EXECUTABLE): $(OBJECTS_FILES)
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	@mkdir -p $(@D)
 	@echo "$(BLUE)[~] Compiling: $<$(RESET)"
-	@$(CC) $(CFLAGS) -MD -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -MD -c $< -o $@
 
 plugins: create_plugin_dirs $(PLUGIN_OBJECTS)
 	@echo "$(GREEN)[✔] Plugins compiled and placed in \
@@ -83,9 +98,9 @@ create_plugin_dirs:
 	@find $(PLUGINSDIR) -type d | sed "s|$(PLUGINSDIR)|$(PLUGINS_OUTDIR)|" \
 	| xargs -I {} mkdir -p {}
 
-$(PLUGINS_OUTDIR)/%.so: $(PLUGINSDIR)/%.cpp $(SRCDIR)/core/PluginsManager.cpp
+$(PLUGINS_OUTDIR)/%.so: $(PLUGINSDIR)/%.cpp
 	@echo "$(BLUE)[~] Compiling plugin: $<$(RESET)"
-	@$(CC) $(CFLAGS) -shared -o $@ $^ -lconfig++ -ldl
+	@$(CXX) $(CXXFLAGS) $(PLUGIN_LDFLAGS) -o $@ $< $(LDFLAGS)
 	@echo "$(GREEN)[✔] Plugin created: $@$(RESET)"
 
 clean:
@@ -109,8 +124,8 @@ re: fclean
 
 tests_run:
 	@echo "$(CYAN)[➜] Linking tests$(RESET)"
-	@$(CC) $(CFLAGS) $(TEST_SOURCES) $(TEST_OBJECTS) \
-	$(TFLAGS) -o $(TEST_EXECUTABLE)
+	@$(CXX) $(CXXFLAGS) $(TEST_SOURCES) $(TEST_OBJECTS) \
+	$(TFLAGS) -o $(TEST_EXECUTABLE) $(SFML_FLAGS) $(LDFLAGS)
 	@echo "$(GREEN)[✔] Unit tests executable created: \
     $(TEST_EXECUTABLE)$(RESET)"
 	@echo "$(CYAN)[➜] Running unit tests$(RESET)"

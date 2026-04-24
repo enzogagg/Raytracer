@@ -14,13 +14,11 @@ var searchData=
   ['translateup_11',['translateUp',['../class_translation.html#a44f67bed63a2a9583b424e876f4d5f7a',1,'Translation']]],
   ['translation_12',['Translation',['../class_translation.html',1,'Translation'],['../class_translation.html#a19a6742a807888b66b0a402469bbf588',1,'Translation::Translation()']]],
   ['translation_2ecpp_13',['Translation.cpp',['../_translation_8cpp.html',1,'']]],
-  ['translation_2ed_14',['Translation.d',['../_translation_8d.html',1,'']]],
-  ['translation_2ehpp_15',['Translation.hpp',['../_translation_8hpp.html',1,'']]],
-  ['transparent_16',['Transparent',['../class_transparent.html',1,'Transparent'],['../class_transparent.html#aab508d55d384597744ca89dcdc94f3bb',1,'Transparent::Transparent()']]],
-  ['transparent_2ecpp_17',['Transparent.cpp',['../_transparent_8cpp.html',1,'']]],
-  ['transparent_2ed_18',['Transparent.d',['../_transparent_8d.html',1,'']]],
-  ['transparent_2ehpp_19',['Transparent.hpp',['../_transparent_8hpp.html',1,'']]],
-  ['triangle_20',['Triangle',['../class_triangle.html',1,'Triangle'],['../class_triangle.html#a6a856283ec837ed0599e158f2818d90c',1,'Triangle::Triangle()']]],
-  ['triangle_2ecpp_21',['Triangle.cpp',['../_triangle_8cpp.html',1,'']]],
-  ['triangle_2ehpp_22',['Triangle.hpp',['../_triangle_8hpp.html',1,'']]]
+  ['translation_2ehpp_14',['Translation.hpp',['../_translation_8hpp.html',1,'']]],
+  ['transparent_15',['Transparent',['../class_transparent.html',1,'Transparent'],['../class_transparent.html#aab508d55d384597744ca89dcdc94f3bb',1,'Transparent::Transparent()']]],
+  ['transparent_2ecpp_16',['Transparent.cpp',['../_transparent_8cpp.html',1,'']]],
+  ['transparent_2ehpp_17',['Transparent.hpp',['../_transparent_8hpp.html',1,'']]],
+  ['triangle_18',['Triangle',['../class_triangle.html',1,'Triangle'],['../class_triangle.html#a6a856283ec837ed0599e158f2818d90c',1,'Triangle::Triangle()']]],
+  ['triangle_2ecpp_19',['Triangle.cpp',['../_triangle_8cpp.html',1,'']]],
+  ['triangle_2ehpp_20',['Triangle.hpp',['../_triangle_8hpp.html',1,'']]]
 ];

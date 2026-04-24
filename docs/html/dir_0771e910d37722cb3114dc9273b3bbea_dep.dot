@@ -10,5 +10,5 @@ digraph "include/plugins/lights"
   dir_0771e910d37722cb3114dc9273b3bbea [label="lights", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_0771e910d37722cb3114dc9273b3bbea.html",tooltip=""];
   }
   dir_b6a1b25c97174b03ee33ad89b32089b9 [label="interfaces", fillcolor="#edf0f7", color="grey50", style="filled", URL="dir_b6a1b25c97174b03ee33ad89b32089b9.html",tooltip=""];
-  dir_0771e910d37722cb3114dc9273b3bbea->dir_b6a1b25c97174b03ee33ad89b32089b9 [headlabel="3", labeldistance=1.5 headhref="dir_000011_000010.html" href="dir_000011_000010.html" color="steelblue1" fontcolor="steelblue1"];
+  dir_0771e910d37722cb3114dc9273b3bbea->dir_b6a1b25c97174b03ee33ad89b32089b9 [headlabel="3", labeldistance=1.5 headhref="dir_000008_000007.html" href="dir_000008_000007.html" color="steelblue1" fontcolor="steelblue1"];
 }

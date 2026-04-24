@@ -40,7 +40,7 @@ class ChessboardMaterial : public AMaterial {
          * @param point Point d'intersection où calculer la couleur
          * @return Couleur à ce point
          */
-        Color getColorAt(const Math::Point &point) const;
+        Color getColorAt(const Math::Point &point) const override;
 
     private:
         Color _color1;

@@ -54,11 +54,6 @@ class Core {
          */
         void loop();
 
-        /**
-         * @brief Create the GUI thread.
-         * @note This function is used to create the GUI thread.
-         */
-        void createGuiThread();
 
         /**
          * @brief Create the render thread.
@@ -98,7 +93,6 @@ class Core {
         void reloadScene();
 
     private:
-        bool _guiReady = false;
 
         std::string _scenePath;
         std::filesystem::file_time_type _lastModificationTime;
@@ -109,15 +103,12 @@ class Core {
         std::shared_ptr<Render> _render;
 
         std::mutex _guiMutex;
-        std::mutex _guiReadyMutex;
         std::mutex _renderMutex;
 
         std::condition_variable _renderCondition;
-        std::condition_variable _guiReadyCond;
 
         std::atomic<bool> _needRenderUpdate;
 
-        std::thread _guiThread;
         std::thread _renderThread;
 
         std::vector<Color> _pixelsRender;

@@ -21,7 +21,8 @@ void PluginsManager::loadPlugins(const std::string &path)
 {
     try {
         for (const auto& entry : std::filesystem::recursive_directory_iterator(path)) {
-            if (entry.path().extension() == ".so") {
+            if (entry.is_regular_file() && entry.path().extension() == ".so" &&
+                entry.path().string().find(".dSYM") == std::string::npos) {
                 _plugins.emplace_back(entry.path().string());
 
                 using RegisterFunc = void(*)();

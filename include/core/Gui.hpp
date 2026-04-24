@@ -72,6 +72,12 @@ class Gui {
         void renderScene(int& eventKey);
 
         /**
+         * @brief Renders a single frame in the GUI.
+         * Draws the scene to the window for one frame.
+         */
+        void renderFrame(int& eventKey);
+
+        /**
          * @brief Checks if the window is open.
          * @return True if the window is open, false otherwise.
          */

@@ -84,8 +84,6 @@ class Plane : public IPrimitive {
         std::shared_ptr<AMaterial> getMaterial() const override;
 
     private:
-        std::string _axis;
-        float _position;
         Math::Point _a, _b, _c;
         Math::Vector _normal;
         Color _color;

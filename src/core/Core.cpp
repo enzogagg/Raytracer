@@ -43,9 +43,6 @@ Core::~Core()
         _renderCondition.notify_one();
         _renderThread.join();
     }
-    if (_guiThread.joinable()) {
-        _guiThread.join();
-    }
     _pluginsManager.unregisterAllFactories();
 }
 
@@ -72,34 +69,10 @@ void Core::init(const std::string &filename)
     _lastModificationTime = std::filesystem::last_write_time(_scenePath);
     setHandleTranslation();
     setHandleRotation();
-    createGuiThread();
-    {
-        std::unique_lock<std::mutex> lock(_guiReadyMutex);
-        _guiReadyCond.wait(lock, [this]() { return _guiReady; });
-    }
+    _gui = std::make_shared<Gui>(_scene.getCamera().getWidth(), _scene.getCamera().getHeight());
     createRenderThread();
 }
 
-/**
- * @brief Create the GUI thread.
- * @note This function is used to create the GUI thread.
- */
-void Core::createGuiThread()
-{
-    _guiThread = std::thread([this]() {
-        auto gui = std::make_shared<Gui>(_scene.getCamera().getWidth(), _scene.getCamera().getHeight());
-        {
-            std::lock_guard<std::mutex> lock(_guiMutex);
-            _gui = gui;
-        }
-        {
-            std::lock_guard<std::mutex> lock(_guiReadyMutex);
-            _guiReady = true;
-            _guiReadyCond.notify_one();
-        }
-        gui->renderScene(_eventKey);
-    });
-}
 
 /**
  * @brief Create the render thread.
@@ -184,6 +157,7 @@ void Core::loop()
             std::lock_guard<std::mutex> lock(_guiMutex);
             if (!_gui || !_gui->isOpen())
                 break;
+            _gui->renderFrame(_eventKey);
         }
         checkSceneFile();
         if (_eventKey != -1 && _eventKey != 40) {
