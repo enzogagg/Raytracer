@@ -1,0 +1,183 @@
+\doxysection{Translation Class Reference}
+\hypertarget{class_translation}{}\label{class_translation}\index{Translation@{Translation}}
+
+
+A class to represent a translation transformation.  
+
+
+
+
+{\ttfamily \#include $<$Translation.\+hpp$>$}
+
+
+
+Inheritance diagram for Translation\+:
+% FIG 0
+
+
+Collaboration diagram for Translation\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_translation_a19a6742a807888b66b0a402469bbf588}{Translation}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_translation}{Translation} class. Initializes the translation with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_translation_a35d591683b34c9973b4bea95ee82266e}{\texorpdfstring{$\sim$}{\string~}\+Translation}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_translation}{Translation} class. Cleans up resources used by the translation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_a7428f9aa75c692732e5cd9ef14425690}{apply}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&origin, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} translation) override
+\begin{DoxyCompactList}\small\item\em Apply the translation to the given vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_a44f67bed63a2a9583b424e876f4d5f7a}{translate\+Up}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em translate all the scene up \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_a74485f7dabda6f270c794f90fa64ca76}{translate\+Down}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em translate all the scene down \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_ad663ca24c7e636fe9750f0c529ce737c}{translate\+Left}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em translate all the scene left \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_ab5b8cb0f298218210059c2678af2e946}{translate\+Right}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em translate all the scene right \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_a1777d2b524551f6d05ccb29a82e9762a}{translate\+In}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em translate all the scene up \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_translation_a42a4a4e407b96f18f7419007372b2f94}{translate\+Out}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em translate all the scene down \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_transformations}{ITransformations}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_transformations_ae4d8434f4c9e24a3ed7231d9e1ee9e1a}{\texorpdfstring{$\sim$}{\string~}\+ITransformations}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_transformations}{ITransformations} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a translation transformation. 
+
+This class is used to represent a translation transformation in the raytracer project. It inherits from the \doxylink{class_i_transformations}{ITransformations} interface. \begin{DoxyNote}{Note}
+The \doxylink{class_translation}{Translation} class is responsible for applying translation transformations 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_translation_a19a6742a807888b66b0a402469bbf588}\index{Translation@{Translation}!Translation@{Translation}}
+\index{Translation@{Translation}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{Translation()}{Translation()}}
+{\footnotesize\ttfamily \label{class_translation_a19a6742a807888b66b0a402469bbf588} 
+Translation\+::\+Translation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_translation}{Translation} class. Initializes the translation with default values. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a translation with default values.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em translation} & The translation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This constructor can be used to create a translation with default values. 
+\end{DoxyNote}
+\Hypertarget{class_translation_a35d591683b34c9973b4bea95ee82266e}\index{Translation@{Translation}!````~Translation@{\texorpdfstring{$\sim$}{\string~}Translation}}
+\index{````~Translation@{\texorpdfstring{$\sim$}{\string~}Translation}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Translation()}{\string~Translation()}}
+{\footnotesize\ttfamily \label{class_translation_a35d591683b34c9973b4bea95ee82266e} 
+Translation\+::\texorpdfstring{$\sim$}{\string~}\+Translation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for \doxylink{class_translation}{Translation} class. Cleans up resources used by the translation. 
+
+\begin{DoxyNote}{Note}
+This destructor is called when the translation object is destroyed. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_translation_a7428f9aa75c692732e5cd9ef14425690}\index{Translation@{Translation}!apply@{apply}}
+\index{apply@{apply}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily \label{class_translation_a7428f9aa75c692732e5cd9ef14425690} 
+void Translation\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{origin}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Apply the translation to the given vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverted} & A boolean indicating whether to apply the transformation in reverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function applies the translation to the given vector.
+
+This function applies the translation to the given vector. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_i_transformations_a0b0a60a9df2ca27f13dd5e85881046e8}{ITransformations}}.
+
+\Hypertarget{class_translation_a74485f7dabda6f270c794f90fa64ca76}\index{Translation@{Translation}!translateDown@{translateDown}}
+\index{translateDown@{translateDown}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{translateDown()}{translateDown()}}
+{\footnotesize\ttfamily \label{class_translation_a74485f7dabda6f270c794f90fa64ca76} 
+void Translation\+::translate\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+translate all the scene down 
+
+\Hypertarget{class_translation_a1777d2b524551f6d05ccb29a82e9762a}\index{Translation@{Translation}!translateIn@{translateIn}}
+\index{translateIn@{translateIn}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{translateIn()}{translateIn()}}
+{\footnotesize\ttfamily \label{class_translation_a1777d2b524551f6d05ccb29a82e9762a} 
+void Translation\+::translate\+In (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+translate all the scene up 
+
+translate all the scene left \Hypertarget{class_translation_ad663ca24c7e636fe9750f0c529ce737c}\index{Translation@{Translation}!translateLeft@{translateLeft}}
+\index{translateLeft@{translateLeft}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{translateLeft()}{translateLeft()}}
+{\footnotesize\ttfamily \label{class_translation_ad663ca24c7e636fe9750f0c529ce737c} 
+void Translation\+::translate\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+translate all the scene left 
+
+\Hypertarget{class_translation_a42a4a4e407b96f18f7419007372b2f94}\index{Translation@{Translation}!translateOut@{translateOut}}
+\index{translateOut@{translateOut}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{translateOut()}{translateOut()}}
+{\footnotesize\ttfamily \label{class_translation_a42a4a4e407b96f18f7419007372b2f94} 
+void Translation\+::translate\+Out (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+translate all the scene down 
+
+translate all the scene right \Hypertarget{class_translation_ab5b8cb0f298218210059c2678af2e946}\index{Translation@{Translation}!translateRight@{translateRight}}
+\index{translateRight@{translateRight}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{translateRight()}{translateRight()}}
+{\footnotesize\ttfamily \label{class_translation_ab5b8cb0f298218210059c2678af2e946} 
+void Translation\+::translate\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+translate all the scene right 
+
+\Hypertarget{class_translation_a44f67bed63a2a9583b424e876f4d5f7a}\index{Translation@{Translation}!translateUp@{translateUp}}
+\index{translateUp@{translateUp}!Translation@{Translation}}
+\doxysubsubsection{\texorpdfstring{translateUp()}{translateUp()}}
+{\footnotesize\ttfamily \label{class_translation_a44f67bed63a2a9583b424e876f4d5f7a} 
+void Translation\+::translate\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+translate all the scene up 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/transformations/\mbox{\hyperlink{_translation_8hpp}{Translation.\+hpp}}\item 
+src/transformation/\mbox{\hyperlink{_translation_8cpp}{Translation.\+cpp}}\end{DoxyCompactItemize}

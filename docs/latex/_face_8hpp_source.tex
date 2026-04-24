@@ -1,0 +1,46 @@
+\doxysection{Face.\+hpp}
+\hypertarget{_face_8hpp_source}{}\label{_face_8hpp_source}\index{include/utilitaries/Face.hpp@{include/utilitaries/Face.hpp}}
+\mbox{\hyperlink{_face_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Face}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugins_manager_8hpp}{PluginsManager.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_point_8hpp}{Point.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_material_8hpp}{AMaterial.hpp}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_face_a77cf7251533cc4e34198bd74a0170ec1}{Face}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_primitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_face_a77cf7251533cc4e34198bd74a0170ec1}{Face}}(\mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v0,\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v1,\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_face_a2d2eb866b9cd8e70a86d2222cd293ae6}{\string~Face}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_face_aa65a263f3096de918a5bac162b68fe25}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_face_afe70f4b0daafddde44288eb027ae3022}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \mbox{\hyperlink{class_face_ac1e5cb9b458bbb327ef625da0b9fd697}{getIntersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \mbox{\hyperlink{class_face_a854e4cea351921ae838d9d600fda4edc}{normal\_at}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \mbox{\hyperlink{class_face_aa99824f2ae07d6c6dddc62d3c169413d}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \mbox{\hyperlink{class_face_a928865fa28e785f894b46cb86d2f6b58}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ std::string\ \_axis;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \_v0,\ \_v1,\ \_v2;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_color;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \_normal;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \_material;}
+\DoxyCodeLine{00090\ \};}
+
+\end{DoxyCode}

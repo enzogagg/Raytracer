@@ -1,0 +1,225 @@
+\doxysection{Sphere Class Reference}
+\hypertarget{class_sphere}{}\label{class_sphere}\index{Sphere@{Sphere}}
+
+
+A class to represent a \doxylink{class_sphere}{Sphere} in 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Sphere.\+hpp$>$}
+
+
+
+Inheritance diagram for Sphere\+:
+% FIG 0
+
+
+Collaboration diagram for Sphere\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sphere_aa78ca7fd11b11a0c23a774133e9ea541}{Sphere}} (\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} center, float radius, const \mbox{\hyperlink{class_color}{Color}} \&color, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_sphere}{Sphere} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sphere_a49ced142bd3b79b528af3363cccbaf7e}{\texorpdfstring{$\sim$}{\string~}\+Sphere}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_sphere}{Sphere} class. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_sphere_aa5aeda0882b74309321401d87cd37218}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the \doxylink{class_sphere}{Sphere}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sphere_a02dd5d865b852dbe994b76f1a1fc295f}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the \doxylink{class_sphere}{Sphere}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_sphere_a6aa2896fd0c4d247d1b11e8a47351cb4}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_sphere_a4cc8d739230691fc260f44876c59c68d}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_sphere_acca8daa2b57aee5e921cd8eee75e687a}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Get the color of the \doxylink{class_sphere}{Sphere}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_sphere_a15ccf54f3975f93614e7186fdc6970cf}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_primitive}{IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a \doxylink{class_sphere}{Sphere} in 3D space. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sphere_aa78ca7fd11b11a0c23a774133e9ea541}\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}}
+{\footnotesize\ttfamily \label{class_sphere_aa78ca7fd11b11a0c23a774133e9ea541} 
+Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{center}{, }\item[{float}]{radius}{, }\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{color}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_sphere}{Sphere} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & the center of the sphere (x, y, or z). \\
+\hline
+{\em radius} & the radius of the sphere \\
+\hline
+{\em color} & The color of the sphere. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sphere_a49ced142bd3b79b528af3363cccbaf7e}\index{Sphere@{Sphere}!````~Sphere@{\texorpdfstring{$\sim$}{\string~}Sphere}}
+\index{````~Sphere@{\texorpdfstring{$\sim$}{\string~}Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sphere()}{\string~Sphere()}}
+{\footnotesize\ttfamily \label{class_sphere_a49ced142bd3b79b528af3363cccbaf7e} 
+Sphere\+::\texorpdfstring{$\sim$}{\string~}\+Sphere (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for the \doxylink{class_sphere}{Sphere} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure proper cleanup of derived classes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sphere_acca8daa2b57aee5e921cd8eee75e687a}\index{Sphere@{Sphere}!getColor@{getColor}}
+\index{getColor@{getColor}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_sphere_acca8daa2b57aee5e921cd8eee75e687a} 
+\mbox{\hyperlink{class_color}{Color}} Sphere\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the color of the \doxylink{class_sphere}{Sphere}. 
+
+Get the color of the sphere.
+
+\begin{DoxyReturn}{Returns}
+The color of the \doxylink{class_sphere}{Sphere}.
+
+The color of the sphere. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{IPrimitive}}.
+
+\Hypertarget{class_sphere_a6aa2896fd0c4d247d1b11e8a47351cb4}\index{Sphere@{Sphere}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_sphere_a6aa2896fd0c4d247d1b11e8a47351cb4} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Sphere\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{IPrimitive}}.
+
+\Hypertarget{class_sphere_a15ccf54f3975f93614e7186fdc6970cf}\index{Sphere@{Sphere}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_sphere_a15ccf54f3975f93614e7186fdc6970cf} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ Sphere\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{IPrimitive}}.
+
+\Hypertarget{class_sphere_aa5aeda0882b74309321401d87cd37218}\index{Sphere@{Sphere}!getType@{getType}}
+\index{getType@{getType}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_sphere_aa5aeda0882b74309321401d87cd37218} 
+const std\+::string \& Sphere\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the \doxylink{class_sphere}{Sphere}. 
+
+Get the type of the sphere.
+
+\begin{DoxyReturn}{Returns}
+The type of the \doxylink{class_sphere}{Sphere} as a string.
+
+The type of the sphere as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{IPrimitive}}.
+
+\Hypertarget{class_sphere_a02dd5d865b852dbe994b76f1a1fc295f}\index{Sphere@{Sphere}!intersect@{intersect}}
+\index{intersect@{intersect}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_sphere_a02dd5d865b852dbe994b76f1a1fc295f} 
+bool Sphere\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a ray intersects with the \doxylink{class_sphere}{Sphere}. 
+
+Check if a ray intersects with the sphere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the \doxylink{class_sphere}{Sphere}, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the sphere, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{IPrimitive}}.
+
+\Hypertarget{class_sphere_a4cc8d739230691fc260f44876c59c68d}\index{Sphere@{Sphere}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_sphere_a4cc8d739230691fc260f44876c59c68d} 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} Sphere\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/plugins/primitives/\mbox{\hyperlink{_sphere_8hpp}{Sphere.\+hpp}}\item 
+src/plugins/primitives/\mbox{\hyperlink{_sphere_8cpp}{Sphere.\+cpp}}\end{DoxyCompactItemize}

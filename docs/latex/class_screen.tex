@@ -1,0 +1,85 @@
+\doxysection{Screen Class Reference}
+\hypertarget{class_screen}{}\label{class_screen}\index{Screen@{Screen}}
+
+
+{\ttfamily \#include $<$Screen.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}{Screen}} ()
+\item 
+\mbox{\hyperlink{class_screen_a9803e86408c3c3e6addc938bcc0857c7}{Screen}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} origin, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} bottom\+\_\+side, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} left\+\_\+side)
+\item 
+\mbox{\hyperlink{class_screen_a4243bc17596af96415b09ac48205676d}{\texorpdfstring{$\sim$}{\string~}\+Screen}} ()
+\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_screen_a211de8dc279c2c801bc28a8be4339888}{point\+At}} (double u, double v)
+\item 
+void \mbox{\hyperlink{class_screen_a7fcbb3753d866cf8a790e8af62e01d3a}{translate}} (\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} translation)
+\item 
+void \mbox{\hyperlink{class_screen_ae7d25ec7f617669f0487c4adc631cf5b}{rotate}} (double angle, std\+::string axis)
+\item 
+void \mbox{\hyperlink{class_screen_a90f2e335db65f2025eb4b25f9740b066}{shear}} (double strength)
+\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_screen_aa71111932326dd9025048332294b47da}{get\+Origin}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72}\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{Screen()}{Screen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_screen_ae7576476fc6e6a6eaa66389fdc41fe72} 
+Screen\+::\+Screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_screen_a9803e86408c3c3e6addc938bcc0857c7}\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{Screen()}{Screen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_screen_a9803e86408c3c3e6addc938bcc0857c7} 
+Screen\+::\+Screen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{origin}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{bottom\+\_\+side}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{left\+\_\+side}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_screen_a4243bc17596af96415b09ac48205676d}\index{Screen@{Screen}!````~Screen@{\texorpdfstring{$\sim$}{\string~}Screen}}
+\index{````~Screen@{\texorpdfstring{$\sim$}{\string~}Screen}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Screen()}{\string~Screen()}}
+{\footnotesize\ttfamily \label{class_screen_a4243bc17596af96415b09ac48205676d} 
+Screen\+::\texorpdfstring{$\sim$}{\string~}\+Screen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_screen_aa71111932326dd9025048332294b47da}\index{Screen@{Screen}!getOrigin@{getOrigin}}
+\index{getOrigin@{getOrigin}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
+{\footnotesize\ttfamily \label{class_screen_aa71111932326dd9025048332294b47da} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Screen\+::get\+Origin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_screen_a211de8dc279c2c801bc28a8be4339888}\index{Screen@{Screen}!pointAt@{pointAt}}
+\index{pointAt@{pointAt}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{pointAt()}{pointAt()}}
+{\footnotesize\ttfamily \label{class_screen_a211de8dc279c2c801bc28a8be4339888} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Screen\+::point\+At (\begin{DoxyParamCaption}\item[{double}]{u}{, }\item[{double}]{v}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_screen_ae7d25ec7f617669f0487c4adc631cf5b}\index{Screen@{Screen}!rotate@{rotate}}
+\index{rotate@{rotate}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{class_screen_ae7d25ec7f617669f0487c4adc631cf5b} 
+void Screen\+::rotate (\begin{DoxyParamCaption}\item[{double}]{angle}{, }\item[{std\+::string}]{axis}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_screen_a90f2e335db65f2025eb4b25f9740b066}\index{Screen@{Screen}!shear@{shear}}
+\index{shear@{shear}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{shear()}{shear()}}
+{\footnotesize\ttfamily \label{class_screen_a90f2e335db65f2025eb4b25f9740b066} 
+void Screen\+::shear (\begin{DoxyParamCaption}\item[{double}]{strength}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_screen_a7fcbb3753d866cf8a790e8af62e01d3a}\index{Screen@{Screen}!translate@{translate}}
+\index{translate@{translate}!Screen@{Screen}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_screen_a7fcbb3753d866cf8a790e8af62e01d3a} 
+void Screen\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_screen_8hpp}{Screen.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_screen_8cpp}{Screen.\+cpp}}\end{DoxyCompactItemize}

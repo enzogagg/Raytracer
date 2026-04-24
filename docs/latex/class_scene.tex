@@ -1,0 +1,232 @@
+\doxysection{Scene Class Reference}
+\hypertarget{class_scene}{}\label{class_scene}\index{Scene@{Scene}}
+
+
+A class to represent a scene in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_scene}{Scene} class. Initializes the scene with a camera, lights, and primitives. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{\texorpdfstring{$\sim$}{\string~}\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_scene}{Scene} class. Cleans up the resources used by the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a2348d0b300d61758800e01c7d8995d75}{add\+Camera}} (const \mbox{\hyperlink{class_camera}{Camera}} \&camera)
+\begin{DoxyCompactList}\small\item\em Add a camera to the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a468d3d9f12f977efabed6dffc352900d}{add\+Light}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ \&light)
+\begin{DoxyCompactList}\small\item\em Add a light to the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_ac742da0a917a3c111b2c29eced2c7be4}{add\+Primitive}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ \&primitive)
+\begin{DoxyCompactList}\small\item\em Add a primitive to the scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} \mbox{\hyperlink{class_scene_a6d0a3d4d98ee8c259109cdc14e7c5408}{get\+Camera}} () const
+\begin{DoxyCompactList}\small\item\em Get the camera of the scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera}{Camera}} \& \mbox{\hyperlink{class_scene_a8727db0cbc4e3737dd7bc61762fd862e}{get\+Modifable\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Get the camera of the scene. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ $>$ \& \mbox{\hyperlink{class_scene_a955c52cfe1a8b4dd9da533338eddfc93}{get\+Primitives}} () const
+\begin{DoxyCompactList}\small\item\em Get the vector of primitives. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ $>$ \& \mbox{\hyperlink{class_scene_aee097ee0182fd02b13d3084676ceeb17}{get\+Lights}} () const
+\begin{DoxyCompactList}\small\item\em Get the vector of lights. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_scene_ab43977182f2258d7264cc6c65da76a19}{get\+Diffuse}} () const
+\begin{DoxyCompactList}\small\item\em Get the diffuse value of the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a10052ef0c9e39f095c385972b1784f6d}{set\+Diffuse}} (double diffuse)
+\begin{DoxyCompactList}\small\item\em Set the diffuse value of the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a4a6af18c9355251a9d1583ca1c89f0b5}{set\+Translate\+Scene}} (\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} translation)
+\begin{DoxyCompactList}\small\item\em Call the translate function of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_a7aa042d8a05e63c5b2a7235947889fa9}{set\+Rotate}} (double angle, std\+::string axis)
+\item 
+void \mbox{\hyperlink{class_scene_aeabcecb8fe463f6fd043b59d3fd7fa7e}{set\+Shear}} (double strength)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a scene in the raytracer project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily \label{class_scene_ad10176d75a9cc0da56626f682d083507} 
+Scene\+::\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_scene}{Scene} class. Initializes the scene with a camera, lights, and primitives. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a scene with default values. 
+\end{DoxyNote}
+\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\index{Scene@{Scene}!````~Scene@{\texorpdfstring{$\sim$}{\string~}Scene}}
+\index{````~Scene@{\texorpdfstring{$\sim$}{\string~}Scene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Scene()}{\string~Scene()}}
+{\footnotesize\ttfamily \label{class_scene_a3b8cec2e32546713915f8c6303c951f1} 
+Scene\+::\texorpdfstring{$\sim$}{\string~}\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_scene}{Scene} class. Cleans up the resources used by the scene. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scene_a2348d0b300d61758800e01c7d8995d75}\index{Scene@{Scene}!addCamera@{addCamera}}
+\index{addCamera@{addCamera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addCamera()}{addCamera()}}
+{\footnotesize\ttfamily \label{class_scene_a2348d0b300d61758800e01c7d8995d75} 
+void Scene\+::add\+Camera (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{camera}{}\end{DoxyParamCaption})}
+
+
+
+Add a camera to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to add to the scene. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a468d3d9f12f977efabed6dffc352900d}\index{Scene@{Scene}!addLight@{addLight}}
+\index{addLight@{addLight}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addLight()}{addLight()}}
+{\footnotesize\ttfamily \label{class_scene_a468d3d9f12f977efabed6dffc352900d} 
+void Scene\+::add\+Light (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ \&}]{light}{}\end{DoxyParamCaption})}
+
+
+
+Add a light to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & The light to add to the scene. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_ac742da0a917a3c111b2c29eced2c7be4}\index{Scene@{Scene}!addPrimitive@{addPrimitive}}
+\index{addPrimitive@{addPrimitive}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{addPrimitive()}{addPrimitive()}}
+{\footnotesize\ttfamily \label{class_scene_ac742da0a917a3c111b2c29eced2c7be4} 
+void Scene\+::add\+Primitive (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ \&}]{primitive}{}\end{DoxyParamCaption})}
+
+
+
+Add a primitive to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em primitive} & The primitive to add to the scene. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a6d0a3d4d98ee8c259109cdc14e7c5408}\index{Scene@{Scene}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}}
+{\footnotesize\ttfamily \label{class_scene_a6d0a3d4d98ee8c259109cdc14e7c5408} 
+\mbox{\hyperlink{class_camera}{Camera}} Scene\+::get\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the camera of the scene. 
+
+\begin{DoxyReturn}{Returns}
+The camera of the scene. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_ab43977182f2258d7264cc6c65da76a19}\index{Scene@{Scene}!getDiffuse@{getDiffuse}}
+\index{getDiffuse@{getDiffuse}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getDiffuse()}{getDiffuse()}}
+{\footnotesize\ttfamily \label{class_scene_ab43977182f2258d7264cc6c65da76a19} 
+double Scene\+::get\+Diffuse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the diffuse value of the scene. 
+
+\begin{DoxyReturn}{Returns}
+The diffuse value of the scene. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_aee097ee0182fd02b13d3084676ceeb17}\index{Scene@{Scene}!getLights@{getLights}}
+\index{getLights@{getLights}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getLights()}{getLights()}}
+{\footnotesize\ttfamily \label{class_scene_aee097ee0182fd02b13d3084676ceeb17} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ $>$ \& Scene\+::get\+Lights (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the vector of lights. 
+
+\begin{DoxyReturn}{Returns}
+The vector of lights in the scene. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a8727db0cbc4e3737dd7bc61762fd862e}\index{Scene@{Scene}!getModifableCamera@{getModifableCamera}}
+\index{getModifableCamera@{getModifableCamera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getModifableCamera()}{getModifableCamera()}}
+{\footnotesize\ttfamily \label{class_scene_a8727db0cbc4e3737dd7bc61762fd862e} 
+\mbox{\hyperlink{class_camera}{Camera}} \& Scene\+::get\+Modifable\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the camera of the scene. 
+
+\begin{DoxyReturn}{Returns}
+The camera of the scene. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a955c52cfe1a8b4dd9da533338eddfc93}\index{Scene@{Scene}!getPrimitives@{getPrimitives}}
+\index{getPrimitives@{getPrimitives}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{getPrimitives()}{getPrimitives()}}
+{\footnotesize\ttfamily \label{class_scene_a955c52cfe1a8b4dd9da533338eddfc93} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ $>$ \& Scene\+::get\+Primitives (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the vector of primitives. 
+
+\begin{DoxyReturn}{Returns}
+The vector of primitives in the scene. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a10052ef0c9e39f095c385972b1784f6d}\index{Scene@{Scene}!setDiffuse@{setDiffuse}}
+\index{setDiffuse@{setDiffuse}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setDiffuse()}{setDiffuse()}}
+{\footnotesize\ttfamily \label{class_scene_a10052ef0c9e39f095c385972b1784f6d} 
+void Scene\+::set\+Diffuse (\begin{DoxyParamCaption}\item[{double}]{diffuse}{}\end{DoxyParamCaption})}
+
+
+
+Set the diffuse value of the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em diffuse} & The diffuse value to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a7aa042d8a05e63c5b2a7235947889fa9}\index{Scene@{Scene}!setRotate@{setRotate}}
+\index{setRotate@{setRotate}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setRotate()}{setRotate()}}
+{\footnotesize\ttfamily \label{class_scene_a7aa042d8a05e63c5b2a7235947889fa9} 
+void Scene\+::set\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle}{, }\item[{std\+::string}]{axis}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_scene_aeabcecb8fe463f6fd043b59d3fd7fa7e}\index{Scene@{Scene}!setShear@{setShear}}
+\index{setShear@{setShear}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setShear()}{setShear()}}
+{\footnotesize\ttfamily \label{class_scene_aeabcecb8fe463f6fd043b59d3fd7fa7e} 
+void Scene\+::set\+Shear (\begin{DoxyParamCaption}\item[{double}]{strength}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_scene_a4a6af18c9355251a9d1583ca1c89f0b5}\index{Scene@{Scene}!setTranslateScene@{setTranslateScene}}
+\index{setTranslateScene@{setTranslateScene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{setTranslateScene()}{setTranslateScene()}}
+{\footnotesize\ttfamily \label{class_scene_a4a6af18c9355251a9d1583ca1c89f0b5} 
+void Scene\+::set\+Translate\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})}
+
+
+
+Call the translate function of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation} & Vector that define the translation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_scene_8hpp}{Scene.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

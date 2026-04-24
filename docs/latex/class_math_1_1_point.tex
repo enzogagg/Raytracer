@@ -1,0 +1,303 @@
+\doxysection{Math\+::Point Class Reference}
+\hypertarget{class_math_1_1_point}{}\label{class_math_1_1_point}\index{Math::Point@{Math::Point}}
+
+
+A class to represent a 3D point with basic operations.  
+
+
+
+
+{\ttfamily \#include $<$Point.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_math_1_1_point}{Point} class. Initializes the point to (0, 0, 0). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point_a22235350669b40ec09fbc5ef4739448c}{Point}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_math_1_1_point}{Point} class. Initializes the point to (0, 0, 0). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} \mbox{\hyperlink{class_math_1_1_point_a2cec4900c07ede6b3d3f16fe22c44696}{operator+}} (const \mbox{\hyperlink{class_math_1_1_point}{Point}} \&point) const
+\begin{DoxyCompactList}\small\item\em Overload of the operator + for two Points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} \mbox{\hyperlink{class_math_1_1_point_a55c0e95aab1229cf9cb841f5857c37ec}{operator+}} (const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&vector) const
+\begin{DoxyCompactList}\small\item\em Overload of the operator + for a \doxylink{class_math_1_1_point}{Point} and a \doxylink{class_math_1_1_vector}{Vector}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} \mbox{\hyperlink{class_math_1_1_point_ab9e42624aa5e0a16fa758c47887b9e92}{operator-\/}} (const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&vector) const
+\begin{DoxyCompactList}\small\item\em Overload of the operator + for a \doxylink{class_math_1_1_point}{Point} and a \doxylink{class_math_1_1_vector}{Vector}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} \& \mbox{\hyperlink{class_math_1_1_point_a9351819dbae628fe76b58ee1b4944e87}{operator+=}} (const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&vector)
+\begin{DoxyCompactList}\small\item\em Overload of the operator += for a \doxylink{class_math_1_1_point}{Point} and a \doxylink{class_math_1_1_vector}{Vector}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_math_1_1_point_a8fc3a71e1f8f25543d50c871a23f2ce3}{operator==}} (const \mbox{\hyperlink{class_math_1_1_point}{Point}} \&point) const
+\begin{DoxyCompactList}\small\item\em Overload of the operator == for a \doxylink{class_math_1_1_point}{Point} and another \doxylink{class_math_1_1_point}{Point}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Vector}} \mbox{\hyperlink{class_math_1_1_point_a431b0e21ed8083480cf457a65af1842f}{operator-\/}} (const \mbox{\hyperlink{class_math_1_1_point}{Point}} \&other) const
+\begin{DoxyCompactList}\small\item\em Generate a vector between two points. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_math_1_1_point_a12a51be86cdd89c33e05d32e33921014}{getX}} () const
+\begin{DoxyCompactList}\small\item\em This does exactly what you think it does. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_math_1_1_point_adeed1ea8e835a0003457bfda1a1ed91b}{getY}} () const
+\begin{DoxyCompactList}\small\item\em This does exactly what you think it does. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_math_1_1_point_a208b81ae0377788fa3f647bb3093fc2e}{getZ}} () const
+\begin{DoxyCompactList}\small\item\em This does exactly what you think it does. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_math_1_1_point_a8d7d175c9d3970bb852ae7c7a4aacae1}{setX}} (const double x)
+\item 
+void \mbox{\hyperlink{class_math_1_1_point_a27c4b00bd54586ff4b99c1767ce9ea4f}{setY}} (const double y)
+\item 
+void \mbox{\hyperlink{class_math_1_1_point_acf46839facb6f1574958f1f5c615a2b3}{setZ}} (const double z)
+\begin{DoxyCompactList}\small\item\em This does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ 4, 1 $>$ \mbox{\hyperlink{class_math_1_1_point_a450c05f7c6b0e005a92e0f5d82329e73}{point\+To\+Matrix}} ()
+\item 
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ 1, 2 $>$ \mbox{\hyperlink{class_math_1_1_point_a9ecf1cdd7120c46912af7d7342031d00}{shear\+To\+Matrix}} ()
+\item 
+double \mbox{\hyperlink{class_math_1_1_point_af71ad9403174302a6876a84ceb23a0d5}{dot}} (const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&other) const
+\begin{DoxyCompactList}\small\item\em Dot product of two vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a 3D point with basic operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}\index{Math::Point@{Math::Point}!Point@{Point}}
+\index{Point@{Point}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1} 
+Math\+::\+Point\+::\+Point (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_math_1_1_point}{Point} class. Initializes the point to (0, 0, 0). 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a "{}null"{} point. 
+\end{DoxyNote}
+\Hypertarget{class_math_1_1_point_a22235350669b40ec09fbc5ef4739448c}\index{Math::Point@{Math::Point}!Point@{Point}}
+\index{Point@{Point}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a22235350669b40ec09fbc5ef4739448c} 
+Math\+::\+Point\+::\+Point (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{double}]{z}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_math_1_1_point}{Point} class. Initializes the point to (0, 0, 0). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the point. \\
+\hline
+{\em y} & The y-\/coordinate of the point. \\
+\hline
+{\em z} & The z-\/coordinate of the point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This constructor can be used to create a point with specific coordinates. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_math_1_1_point_af71ad9403174302a6876a84ceb23a0d5}\index{Math::Point@{Math::Point}!dot@{dot}}
+\index{dot@{dot}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_af71ad9403174302a6876a84ceb23a0d5} 
+double Math\+::\+Point\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Dot product of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The vector to dot with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dot product of this vector and the other vector. 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a12a51be86cdd89c33e05d32e33921014}\index{Math::Point@{Math::Point}!getX@{getX}}
+\index{getX@{getX}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a12a51be86cdd89c33e05d32e33921014} 
+double Math\+::\+Point\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+This does exactly what you think it does. 
+
+\begin{DoxyReturn}{Returns}
+the X attribute of the current point 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_adeed1ea8e835a0003457bfda1a1ed91b}\index{Math::Point@{Math::Point}!getY@{getY}}
+\index{getY@{getY}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_adeed1ea8e835a0003457bfda1a1ed91b} 
+double Math\+::\+Point\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+This does exactly what you think it does. 
+
+\begin{DoxyReturn}{Returns}
+the Y attribute of the current point 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a208b81ae0377788fa3f647bb3093fc2e}\index{Math::Point@{Math::Point}!getZ@{getZ}}
+\index{getZ@{getZ}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a208b81ae0377788fa3f647bb3093fc2e} 
+double Math\+::\+Point\+::getZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+This does exactly what you think it does. 
+
+\begin{DoxyReturn}{Returns}
+the Z attribute of the current point 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a2cec4900c07ede6b3d3f16fe22c44696}\index{Math::Point@{Math::Point}!operator+@{operator+}}
+\index{operator+@{operator+}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a2cec4900c07ede6b3d3f16fe22c44696} 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} Math\+::\+Point\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Point}} \&}]{point}{}\end{DoxyParamCaption}) const}
+
+
+
+Overload of the operator + for two Points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & point to add to the other \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a newly created point represented by the add of two points 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a55c0e95aab1229cf9cb841f5857c37ec}\index{Math::Point@{Math::Point}!operator+@{operator+}}
+\index{operator+@{operator+}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a55c0e95aab1229cf9cb841f5857c37ec} 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} Math\+::\+Point\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&}]{vector}{}\end{DoxyParamCaption}) const}
+
+
+
+Overload of the operator + for a \doxylink{class_math_1_1_point}{Point} and a \doxylink{class_math_1_1_vector}{Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_math_1_1_vector}{Vector}} & vector to add to the other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a newly created point represented by the add of a point and a vector 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a9351819dbae628fe76b58ee1b4944e87}\index{Math::Point@{Math::Point}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a9351819dbae628fe76b58ee1b4944e87} 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} \& Math\+::\+Point\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&}]{vector}{}\end{DoxyParamCaption})}
+
+
+
+Overload of the operator += for a \doxylink{class_math_1_1_point}{Point} and a \doxylink{class_math_1_1_vector}{Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_math_1_1_vector}{Vector}} & vector to add to the other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+add to the current point coordinate of the vector 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a431b0e21ed8083480cf457a65af1842f}\index{Math::Point@{Math::Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a431b0e21ed8083480cf457a65af1842f} 
+\mbox{\hyperlink{class_math_1_1_vector}{Vector}} Math\+::\+Point\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Point}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Generate a vector between two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other end of the vector represented by a point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a newly created vector 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_ab9e42624aa5e0a16fa758c47887b9e92}\index{Math::Point@{Math::Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_ab9e42624aa5e0a16fa758c47887b9e92} 
+\mbox{\hyperlink{class_math_1_1_point}{Point}} Math\+::\+Point\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Vector}} \&}]{vector}{}\end{DoxyParamCaption}) const}
+
+
+
+Overload of the operator + for a \doxylink{class_math_1_1_point}{Point} and a \doxylink{class_math_1_1_vector}{Vector}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_math_1_1_vector}{Vector}} & vector to add to the other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a newly created point represented by the add of a point and a vector 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a8fc3a71e1f8f25543d50c871a23f2ce3}\index{Math::Point@{Math::Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a8fc3a71e1f8f25543d50c871a23f2ce3} 
+bool Math\+::\+Point\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Point}} \&}]{point}{}\end{DoxyParamCaption}) const}
+
+
+
+Overload of the operator == for a \doxylink{class_math_1_1_point}{Point} and another \doxylink{class_math_1_1_point}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & point to check the equality \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both are the same, false if not 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a450c05f7c6b0e005a92e0f5d82329e73}\index{Math::Point@{Math::Point}!pointToMatrix@{pointToMatrix}}
+\index{pointToMatrix@{pointToMatrix}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{pointToMatrix()}{pointToMatrix()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a450c05f7c6b0e005a92e0f5d82329e73} 
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ 4, 1 $>$ Math\+::\+Point\+::point\+To\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_math_1_1_point_a8d7d175c9d3970bb852ae7c7a4aacae1}\index{Math::Point@{Math::Point}!setX@{setX}}
+\index{setX@{setX}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a8d7d175c9d3970bb852ae7c7a4aacae1} 
+void Math\+::\+Point\+::setX (\begin{DoxyParamCaption}\item[{const double}]{x}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+set X attribute of the current point 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_a27c4b00bd54586ff4b99c1767ce9ea4f}\index{Math::Point@{Math::Point}!setY@{setY}}
+\index{setY@{setY}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a27c4b00bd54586ff4b99c1767ce9ea4f} 
+void Math\+::\+Point\+::setY (\begin{DoxyParamCaption}\item[{const double}]{y}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+set Y attribute of the current point 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_point_acf46839facb6f1574958f1f5c615a2b3}\index{Math::Point@{Math::Point}!setZ@{setZ}}
+\index{setZ@{setZ}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{setZ()}{setZ()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_acf46839facb6f1574958f1f5c615a2b3} 
+void Math\+::\+Point\+::setZ (\begin{DoxyParamCaption}\item[{const double}]{z}{}\end{DoxyParamCaption})}
+
+
+
+This does exactly what you think it does. 
+
+\Hypertarget{class_math_1_1_point_a9ecf1cdd7120c46912af7d7342031d00}\index{Math::Point@{Math::Point}!shearToMatrix@{shearToMatrix}}
+\index{shearToMatrix@{shearToMatrix}!Math::Point@{Math::Point}}
+\doxysubsubsection{\texorpdfstring{shearToMatrix()}{shearToMatrix()}}
+{\footnotesize\ttfamily \label{class_math_1_1_point_a9ecf1cdd7120c46912af7d7342031d00} 
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ 1, 2 $>$ Math\+::\+Point\+::shear\+To\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_point_8hpp}{Point.\+hpp}}\item 
+src/utilitaries/\mbox{\hyperlink{_point_8cpp}{Point.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,208 @@
+\doxysection{Infinite\+Cylindre Class Reference}
+\hypertarget{class_infinite_cylindre}{}\label{class_infinite_cylindre}\index{InfiniteCylindre@{InfiniteCylindre}}
+
+
+{\ttfamily \#include $<$Infinite\+Cylindre.\+hpp$>$}
+
+
+
+Inheritance diagram for Infinite\+Cylindre\+:
+% FIG 0
+
+
+Collaboration diagram for Infinite\+Cylindre\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_infinite_cylindre_af99c5c34d663850c5f0c804e3a95b11e}{Infinite\+Cylindre}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} shape. By default tip is at (0, 0, 0), height at (0, 0, 0) and angle at 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_infinite_cylindre_ade3025d56c150f75840a4c98b0b76600}{Infinite\+Cylindre}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} center, double radius, double height, \mbox{\hyperlink{class_color}{Color}} \&color, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Constructor of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_infinite_cylindre_aff50f1876b5c6855fd46e136e94a38d6}{\texorpdfstring{$\sim$}{\string~}\+Infinite\+Cylindre}} ()
+\begin{DoxyCompactList}\small\item\em basic destructor of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} class \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_infinite_cylindre_acd1f463e553e38a11ab3e4cf5ec1016b}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the primitive shape. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinite_cylindre_afc314d447416d82110538281d900373e}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the primitive shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_infinite_cylindre_a8460cae3a8126c92eddc478c2e83c9ba}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_infinite_cylindre_a4ef089f2e8d84b1bfa45bc299df44702}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_infinite_cylindre_a3839a3cf800c09a657bf2265442683c7}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Get the color of the primitive shape. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_infinite_cylindre_aec2565218e9c18cf0f650bfee95975a0}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_primitive}{IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_infinite_cylindre_af99c5c34d663850c5f0c804e3a95b11e}\index{InfiniteCylindre@{InfiniteCylindre}!InfiniteCylindre@{InfiniteCylindre}}
+\index{InfiniteCylindre@{InfiniteCylindre}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{InfiniteCylindre()}{InfiniteCylindre()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_af99c5c34d663850c5f0c804e3a95b11e} 
+Infinite\+Cylindre\+::\+Infinite\+Cylindre (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} shape. By default tip is at (0, 0, 0), height at (0, 0, 0) and angle at 0. 
+
+\Hypertarget{class_infinite_cylindre_ade3025d56c150f75840a4c98b0b76600}\index{InfiniteCylindre@{InfiniteCylindre}!InfiniteCylindre@{InfiniteCylindre}}
+\index{InfiniteCylindre@{InfiniteCylindre}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{InfiniteCylindre()}{InfiniteCylindre()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_ade3025d56c150f75840a4c98b0b76600} 
+Infinite\+Cylindre\+::\+Infinite\+Cylindre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{center}{, }\item[{double}]{radius}{, }\item[{double}]{height}{, }\item[{\mbox{\hyperlink{class_color}{Color}} \&}]{color}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Constructor of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Point that represents the center of the bottom cap of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} \\
+\hline
+{\em radius} & The radius of both cap of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} \\
+\hline
+{\em height} & height of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_infinite_cylindre_aff50f1876b5c6855fd46e136e94a38d6}\index{InfiniteCylindre@{InfiniteCylindre}!````~InfiniteCylindre@{\texorpdfstring{$\sim$}{\string~}InfiniteCylindre}}
+\index{````~InfiniteCylindre@{\texorpdfstring{$\sim$}{\string~}InfiniteCylindre}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}InfiniteCylindre()}{\string~InfiniteCylindre()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_aff50f1876b5c6855fd46e136e94a38d6} 
+Infinite\+Cylindre\+::\texorpdfstring{$\sim$}{\string~}\+Infinite\+Cylindre (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+basic destructor of the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} class 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_infinite_cylindre_a3839a3cf800c09a657bf2265442683c7}\index{InfiniteCylindre@{InfiniteCylindre}!getColor@{getColor}}
+\index{getColor@{getColor}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_a3839a3cf800c09a657bf2265442683c7} 
+\mbox{\hyperlink{class_color}{Color}} Infinite\+Cylindre\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the color of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The color of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{IPrimitive}}.
+
+\Hypertarget{class_infinite_cylindre_a8460cae3a8126c92eddc478c2e83c9ba}\index{InfiniteCylindre@{InfiniteCylindre}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_a8460cae3a8126c92eddc478c2e83c9ba} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Infinite\+Cylindre\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{IPrimitive}}.
+
+\Hypertarget{class_infinite_cylindre_aec2565218e9c18cf0f650bfee95975a0}\index{InfiniteCylindre@{InfiniteCylindre}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_aec2565218e9c18cf0f650bfee95975a0} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ Infinite\+Cylindre\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{IPrimitive}}.
+
+\Hypertarget{class_infinite_cylindre_acd1f463e553e38a11ab3e4cf5ec1016b}\index{InfiniteCylindre@{InfiniteCylindre}!getType@{getType}}
+\index{getType@{getType}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_acd1f463e553e38a11ab3e4cf5ec1016b} 
+const std\+::string \& Infinite\+Cylindre\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The type of the shape as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{IPrimitive}}.
+
+\Hypertarget{class_infinite_cylindre_afc314d447416d82110538281d900373e}\index{InfiniteCylindre@{InfiniteCylindre}!intersect@{intersect}}
+\index{intersect@{intersect}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_afc314d447416d82110538281d900373e} 
+bool Infinite\+Cylindre\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a ray intersects with the primitive shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the shape, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{IPrimitive}}.
+
+\Hypertarget{class_infinite_cylindre_a4ef089f2e8d84b1bfa45bc299df44702}\index{InfiniteCylindre@{InfiniteCylindre}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!InfiniteCylindre@{InfiniteCylindre}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_infinite_cylindre_a4ef089f2e8d84b1bfa45bc299df44702} 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} Infinite\+Cylindre\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/plugins/primitives/\mbox{\hyperlink{_infinite_cylindre_8hpp}{Infinite\+Cylindre.\+hpp}}\item 
+src/plugins/primitives/\mbox{\hyperlink{_infinite_cylindre_8cpp}{Infinite\+Cylindre.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,211 @@
+\doxysection{Face Class Reference}
+\hypertarget{class_face}{}\label{class_face}\index{Face@{Face}}
+
+
+A class to represent a \doxylink{class_face}{Face} in 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Face.\+hpp$>$}
+
+
+
+Inheritance diagram for Face\+:
+% FIG 0
+
+
+Collaboration diagram for Face\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_face_a77cf7251533cc4e34198bd74a0170ec1}{Face}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} v0, \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} v1, \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} v2, const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_face}{Face} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_face_a2d2eb866b9cd8e70a86d2222cd293ae6}{\texorpdfstring{$\sim$}{\string~}\+Face}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_face}{Face} class. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_face_aa65a263f3096de918a5bac162b68fe25}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the \doxylink{class_face}{Face}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_face_afe70f4b0daafddde44288eb027ae3022}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the \doxylink{class_face}{Face}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_face_ac1e5cb9b458bbb327ef625da0b9fd697}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_face_a854e4cea351921ae838d9d600fda4edc}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_face_aa99824f2ae07d6c6dddc62d3c169413d}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Get the color of the \doxylink{class_face}{Face}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_face_a928865fa28e785f894b46cb86d2f6b58}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_primitive}{IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a \doxylink{class_face}{Face} in 3D space. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_face_a77cf7251533cc4e34198bd74a0170ec1}\index{Face@{Face}!Face@{Face}}
+\index{Face@{Face}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{Face()}{Face()}}
+{\footnotesize\ttfamily \label{class_face_a77cf7251533cc4e34198bd74a0170ec1} 
+Face\+::\+Face (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{v0}{, }\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{v1}{, }\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{v2}{, }\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_face}{Face} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis of the \doxylink{class_face}{Face} (x, y, or z). \\
+\hline
+{\em v0} & The position of the first vertex \\
+\hline
+{\em v1} & The position of the second vertex \\
+\hline
+{\em v2} & The position of the third vertex \\
+\hline
+{\em color} & The color of the \doxylink{class_face}{Face}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_face_a2d2eb866b9cd8e70a86d2222cd293ae6}\index{Face@{Face}!````~Face@{\texorpdfstring{$\sim$}{\string~}Face}}
+\index{````~Face@{\texorpdfstring{$\sim$}{\string~}Face}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Face()}{\string~Face()}}
+{\footnotesize\ttfamily \label{class_face_a2d2eb866b9cd8e70a86d2222cd293ae6} 
+Face\+::\texorpdfstring{$\sim$}{\string~}\+Face (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for the \doxylink{class_face}{Face} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure proper cleanup of derived classes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_face_aa99824f2ae07d6c6dddc62d3c169413d}\index{Face@{Face}!getColor@{getColor}}
+\index{getColor@{getColor}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_face_aa99824f2ae07d6c6dddc62d3c169413d} 
+\mbox{\hyperlink{class_color}{Color}} Face\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the color of the \doxylink{class_face}{Face}. 
+
+\begin{DoxyReturn}{Returns}
+The color of the \doxylink{class_face}{Face}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{IPrimitive}}.
+
+\Hypertarget{class_face_ac1e5cb9b458bbb327ef625da0b9fd697}\index{Face@{Face}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_face_ac1e5cb9b458bbb327ef625da0b9fd697} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Face\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{IPrimitive}}.
+
+\Hypertarget{class_face_a928865fa28e785f894b46cb86d2f6b58}\index{Face@{Face}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_face_a928865fa28e785f894b46cb86d2f6b58} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ Face\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{IPrimitive}}.
+
+\Hypertarget{class_face_aa65a263f3096de918a5bac162b68fe25}\index{Face@{Face}!getType@{getType}}
+\index{getType@{getType}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_face_aa65a263f3096de918a5bac162b68fe25} 
+const std\+::string \& Face\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the \doxylink{class_face}{Face}. 
+
+\begin{DoxyReturn}{Returns}
+The type of the \doxylink{class_face}{Face} as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{IPrimitive}}.
+
+\Hypertarget{class_face_afe70f4b0daafddde44288eb027ae3022}\index{Face@{Face}!intersect@{intersect}}
+\index{intersect@{intersect}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_face_afe70f4b0daafddde44288eb027ae3022} 
+bool Face\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a ray intersects with the \doxylink{class_face}{Face}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the \doxylink{class_face}{Face}, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{IPrimitive}}.
+
+\Hypertarget{class_face_a854e4cea351921ae838d9d600fda4edc}\index{Face@{Face}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!Face@{Face}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_face_a854e4cea351921ae838d9d600fda4edc} 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} Face\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_face_8hpp}{Face.\+hpp}}\item 
+src/utilitaries/\mbox{\hyperlink{_face_8cpp}{Face.\+cpp}}\end{DoxyCompactItemize}

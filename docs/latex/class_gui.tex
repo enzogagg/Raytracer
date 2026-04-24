@@ -1,0 +1,152 @@
+\doxysection{Gui Class Reference}
+\hypertarget{class_gui}{}\label{class_gui}\index{Gui@{Gui}}
+
+
+{\ttfamily \#include $<$Gui.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gui_ad94e6b9ba678601536c5af482d7860c7}{Gui}} ()=default
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_gui}{Gui} class. Initializes the GUI with default settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gui_af1c8c5496c641bf4bd8c0780fb3cc781}{Gui}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_gui}{Gui} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gui_a4fd8485d226f9b8a2ac2d81d7f0f3598}{\texorpdfstring{$\sim$}{\string~}\+Gui}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_gui}{Gui} class. Cleans up resources used by the GUI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_a5b8ab15a49c47706d4353e0b8a1c8c3e}{handle\+Input}} (int \&event\+Key)
+\begin{DoxyCompactList}\small\item\em Handles user input in the GUI. Processes events such as keyboard and mouse input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_a1542dedd9780309f02b4a7be4e20fc42}{update\+Scene}} (std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&pixels\+Render, std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&pixels\+Fast\+Render)
+\begin{DoxyCompactList}\small\item\em Updates the scene in the GUI. Updates the scene based on the rendered pixels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_a1ca197ce81ec24bbf0da2600821a848a}{create\+Image}} (sf\+::\+Image \&image, const std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&pixels, int width, int height)
+\begin{DoxyCompactList}\small\item\em Creates the image from the pixels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gui_a6063af77da5cc190ea565684f86f402a}{render\+Scene}} (int \&event\+Key)
+\begin{DoxyCompactList}\small\item\em Renders the scene in the GUI. Draws the scene to the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gui_aec79d6a61214f3ebe579d248605edd2b}{is\+Open}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the window is open. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gui_ad94e6b9ba678601536c5af482d7860c7}\index{Gui@{Gui}!Gui@{Gui}}
+\index{Gui@{Gui}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{Gui()}{Gui()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_gui_ad94e6b9ba678601536c5af482d7860c7} 
+Gui\+::\+Gui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_gui}{Gui} class. Initializes the GUI with default settings. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a GUI with default values. 
+\end{DoxyNote}
+\Hypertarget{class_gui_af1c8c5496c641bf4bd8c0780fb3cc781}\index{Gui@{Gui}!Gui@{Gui}}
+\index{Gui@{Gui}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{Gui()}{Gui()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_gui_af1c8c5496c641bf4bd8c0780fb3cc781} 
+Gui\+::\+Gui (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_gui}{Gui} class. 
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_gui}{Gui} class. Initializes the GUI with default settings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the window. \\
+\hline
+{\em height} & The height of the window. Initializes the GUI with default settings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This constructor can be used to create a GUI with default values. 
+\end{DoxyNote}
+\Hypertarget{class_gui_a4fd8485d226f9b8a2ac2d81d7f0f3598}\index{Gui@{Gui}!````~Gui@{\texorpdfstring{$\sim$}{\string~}Gui}}
+\index{````~Gui@{\texorpdfstring{$\sim$}{\string~}Gui}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Gui()}{\string~Gui()}}
+{\footnotesize\ttfamily \label{class_gui_a4fd8485d226f9b8a2ac2d81d7f0f3598} 
+Gui\+::\texorpdfstring{$\sim$}{\string~}\+Gui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_gui}{Gui} class. Cleans up resources used by the GUI. 
+
+\begin{DoxyNote}{Note}
+This destructor is called when the GUI object is destroyed. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gui_a1ca197ce81ec24bbf0da2600821a848a}\index{Gui@{Gui}!createImage@{createImage}}
+\index{createImage@{createImage}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily \label{class_gui_a1ca197ce81ec24bbf0da2600821a848a} 
+void Gui\+::create\+Image (\begin{DoxyParamCaption}\item[{sf\+::\+Image \&}]{image}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&}]{pixels}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Creates the image from the pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The image to create. \\
+\hline
+{\em pixels} & The pixels to use for the image. \\
+\hline
+{\em width} & The width of the image. \\
+\hline
+{\em height} & The height of the image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is used to create the image from the pixels. 
+\end{DoxyNote}
+\Hypertarget{class_gui_a5b8ab15a49c47706d4353e0b8a1c8c3e}\index{Gui@{Gui}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily \label{class_gui_a5b8ab15a49c47706d4353e0b8a1c8c3e} 
+void Gui\+::handle\+Input (\begin{DoxyParamCaption}\item[{int \&}]{event\+Key}{}\end{DoxyParamCaption})}
+
+
+
+Handles user input in the GUI. Processes events such as keyboard and mouse input. 
+
+\Hypertarget{class_gui_aec79d6a61214f3ebe579d248605edd2b}\index{Gui@{Gui}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily \label{class_gui_aec79d6a61214f3ebe579d248605edd2b} 
+bool Gui\+::is\+Open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the window is open. 
+
+\begin{DoxyReturn}{Returns}
+True if the window is open, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_gui_a6063af77da5cc190ea565684f86f402a}\index{Gui@{Gui}!renderScene@{renderScene}}
+\index{renderScene@{renderScene}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{renderScene()}{renderScene()}}
+{\footnotesize\ttfamily \label{class_gui_a6063af77da5cc190ea565684f86f402a} 
+void Gui\+::render\+Scene (\begin{DoxyParamCaption}\item[{int \&}]{event\+Key}{}\end{DoxyParamCaption})}
+
+
+
+Renders the scene in the GUI. Draws the scene to the window. 
+
+\Hypertarget{class_gui_a1542dedd9780309f02b4a7be4e20fc42}\index{Gui@{Gui}!updateScene@{updateScene}}
+\index{updateScene@{updateScene}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{updateScene()}{updateScene()}}
+{\footnotesize\ttfamily \label{class_gui_a1542dedd9780309f02b4a7be4e20fc42} 
+void Gui\+::update\+Scene (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&}]{pixels\+Render}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&}]{pixels\+Fast\+Render}{}\end{DoxyParamCaption})}
+
+
+
+Updates the scene in the GUI. Updates the scene based on the rendered pixels. 
+
+Updates the scene in the GUI. Updates the scene based on user input and other factors. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_gui_8hpp}{Gui.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_gui_8cpp}{Gui.\+cpp}}\end{DoxyCompactItemize}

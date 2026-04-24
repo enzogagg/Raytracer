@@ -1,0 +1,52 @@
+\doxysection{include/plugins/lights/\+Directional\+Light.hpp File Reference}
+\hypertarget{_directional_light_8hpp}{}\label{_directional_light_8hpp}\index{include/plugins/lights/DirectionalLight.hpp@{include/plugins/lights/DirectionalLight.hpp}}
+{\ttfamily \#include "{}Plugins\+Manager.\+hpp"{}}\newline
+{\ttfamily \#include "{}ILight.\+hpp"{}}\newline
+Include dependency graph for Directional\+Light.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_directional_light}{Directional\+Light}}
+\begin{DoxyCompactList}\small\item\em A class to represent a directional light source in the raytracer project. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ \mbox{\hyperlink{_directional_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7}{create\+Light}} (const libconfig\+::\+Setting \&setting)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{class_directional_light}{Directional\+Light} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_directional_light_8hpp_a5103d5f079a351497d19fb22b5c76683}{register\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Register the \doxylink{class_directional_light}{Directional\+Light} plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_directional_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7}\index{DirectionalLight.hpp@{DirectionalLight.hpp}!createLight@{createLight}}
+\index{createLight@{createLight}!DirectionalLight.hpp@{DirectionalLight.hpp}}
+\doxysubsubsection{\texorpdfstring{createLight()}{createLight()}}
+{\footnotesize\ttfamily \label{_directional_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ create\+Light (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{setting}{}\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{class_directional_light}{Directional\+Light} object. 
+
+This function creates a new \doxylink{class_directional_light}{Directional\+Light} object. 
+\begin{DoxyParams}{Parameters}
+{\em setting} & The settings for the \doxylink{class_directional_light}{Directional\+Light} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{class_directional_light}{Directional\+Light} object. 
+\end{DoxyReturn}
+\Hypertarget{_directional_light_8hpp_a5103d5f079a351497d19fb22b5c76683}\index{DirectionalLight.hpp@{DirectionalLight.hpp}!registerPlugin@{registerPlugin}}
+\index{registerPlugin@{registerPlugin}!DirectionalLight.hpp@{DirectionalLight.hpp}}
+\doxysubsubsection{\texorpdfstring{registerPlugin()}{registerPlugin()}}
+{\footnotesize\ttfamily \label{_directional_light_8hpp_a5103d5f079a351497d19fb22b5c76683} 
+void register\+Plugin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Register the \doxylink{class_directional_light}{Directional\+Light} plugin. 
+
+This function registers the \doxylink{class_directional_light}{Directional\+Light} plugin with the \doxylink{class_plugins_manager}{Plugins\+Manager}. 

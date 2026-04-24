@@ -1,0 +1,58 @@
+\doxysection{include/plugins/primitives/\+Plane.hpp File Reference}
+\hypertarget{_plane_8hpp}{}\label{_plane_8hpp}\index{include/plugins/primitives/Plane.hpp@{include/plugins/primitives/Plane.hpp}}
+{\ttfamily \#include "{}Plugins\+Manager.\+hpp"{}}\newline
+{\ttfamily \#include "{}IPrimitive.\+hpp"{}}\newline
+{\ttfamily \#include "{}Point.\+hpp"{}}\newline
+{\ttfamily \#include "{}AMaterial.\+hpp"{}}\newline
+{\ttfamily \#include "{}Default.\+hpp"{}}\newline
+{\ttfamily \#include "{}Metal.\+hpp"{}}\newline
+{\ttfamily \#include "{}Chessboard.\+hpp"{}}\newline
+{\ttfamily \#include "{}Perlin\+Noise.\+hpp"{}}\newline
+Include dependency graph for Plane.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_plane}{Plane}}
+\begin{DoxyCompactList}\small\item\em A class to represent a plane in 3D space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ \mbox{\hyperlink{_plane_8hpp_a1054de0203b7aaa07367873bc1c37118}{create\+Primitive}} (const libconfig\+::\+Setting \&setting)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{class_plane}{Plane} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_plane_8hpp_a5103d5f079a351497d19fb22b5c76683}{register\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Register the \doxylink{class_plane}{Plane} plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_plane_8hpp_a1054de0203b7aaa07367873bc1c37118}\index{Plane.hpp@{Plane.hpp}!createPrimitive@{createPrimitive}}
+\index{createPrimitive@{createPrimitive}!Plane.hpp@{Plane.hpp}}
+\doxysubsubsection{\texorpdfstring{createPrimitive()}{createPrimitive()}}
+{\footnotesize\ttfamily \label{_plane_8hpp_a1054de0203b7aaa07367873bc1c37118} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ create\+Primitive (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{setting}{}\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{class_plane}{Plane} object. 
+
+This function creates a new \doxylink{class_plane}{Plane} object. 
+\begin{DoxyParams}{Parameters}
+{\em setting} & The settings for the \doxylink{class_plane}{Plane} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{class_plane}{Plane} object. 
+\end{DoxyReturn}
+\Hypertarget{_plane_8hpp_a5103d5f079a351497d19fb22b5c76683}\index{Plane.hpp@{Plane.hpp}!registerPlugin@{registerPlugin}}
+\index{registerPlugin@{registerPlugin}!Plane.hpp@{Plane.hpp}}
+\doxysubsubsection{\texorpdfstring{registerPlugin()}{registerPlugin()}}
+{\footnotesize\ttfamily \label{_plane_8hpp_a5103d5f079a351497d19fb22b5c76683} 
+void register\+Plugin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Register the \doxylink{class_plane}{Plane} plugin. 
+
+This function is called to register the \doxylink{class_plane}{Plane} plugin. 

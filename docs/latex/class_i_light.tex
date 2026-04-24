@@ -1,0 +1,199 @@
+\doxysection{ILight Class Reference}
+\hypertarget{class_i_light}{}\label{class_i_light}\index{ILight@{ILight}}
+
+
+An interface for light sources in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$ILight.\+hpp$>$}
+
+
+
+Inheritance diagram for ILight\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_light_a13040cea55cb2d4ba287572567bbb57e}{\texorpdfstring{$\sim$}{\string~}\+ILight}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_light}{ILight} class. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{class_i_light_a17a8dee4bf602400c78f78e7695d025d}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the type of the light source. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \& \mbox{\hyperlink{class_i_light_ab86902bb7965a7fdc4c00650db7ddac5}{get\+Position}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the position of the light source. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& \mbox{\hyperlink{class_i_light_a30cbdb438bb0ff54a2d514601fb2931a}{get\+Direction}} () const =0
+\begin{DoxyCompactList}\small\item\em get\+Direction \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_i_light_a04d4fe23a07d67e21480631659a85fa3}{get\+Intensity}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the intensity of the light source. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_i_light_a06aa4295f8fab68da783cf27bc5ec9ab}{get\+Color}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the color of the light source. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_i_light_a5572903828f939b5d4e2e1f3a1651186}{get\+Ambient\+Component}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the ambient component of the light source. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_i_light_a21625b4731dc55c3a19d6d2a61149778}{get\+Diffuse\+Component}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the diffuse component of the light source. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_i_light_a91e3ecf002e49350580f6fa8489535b3}{get\+Specular\+Component}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the specular component of the light source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for light sources in the raytracer project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_light_a13040cea55cb2d4ba287572567bbb57e}\index{ILight@{ILight}!````~ILight@{\texorpdfstring{$\sim$}{\string~}ILight}}
+\index{````~ILight@{\texorpdfstring{$\sim$}{\string~}ILight}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ILight()}{\string~ILight()}}
+{\footnotesize\ttfamily \label{class_i_light_a13040cea55cb2d4ba287572567bbb57e} 
+virtual ILight\+::\texorpdfstring{$\sim$}{\string~}\+ILight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{class_i_light}{ILight} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure proper cleanup of derived classes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_light_a5572903828f939b5d4e2e1f3a1651186}\index{ILight@{ILight}!getAmbientComponent@{getAmbientComponent}}
+\index{getAmbientComponent@{getAmbientComponent}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getAmbientComponent()}{getAmbientComponent()}}
+{\footnotesize\ttfamily \label{class_i_light_a5572903828f939b5d4e2e1f3a1651186} 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& ILight\+::get\+Ambient\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the ambient component of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The ambient component of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_a8d43f2583ec0d019d77e5016b00139d5}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_a414788faddacc623442436001d04382d}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_a256686d34074cd1c951b2c9ac67e6766}{Point\+Light}}.
+
+\Hypertarget{class_i_light_a06aa4295f8fab68da783cf27bc5ec9ab}\index{ILight@{ILight}!getColor@{getColor}}
+\index{getColor@{getColor}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_i_light_a06aa4295f8fab68da783cf27bc5ec9ab} 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& ILight\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the color of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The color of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_ada8b29c436b22fbca53c58a9596d594a}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_a4443efa7b078260bbe4ef03c38ea7ac9}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_a13e3e215e02dc6ea250f3955ce482412}{Point\+Light}}.
+
+\Hypertarget{class_i_light_a21625b4731dc55c3a19d6d2a61149778}\index{ILight@{ILight}!getDiffuseComponent@{getDiffuseComponent}}
+\index{getDiffuseComponent@{getDiffuseComponent}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getDiffuseComponent()}{getDiffuseComponent()}}
+{\footnotesize\ttfamily \label{class_i_light_a21625b4731dc55c3a19d6d2a61149778} 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& ILight\+::get\+Diffuse\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the diffuse component of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The diffuse component of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_ac951ad0774fb86621fc28ff9f1f65c8c}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_ab60692ab2d4cfe353e8c97b313512b30}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_a470e05253bce2a929e7c2876a7768769}{Point\+Light}}.
+
+\Hypertarget{class_i_light_a30cbdb438bb0ff54a2d514601fb2931a}\index{ILight@{ILight}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \label{class_i_light_a30cbdb438bb0ff54a2d514601fb2931a} 
+virtual const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& ILight\+::get\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Direction 
+
+Get the direction of the light source. \begin{DoxyReturn}{Returns}
+The direction of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_ae9a6de1d4eac5984a514636a1c07608c}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_aaf54bdabd3b80a90361fd0054ab44335}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_af0c0225fb5884feef6e400dc0e540c56}{Point\+Light}}.
+
+\Hypertarget{class_i_light_a04d4fe23a07d67e21480631659a85fa3}\index{ILight@{ILight}!getIntensity@{getIntensity}}
+\index{getIntensity@{getIntensity}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
+{\footnotesize\ttfamily \label{class_i_light_a04d4fe23a07d67e21480631659a85fa3} 
+virtual float ILight\+::get\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the intensity of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The intensity of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_a32c931c5e07b29ed20654ac97bbaa2de}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_a34832833a1bf9f5c244592ea4a43bbf9}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_a63fc23fb119838b3379f7fa49934de1c}{Point\+Light}}.
+
+\Hypertarget{class_i_light_ab86902bb7965a7fdc4c00650db7ddac5}\index{ILight@{ILight}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_i_light_ab86902bb7965a7fdc4c00650db7ddac5} 
+virtual const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \& ILight\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the position of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The position of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_a6711c7412850c5ff04551677ab74f3c2}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_a93e69dbb21e64b0fc6f292a20b0506ca}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_aa3203050158f703c4dcc470d48674378}{Point\+Light}}.
+
+\Hypertarget{class_i_light_a91e3ecf002e49350580f6fa8489535b3}\index{ILight@{ILight}!getSpecularComponent@{getSpecularComponent}}
+\index{getSpecularComponent@{getSpecularComponent}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getSpecularComponent()}{getSpecularComponent()}}
+{\footnotesize\ttfamily \label{class_i_light_a91e3ecf002e49350580f6fa8489535b3} 
+virtual const \mbox{\hyperlink{class_color}{Color}} \& ILight\+::get\+Specular\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the specular component of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The specular component of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_adf685360c8a12e98993580c2861b8fdf}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_aa3321736daa120681098306f33f56c81}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_adec49817001af05b3bf9a4ac47c36dae}{Point\+Light}}.
+
+\Hypertarget{class_i_light_a17a8dee4bf602400c78f78e7695d025d}\index{ILight@{ILight}!getType@{getType}}
+\index{getType@{getType}!ILight@{ILight}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_i_light_a17a8dee4bf602400c78f78e7695d025d} 
+virtual const std\+::string \& ILight\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the type of the light source. 
+
+\begin{DoxyReturn}{Returns}
+The type of the light source. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_ambient_light_a93e7127180d16ed5a0d1f6812951fcb3}{Ambient\+Light}}, \mbox{\hyperlink{class_directional_light_ab0845d5fde7fa66c2fc918438e83af0d}{Directional\+Light}}, and \mbox{\hyperlink{class_point_light_aee29b056171f0a3883dc614d1856f4f5}{Point\+Light}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/interfaces/\mbox{\hyperlink{_i_light_8hpp}{ILight.\+hpp}}\end{DoxyCompactItemize}

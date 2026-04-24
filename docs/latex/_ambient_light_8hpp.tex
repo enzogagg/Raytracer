@@ -1,0 +1,52 @@
+\doxysection{include/plugins/lights/\+Ambient\+Light.hpp File Reference}
+\hypertarget{_ambient_light_8hpp}{}\label{_ambient_light_8hpp}\index{include/plugins/lights/AmbientLight.hpp@{include/plugins/lights/AmbientLight.hpp}}
+{\ttfamily \#include "{}Plugins\+Manager.\+hpp"{}}\newline
+{\ttfamily \#include "{}ILight.\+hpp"{}}\newline
+Include dependency graph for Ambient\+Light.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_ambient_light}{Ambient\+Light}}
+\begin{DoxyCompactList}\small\item\em A class to represent an ambient light source in the raytracer project. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ \mbox{\hyperlink{_ambient_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7}{create\+Light}} (const libconfig\+::\+Setting \&setting)
+\begin{DoxyCompactList}\small\item\em Create an \doxylink{class_ambient_light}{Ambient\+Light} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ambient_light_8hpp_a5103d5f079a351497d19fb22b5c76683}{register\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Register the \doxylink{class_ambient_light}{Ambient\+Light} plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_ambient_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7}\index{AmbientLight.hpp@{AmbientLight.hpp}!createLight@{createLight}}
+\index{createLight@{createLight}!AmbientLight.hpp@{AmbientLight.hpp}}
+\doxysubsubsection{\texorpdfstring{createLight()}{createLight()}}
+{\footnotesize\ttfamily \label{_ambient_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ create\+Light (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{setting}{}\end{DoxyParamCaption})}
+
+
+
+Create an \doxylink{class_ambient_light}{Ambient\+Light} object. 
+
+This function creates a new \doxylink{class_ambient_light}{Ambient\+Light} object. 
+\begin{DoxyParams}{Parameters}
+{\em setting} & The settings for the \doxylink{class_ambient_light}{Ambient\+Light} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{class_ambient_light}{Ambient\+Light} object. 
+\end{DoxyReturn}
+\Hypertarget{_ambient_light_8hpp_a5103d5f079a351497d19fb22b5c76683}\index{AmbientLight.hpp@{AmbientLight.hpp}!registerPlugin@{registerPlugin}}
+\index{registerPlugin@{registerPlugin}!AmbientLight.hpp@{AmbientLight.hpp}}
+\doxysubsubsection{\texorpdfstring{registerPlugin()}{registerPlugin()}}
+{\footnotesize\ttfamily \label{_ambient_light_8hpp_a5103d5f079a351497d19fb22b5c76683} 
+void register\+Plugin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Register the \doxylink{class_ambient_light}{Ambient\+Light} plugin. 
+
+This function registers the \doxylink{class_ambient_light}{Ambient\+Light} plugin with the \doxylink{class_plugins_manager}{Plugins\+Manager}. 

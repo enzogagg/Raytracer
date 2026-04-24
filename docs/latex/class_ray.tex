@@ -1,0 +1,117 @@
+\doxysection{Ray Class Reference}
+\hypertarget{class_ray}{}\label{class_ray}\index{Ray@{Ray}}
+
+
+A class to represent a ray in 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Ray.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ray_a49d6caed9701889da6d45f0bcddff3fa}{Ray}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&origin=\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}(), const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&direction=\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}())
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_ray}{Ray} class. Initializes the ray with a position and direction. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \& \mbox{\hyperlink{class_ray_a4dbc225d71d08e4610a9038740415495}{get\+Origin}} () const
+\begin{DoxyCompactList}\small\item\em Get the origin of the ray. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& \mbox{\hyperlink{class_ray_abc102b8e15617de9806228896bb08552}{get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Get the direction of the ray. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ray_a6c55bbc4257cb81da56f26505deed78e}{set\+Origin}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&origin)
+\begin{DoxyCompactList}\small\item\em Set the origin of the ray. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ray_a0586941a96514cb2c33c287ae247cd33}{set\+Direction}} (const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&direction)
+\begin{DoxyCompactList}\small\item\em Set the direction of the ray. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a ray in 3D space. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ray_a49d6caed9701889da6d45f0bcddff3fa}\index{Ray@{Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}}
+{\footnotesize\ttfamily \label{class_ray_a49d6caed9701889da6d45f0bcddff3fa} 
+Ray\+::\+Ray (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{origin}{ = {\ttfamily \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}()}, }\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{direction}{ = {\ttfamily \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}()}}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_ray}{Ray} class. Initializes the ray with a position and direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the ray. \\
+\hline
+{\em direction} & The direction of the ray. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If no parameters are provided, the ray is initialized to (0, 0, 0). 
+
+This constructor can be used to create a ray with specific origin and direction. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ray_abc102b8e15617de9806228896bb08552}\index{Ray@{Ray}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \label{class_ray_abc102b8e15617de9806228896bb08552} 
+const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& Ray\+::get\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the direction of the ray. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the ray. 
+\end{DoxyReturn}
+\Hypertarget{class_ray_a4dbc225d71d08e4610a9038740415495}\index{Ray@{Ray}!getOrigin@{getOrigin}}
+\index{getOrigin@{getOrigin}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
+{\footnotesize\ttfamily \label{class_ray_a4dbc225d71d08e4610a9038740415495} 
+const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \& Ray\+::get\+Origin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the origin of the ray. 
+
+\begin{DoxyReturn}{Returns}
+The origin of the ray. 
+\end{DoxyReturn}
+\Hypertarget{class_ray_a0586941a96514cb2c33c287ae247cd33}\index{Ray@{Ray}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily \label{class_ray_a0586941a96514cb2c33c287ae247cd33} 
+void Ray\+::set\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{direction}{}\end{DoxyParamCaption})}
+
+
+
+Set the direction of the ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & direction of the ray. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ray_a6c55bbc4257cb81da56f26505deed78e}\index{Ray@{Ray}!setOrigin@{setOrigin}}
+\index{setOrigin@{setOrigin}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{setOrigin()}{setOrigin()}}
+{\footnotesize\ttfamily \label{class_ray_a6c55bbc4257cb81da56f26505deed78e} 
+void Ray\+::set\+Origin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{origin}{}\end{DoxyParamCaption})}
+
+
+
+Set the origin of the ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & origin to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_ray_8hpp}{Ray.\+hpp}}\item 
+src/utilitaries/\mbox{\hyperlink{_ray_8cpp}{Ray.\+cpp}}\end{DoxyCompactItemize}

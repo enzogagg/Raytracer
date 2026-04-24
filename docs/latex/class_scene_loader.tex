@@ -1,0 +1,111 @@
+\doxysection{Scene\+Loader Class Reference}
+\hypertarget{class_scene_loader}{}\label{class_scene_loader}\index{SceneLoader@{SceneLoader}}
+
+
+A class to load scenes from files in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Loader.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_scene}{Scene}} \mbox{\hyperlink{class_scene_loader_a0f188145bd163b89003b267335387e96}{parse\+Scene\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Load a scene from a file. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_scene_loader_a3aa2ed8e857d4fc95ed96bd6136482e3}{parse\+Scene\+Camera}} (const libconfig\+::\+Setting \&file, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Parse the scene file and create the camera. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_scene_loader_a7b62650e5bfbfbdfbc44cbcce8fa8f29}{parse\+Scene\+Primitive}} (const libconfig\+::\+Setting \&file, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Parse the scene file and create the primitive. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_scene_loader_a53977047c09bbebaf6f5a35892e8e6c7}{parse\+Scene\+Light}} (const libconfig\+::\+Setting \&file, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Parse the scene file and create the light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to load scenes from files in the raytracer project. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scene_loader_a3aa2ed8e857d4fc95ed96bd6136482e3}\index{SceneLoader@{SceneLoader}!parseSceneCamera@{parseSceneCamera}}
+\index{parseSceneCamera@{parseSceneCamera}!SceneLoader@{SceneLoader}}
+\doxysubsubsection{\texorpdfstring{parseSceneCamera()}{parseSceneCamera()}}
+{\footnotesize\ttfamily \label{class_scene_loader_a3aa2ed8e857d4fc95ed96bd6136482e3} 
+void Scene\+Loader\+::parse\+Scene\+Camera (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{file}{, }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parse the scene file and create the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to parse. \\
+\hline
+{\em scene} & The scene object to fill. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_loader_a0f188145bd163b89003b267335387e96}\index{SceneLoader@{SceneLoader}!parseSceneFile@{parseSceneFile}}
+\index{parseSceneFile@{parseSceneFile}!SceneLoader@{SceneLoader}}
+\doxysubsubsection{\texorpdfstring{parseSceneFile()}{parseSceneFile()}}
+{\footnotesize\ttfamily \label{class_scene_loader_a0f188145bd163b89003b267335387e96} 
+\mbox{\hyperlink{class_scene}{Scene}} Scene\+Loader\+::parse\+Scene\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load a scene from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load the scene from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the loaded scene.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load the scene from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the loaded \doxylink{class_scene}{Scene} object. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_loader_a53977047c09bbebaf6f5a35892e8e6c7}\index{SceneLoader@{SceneLoader}!parseSceneLight@{parseSceneLight}}
+\index{parseSceneLight@{parseSceneLight}!SceneLoader@{SceneLoader}}
+\doxysubsubsection{\texorpdfstring{parseSceneLight()}{parseSceneLight()}}
+{\footnotesize\ttfamily \label{class_scene_loader_a53977047c09bbebaf6f5a35892e8e6c7} 
+void Scene\+Loader\+::parse\+Scene\+Light (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{file}{, }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parse the scene file and create the light. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to parse. \\
+\hline
+{\em scene} & The scene object to fill. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_loader_a7b62650e5bfbfbdfbc44cbcce8fa8f29}\index{SceneLoader@{SceneLoader}!parseScenePrimitive@{parseScenePrimitive}}
+\index{parseScenePrimitive@{parseScenePrimitive}!SceneLoader@{SceneLoader}}
+\doxysubsubsection{\texorpdfstring{parseScenePrimitive()}{parseScenePrimitive()}}
+{\footnotesize\ttfamily \label{class_scene_loader_a7b62650e5bfbfbdfbc44cbcce8fa8f29} 
+void Scene\+Loader\+::parse\+Scene\+Primitive (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{file}{, }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parse the scene file and create the primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to parse. \\
+\hline
+{\em scene} & The scene object to fill. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/loader/\mbox{\hyperlink{_scene_loader_8hpp}{Scene\+Loader.\+hpp}}\item 
+src/loader/\mbox{\hyperlink{_scene_loader_8cpp}{Scene\+Loader.\+cpp}}\end{DoxyCompactItemize}

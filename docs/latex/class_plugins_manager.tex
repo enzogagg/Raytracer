@@ -1,0 +1,190 @@
+\doxysection{Plugins\+Manager Class Reference}
+\hypertarget{class_plugins_manager}{}\label{class_plugins_manager}\index{PluginsManager@{PluginsManager}}
+
+
+A class to manage plugins in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Plugins\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plugins_manager_a2098484303966342e85b1ebcea186a66}{load\+Plugins}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load the plugins from the specified path. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\T \mbox{\hyperlink{class_plugins_manager_ad071223f970da56046386961bc911f26}{get\+Symbol}} (const std\+::string \&symbol)
+\begin{DoxyCompactList}\small\item\em Get a symbol from the plugin handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307}{register\+Primitive\+Factory}} (const std\+::string \&type, \mbox{\hyperlink{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940}{Primitives\+Factory}} factory)
+\begin{DoxyCompactList}\small\item\em Register a factory for creating \doxylink{class_i_primitive}{IPrimitive} objects. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_plugins_manager_a32d1092f17e837b6f3d78a02f4d8df6d}{register\+Light\+Factory}} (const std\+::string \&type, \mbox{\hyperlink{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61}{Lights\+Factory}} factory)
+\begin{DoxyCompactList}\small\item\em Register a factory for creating \doxylink{class_i_light}{ILight} objects. \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ \mbox{\hyperlink{class_plugins_manager_ac71d604a59e034c6d5cec7f05a821097}{create\+Primitive}} (const std\+::string \&name, const libconfig\+::\+Setting \&setting)
+\begin{DoxyCompactList}\small\item\em Create a primitive object based on the specified name and settings. \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ \mbox{\hyperlink{class_plugins_manager_ad6c1b70afeb354f4682b417b25129368}{create\+Light}} (const std\+::string \&name, const libconfig\+::\+Setting \&setting)
+\begin{DoxyCompactList}\small\item\em Create a light object based on the specified name and settings. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_plugins_manager_a3e7493b1bb60efb5c045eec6627efc17}{unregister\+All\+Factories}} ()
+\begin{DoxyCompactList}\small\item\em Unergister all factory for creating \doxylink{class_i_primitive}{IPrimitive} objects and Ilight objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to manage plugins in the raytracer project. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plugins_manager_ad6c1b70afeb354f4682b417b25129368}\index{PluginsManager@{PluginsManager}!createLight@{createLight}}
+\index{createLight@{createLight}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{createLight()}{createLight()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_ad6c1b70afeb354f4682b417b25129368} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_light}{ILight}} $>$ Plugins\+Manager\+::create\+Light (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const libconfig\+::\+Setting \&}]{setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a light object based on the specified name and settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the light type. \\
+\hline
+{\em setting} & The settings for the light. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{class_i_light}{ILight} object. 
+\end{DoxyReturn}
+\Hypertarget{class_plugins_manager_ac71d604a59e034c6d5cec7f05a821097}\index{PluginsManager@{PluginsManager}!createPrimitive@{createPrimitive}}
+\index{createPrimitive@{createPrimitive}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{createPrimitive()}{createPrimitive()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_ac71d604a59e034c6d5cec7f05a821097} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ Plugins\+Manager\+::create\+Primitive (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const libconfig\+::\+Setting \&}]{setting}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a primitive object based on the specified name and settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the primitive type. \\
+\hline
+{\em setting} & The settings for the primitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{class_i_primitive}{IPrimitive} object.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the primitive type. \\
+\hline
+{\em setting} & The settings for the primitive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{class_i_primitive}{IPrimitive} object. 
+\end{DoxyReturn}
+\Hypertarget{class_plugins_manager_ad071223f970da56046386961bc911f26}\index{PluginsManager@{PluginsManager}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_ad071223f970da56046386961bc911f26} 
+template$<$typename T$>$ \\
+T Plugins\+Manager\+::get\+Symbol (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a symbol from the plugin handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The name of the symbol to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the symbol. 
+\end{DoxyReturn}
+\Hypertarget{class_plugins_manager_a2098484303966342e85b1ebcea186a66}\index{PluginsManager@{PluginsManager}!loadPlugins@{loadPlugins}}
+\index{loadPlugins@{loadPlugins}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{loadPlugins()}{loadPlugins()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_a2098484303966342e85b1ebcea186a66} 
+void Plugins\+Manager\+::load\+Plugins (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Load the plugins from the specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the directory containing the plugins. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plugins_manager_a32d1092f17e837b6f3d78a02f4d8df6d}\index{PluginsManager@{PluginsManager}!registerLightFactory@{registerLightFactory}}
+\index{registerLightFactory@{registerLightFactory}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{registerLightFactory()}{registerLightFactory()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_a32d1092f17e837b6f3d78a02f4d8df6d} 
+void Plugins\+Manager\+::register\+Light\+Factory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type}{, }\item[{\mbox{\hyperlink{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61}{Lights\+Factory}}}]{factory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Register a factory for creating \doxylink{class_i_light}{ILight} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the light (e.\+g., "{}point"{}, "{}directional"{}). \\
+\hline
+{\em factory} & The factory function to create \doxylink{class_i_light}{ILight} objects.\\
+\hline
+{\em type} & The type of the light (e.\+g., "{}point"{}, "{}directional"{}). \\
+\hline
+{\em factory} & The factory function to create \doxylink{class_i_light}{ILight} objects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is used to register a factory function for creating \doxylink{class_i_light}{ILight} objects. 
+\end{DoxyNote}
+\Hypertarget{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307}\index{PluginsManager@{PluginsManager}!registerPrimitiveFactory@{registerPrimitiveFactory}}
+\index{registerPrimitiveFactory@{registerPrimitiveFactory}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{registerPrimitiveFactory()}{registerPrimitiveFactory()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307} 
+void Plugins\+Manager\+::register\+Primitive\+Factory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type}{, }\item[{\mbox{\hyperlink{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940}{Primitives\+Factory}}}]{factory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Register a factory for creating \doxylink{class_i_primitive}{IPrimitive} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the primitive ( e.\+g., "{}sphere"{}, "{}cube"{}). \\
+\hline
+{\em factory} & The factory function to create \doxylink{class_i_primitive}{IPrimitive} objects.\\
+\hline
+{\em type} & The type of the primitive (e.\+g., "{}sphere"{}, "{}cube"{}). \\
+\hline
+{\em factory} & The factory function to create \doxylink{class_i_primitive}{IPrimitive} objects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is used to register a factory function for creating 
+\end{DoxyNote}
+\Hypertarget{class_plugins_manager_a3e7493b1bb60efb5c045eec6627efc17}\index{PluginsManager@{PluginsManager}!unregisterAllFactories@{unregisterAllFactories}}
+\index{unregisterAllFactories@{unregisterAllFactories}!PluginsManager@{PluginsManager}}
+\doxysubsubsection{\texorpdfstring{unregisterAllFactories()}{unregisterAllFactories()}}
+{\footnotesize\ttfamily \label{class_plugins_manager_a3e7493b1bb60efb5c045eec6627efc17} 
+void Plugins\+Manager\+::unregister\+All\+Factories (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unergister all factory for creating \doxylink{class_i_primitive}{IPrimitive} objects and Ilight objects. 
+
+Unregister all factory for creating \doxylink{class_i_primitive}{IPrimitive} objects and \doxylink{class_i_light}{ILight} objects.
+
+\begin{DoxyNote}{Note}
+This method is used to unregister all factory functions for creating \doxylink{class_i_primitive}{IPrimitive} and \doxylink{class_i_light}{ILight} objects. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/plugins/\mbox{\hyperlink{_plugins_manager_8hpp}{Plugins\+Manager.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_plugins_manager_8cpp}{Plugins\+Manager.\+cpp}}\end{DoxyCompactItemize}

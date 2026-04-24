@@ -1,0 +1,21 @@
+\doxysection{Plugins\+Factory.\+hpp}
+\hypertarget{_plugins_factory_8hpp_source}{}\label{_plugins_factory_8hpp_source}\index{include/plugins/PluginsFactory.hpp@{include/plugins/PluginsFactory.hpp}}
+\mbox{\hyperlink{_plugins_factory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ PluginsFactory}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_light_8hpp}{ILight.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_define_8hpp}{Define.hpp}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940}{PrimitivesFactory}}\ =\ std::function<std::shared\_ptr<IPrimitive>(\textcolor{keyword}{const}\ libconfig::Setting\ \&)>;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61}{LightsFactory}}\ =\ std::function<std::shared\_ptr<ILight>(\textcolor{keyword}{const}\ libconfig::Setting\ \&)>;}
+
+\end{DoxyCode}

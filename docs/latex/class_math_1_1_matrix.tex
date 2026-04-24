@@ -1,0 +1,222 @@
+\doxysection{Math\+::Matrix\texorpdfstring{$<$}{<} X, Y \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_math_1_1_matrix}{}\label{class_math_1_1_matrix}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+
+
+A class to use \doxylink{class_math_1_1_matrix}{Matrix} for calculus.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_math_1_1_matrix_a70758057d1c308de63377375dfc272c9}{Matrix}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor of the \doxylink{class_math_1_1_matrix}{Matrix} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_matrix_a4bbcc12077cafc70b49b8562204b0735}{Matrix}} (double matrix\mbox{[}X\mbox{]}\mbox{[}Y\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor of the \doxylink{class_math_1_1_matrix}{Matrix} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_matrix_afe350904354060dfe728ddad5d834186}{\texorpdfstring{$\sim$}{\string~}\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} destructor of the \doxylink{class_math_1_1_matrix}{Matrix} class. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{class_math_1_1_matrix_ae0439b3bd43c8cf6330a571630dbad13}{operator()}} (unsigned int row, unsigned int col)
+\begin{DoxyCompactList}\small\item\em Overload of the () operator\+: allow us to acces the value inside the matrix. \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{class_math_1_1_matrix_add782cd881832e5b1b8956b67c0e6c33}{operator()}} (unsigned int row, unsigned int col) const
+\begin{DoxyCompactList}\small\item\em Overload of the () operator\+: allow us to acces the value inside the matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int x, unsigned int y$>$ }\\\mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}$<$ X, y $>$ \mbox{\hyperlink{class_math_1_1_matrix_a34a1c8ce903264dfb2fd90bf73fe6917}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}$<$ x, y $>$ const \&m2)
+\begin{DoxyCompactList}\small\item\em Overload of the \texorpdfstring{$\ast$}{*} operator\+: allow us to multiply two matrices. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix_aca8b3b430549343b3394b74e9d5135c1}{get\+Row}} () const
+\begin{DoxyCompactList}\small\item\em get the number of row in the current matrix \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix_a75f74cba0b7e45a74ebc76bfa22b472b}{get\+Col}} () const
+\begin{DoxyCompactList}\small\item\em get the number of columns in the current matrix \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix_a0ae002ae1ec21208e3feddf8d1f04cce}{\+\_\+row}}
+\item 
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix_afbce25a9e2a4f15ebf76fe974f734364}{\+\_\+col}}
+\item 
+double \mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\+\_\+matrix}} \mbox{[}X\mbox{]}\mbox{[}Y\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned int X, unsigned int Y$>$\newline
+class Math\+::\+Matrix$<$ X, Y $>$}
+A class to use \doxylink{class_math_1_1_matrix}{Matrix} for calculus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & X represents the number of lines in the matrix \\
+\hline
+{\em Y} & Y represents the number of columns in the matrix \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_math_1_1_matrix_a70758057d1c308de63377375dfc272c9}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_a70758057d1c308de63377375dfc272c9} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_default}{Default} constructor of the \doxylink{class_math_1_1_matrix}{Matrix} class. 
+
+\begin{DoxyNote}{Note}
+By default the \doxylink{class_math_1_1_matrix}{Matrix} is set to 0.\+0 for each value 
+\end{DoxyNote}
+\Hypertarget{class_math_1_1_matrix_a4bbcc12077cafc70b49b8562204b0735}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_a4bbcc12077cafc70b49b8562204b0735} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::\+Matrix (\begin{DoxyParamCaption}\item[{double}]{matrix}{\mbox{[}\+X\mbox{]}\mbox{[}\+Y\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of the \doxylink{class_math_1_1_matrix}{Matrix} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & the matrix to copy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_math_1_1_matrix_afe350904354060dfe728ddad5d834186}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!````~Matrix@{\texorpdfstring{$\sim$}{\string~}Matrix}}
+\index{````~Matrix@{\texorpdfstring{$\sim$}{\string~}Matrix}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Matrix()}{\string~Matrix()}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_afe350904354060dfe728ddad5d834186} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+\mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_math_1_1_matrix}{Matrix}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_default}{Default} destructor of the \doxylink{class_math_1_1_matrix}{Matrix} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_math_1_1_matrix_a75f74cba0b7e45a74ebc76bfa22b472b}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!getCol@{getCol}}
+\index{getCol@{getCol}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{getCol()}{getCol()}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_a75f74cba0b7e45a74ebc76bfa22b472b} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::get\+Col (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the number of columns in the current matrix 
+
+\Hypertarget{class_math_1_1_matrix_aca8b3b430549343b3394b74e9d5135c1}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!getRow@{getRow}}
+\index{getRow@{getRow}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{getRow()}{getRow()}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_aca8b3b430549343b3394b74e9d5135c1} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::get\+Row (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the number of row in the current matrix 
+
+\Hypertarget{class_math_1_1_matrix_ae0439b3bd43c8cf6330a571630dbad13}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_ae0439b3bd43c8cf6330a571630dbad13} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+double \& \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row}{, }\item[{unsigned int}]{col}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload of the () operator\+: allow us to acces the value inside the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row represents the row of the matrix you want to access \\
+\hline
+{\em col} & col represents the col of the matrix you want to access\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value at the row and the col passed as parameter 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_matrix_add782cd881832e5b1b8956b67c0e6c33}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_add782cd881832e5b1b8956b67c0e6c33} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+const double \& \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row}{, }\item[{unsigned int}]{col}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload of the () operator\+: allow us to acces the value inside the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & row represents the row of the matrix you want to access \\
+\hline
+{\em col} & col represents the col of the matrix you want to access\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a copy of the value at the row and the col passed as parameter 
+\end{DoxyReturn}
+\Hypertarget{class_math_1_1_matrix_a34a1c8ce903264dfb2fd90bf73fe6917}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_a34a1c8ce903264dfb2fd90bf73fe6917} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+template$<$unsigned int x, unsigned int y$>$ \\
+\mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}$<$ X, y $>$ \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_matrix}{Matrix}}$<$ x, y $>$ const \&}]{m2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload of the \texorpdfstring{$\ast$}{*} operator\+: allow us to multiply two matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m2} & the matrix that the current ones will be multiply by\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an out of range exception if the multiply isn\textquotesingle{}t possible 
+
+the result of the multiplication
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+the x and y param represent the row and the cols of the matrix to be multiply 
+
+the X and Y represent the row and the cols of the current matrix 
+
+in the case where Y != x then the multiplication cannot be performed 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_math_1_1_matrix_afbce25a9e2a4f15ebf76fe974f734364}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!\_col@{\_col}}
+\index{\_col@{\_col}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{\_col}{\_col}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_afbce25a9e2a4f15ebf76fe974f734364} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::\+\_\+col}
+
+\Hypertarget{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!\_matrix@{\_matrix}}
+\index{\_matrix@{\_matrix}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{\_matrix}{\_matrix}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+double \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::\+\_\+matrix\mbox{[}X\mbox{]}\mbox{[}Y\mbox{]}}
+
+\Hypertarget{class_math_1_1_matrix_a0ae002ae1ec21208e3feddf8d1f04cce}\index{Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}!\_row@{\_row}}
+\index{\_row@{\_row}!Math::Matrix$<$ X, Y $>$@{Math::Matrix$<$ X, Y $>$}}
+\doxysubsubsection{\texorpdfstring{\_row}{\_row}}
+{\footnotesize\ttfamily \label{class_math_1_1_matrix_a0ae002ae1ec21208e3feddf8d1f04cce} 
+template$<$unsigned int X, unsigned int Y$>$ \\
+unsigned int \mbox{\hyperlink{class_math_1_1_matrix}{Math\+::\+Matrix}}$<$ X, Y $>$\+::\+\_\+row}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_matrix_8hpp}{Matrix.\+hpp}}\end{DoxyCompactItemize}

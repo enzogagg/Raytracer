@@ -1,0 +1,72 @@
+\doxysection{Gui.\+hpp}
+\hypertarget{_gui_8hpp_source}{}\label{_gui_8hpp_source}\index{include/core/Gui.hpp@{include/core/Gui.hpp}}
+\mbox{\hyperlink{_gui_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Gui}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_color_8hpp}{Color.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_define_8hpp}{Define.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_camera_8hpp}{Camera.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cursor_8hpp}{Cursor.hpp}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_gui_ad94e6b9ba678601536c5af482d7860c7}{Gui}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_gui_ad94e6b9ba678601536c5af482d7860c7}{Gui}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_gui_ad94e6b9ba678601536c5af482d7860c7}{Gui}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_gui_a4fd8485d226f9b8a2ac2d81d7f0f3598}{\string~Gui}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gui_a5b8ab15a49c47706d4353e0b8a1c8c3e}{handleInput}}(\textcolor{keywordtype}{int}\&\ eventKey);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gui_a1542dedd9780309f02b4a7be4e20fc42}{updateScene}}(std::vector<Color>\ \&pixelsRender,\ std::vector<Color>\ \&pixelsFastRender);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gui_a1ca197ce81ec24bbf0da2600821a848a}{createImage}}(sf::Image\ \&image,\ \textcolor{keyword}{const}\ std::vector<Color>\ \&pixels,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gui_a6063af77da5cc190ea565684f86f402a}{renderScene}}(\textcolor{keywordtype}{int}\&\ eventKey);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_gui_aec79d6a61214f3ebe579d248605edd2b}{isOpen}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_width;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_height;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_fastWidth;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_fastHeight;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isOpen;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ sf::RenderWindow\ \_window;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ sf::Event\ \_event;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ std::vector<Color>\ \_pixelsRender;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::vector<Color>\ \_pixelsFastRender;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ sf::Image\ \_renderImage;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ sf::Texture\ \_renderTexture;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ sf::Sprite\ \_renderSprite;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ sf::Image\ \_fastRenderImage;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ sf::Texture\ \_fastRenderTexture;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ sf::Sprite\ \_fastRenderSprite;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ sf::Vector2i\ \_prevMousPos;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ sf::Font\ \_font;}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TRANSFORMATION}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Cursor>>\ \_transfomationCursors;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ std::shared\_ptr<Cursor>\ \_translateX;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ std::shared\_ptr<Cursor>\ \_translateY;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ std::shared\_ptr<Cursor>\ \_translateZ;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ std::shared\_ptr<Cursor>\ \_rotateX;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ std::shared\_ptr<Cursor>\ \_rotateY;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::shared\_ptr<Cursor>\ \_rotateZ;}
+\DoxyCodeLine{00112\ \};}
+
+\end{DoxyCode}

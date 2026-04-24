@@ -1,0 +1,1224 @@
+\begin{theindex}
+
+  \item {\_col}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{82}
+  \item {\_matrix}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{82}
+  \item {\_row}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{82}
+  \item {\texorpdfstring{$\sim$}{\string~}AMaterial}
+    \subitem {AMaterial}, \hyperpage{14}
+  \item {\texorpdfstring{$\sim$}{\string~}ChessboardMaterial}
+    \subitem {ChessboardMaterial}, \hyperpage{26}
+  \item {\texorpdfstring{$\sim$}{\string~}Cone}
+    \subitem {Cone}, \hyperpage{34}
+  \item {\texorpdfstring{$\sim$}{\string~}Core}
+    \subitem {Core}, \hyperpage{38}
+  \item {\texorpdfstring{$\sim$}{\string~}Cursor}
+    \subitem {Cursor}, \hyperpage{42}
+  \item {\texorpdfstring{$\sim$}{\string~}Cylindre}
+    \subitem {Cylindre}, \hyperpage{47}
+  \item {\texorpdfstring{$\sim$}{\string~}Face}
+    \subitem {Face}, \hyperpage{55}
+  \item {\texorpdfstring{$\sim$}{\string~}Gui}
+    \subitem {Gui}, \hyperpage{58}
+  \item {\texorpdfstring{$\sim$}{\string~}ILight}
+    \subitem {ILight}, \hyperpage{63}
+  \item {\texorpdfstring{$\sim$}{\string~}IPrimitive}
+    \subitem {IPrimitive}, \hyperpage{75}
+  \item {\texorpdfstring{$\sim$}{\string~}ITransformations}
+    \subitem {ITransformations}, \hyperpage{78}
+  \item {\texorpdfstring{$\sim$}{\string~}Image}
+    \subitem {Image}, \hyperpage{66}
+  \item {\texorpdfstring{$\sim$}{\string~}InfinitCone}
+    \subitem {InfinitCone}, \hyperpage{69}
+  \item {\texorpdfstring{$\sim$}{\string~}InfiniteCylindre}
+    \subitem {InfiniteCylindre}, \hyperpage{72}
+  \item {\texorpdfstring{$\sim$}{\string~}Matrix}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{80}
+  \item {\texorpdfstring{$\sim$}{\string~}Mtl}
+    \subitem {Mtl}, \hyperpage{84}
+  \item {\texorpdfstring{$\sim$}{\string~}PerlinNoiseMaterial}
+    \subitem {PerlinNoiseMaterial}, \hyperpage{87}
+  \item {\texorpdfstring{$\sim$}{\string~}Plane}
+    \subitem {Plane}, \hyperpage{89}
+  \item {\texorpdfstring{$\sim$}{\string~}PluginsHandle}
+    \subitem {PluginsHandle}, \hyperpage{93}
+  \item {\texorpdfstring{$\sim$}{\string~}Render}
+    \subitem {Render}, \hyperpage{112}
+  \item {\texorpdfstring{$\sim$}{\string~}Rotation}
+    \subitem {Rotation}, \hyperpage{119}
+  \item {\texorpdfstring{$\sim$}{\string~}Scene}
+    \subitem {Scene}, \hyperpage{121}
+  \item {\texorpdfstring{$\sim$}{\string~}Screen}
+    \subitem {Screen}, \hyperpage{127}
+  \item {\texorpdfstring{$\sim$}{\string~}Shear}
+    \subitem {Shear}, \hyperpage{129}
+  \item {\texorpdfstring{$\sim$}{\string~}Sphere}
+    \subitem {Sphere}, \hyperpage{131}
+  \item {\texorpdfstring{$\sim$}{\string~}Translation}
+    \subitem {Translation}, \hyperpage{136}
+  \item {\texorpdfstring{$\sim$}{\string~}Triangle}
+    \subitem {Triangle}, \hyperpage{140}
+
+  \indexspace
+
+  \item {adaptiveSample}
+    \subitem {Render}, \hyperpage{112}
+  \item {addCamera}
+    \subitem {Scene}, \hyperpage{122}
+  \item {addLight}
+    \subitem {Scene}, \hyperpage{122}
+  \item {addPrimitive}
+    \subitem {Scene}, \hyperpage{122}
+  \item {AMaterial}, \hyperpage{13}
+    \subitem {\texorpdfstring{$\sim$}{\string~}AMaterial}, 
+		\hyperpage{14}
+    \subitem {AMaterial}, \hyperpage{14}
+    \subitem {getAmbient}, \hyperpage{14}
+    \subitem {getColorAt}, \hyperpage{14}
+    \subitem {getDiffuse}, \hyperpage{14}
+    \subitem {getDiffuseColor}, \hyperpage{15}
+    \subitem {getName}, \hyperpage{15}
+    \subitem {getRefractionIndex}, \hyperpage{15}
+    \subitem {getShininess}, \hyperpage{15}
+    \subitem {getSpecular}, \hyperpage{15}
+    \subitem {getSpecularColor}, \hyperpage{15}
+    \subitem {getTransparency}, \hyperpage{15}
+    \subitem {loadFromMtlLine}, \hyperpage{15}
+    \subitem {setDiffuseColor}, \hyperpage{16}
+    \subitem {setRefractionIndex}, \hyperpage{16}
+    \subitem {setShininess}, \hyperpage{16}
+    \subitem {setSpecularColor}, \hyperpage{16}
+    \subitem {setTransparency}, \hyperpage{17}
+  \item {AmbiantOcclusion}
+    \subitem {Render}, \hyperpage{112}
+  \item {AmbientLight}, \hyperpage{17}
+    \subitem {AmbientLight}, \hyperpage{18}
+    \subitem {getAmbientComponent}, \hyperpage{18}
+    \subitem {getColor}, \hyperpage{18}
+    \subitem {getDiffuseComponent}, \hyperpage{18}
+    \subitem {getDirection}, \hyperpage{19}
+    \subitem {getIntensity}, \hyperpage{19}
+    \subitem {getPosition}, \hyperpage{19}
+    \subitem {getSpecularComponent}, \hyperpage{19}
+    \subitem {getType}, \hyperpage{20}
+  \item {AmbientLight.hpp}
+    \subitem {createLight}, \hyperpage{175}
+    \subitem {registerPlugin}, \hyperpage{175}
+  \item {apply}
+    \subitem {ITransformations}, \hyperpage{78}
+    \subitem {Rotation}, \hyperpage{120}
+    \subitem {Shear}, \hyperpage{129}
+    \subitem {Translation}, \hyperpage{136}
+  \item {applyIntensity}
+    \subitem {Color}, \hyperpage{28}
+
+  \indexspace
+
+  \item {BACKGROUNDCOLOR}
+    \subitem {Define.hpp}, \hyperpage{161}
+
+  \indexspace
+
+  \item {CalculateRender.cpp}
+    \subitem {orthogonalVector}, \hyperpage{219}
+    \subitem {random\_double}, \hyperpage{219}
+  \item {Camera}, \hyperpage{20}
+    \subitem {Camera}, \hyperpage{21}
+    \subitem {getFov}, \hyperpage{21}
+    \subitem {getHeight}, \hyperpage{21}
+    \subitem {getPosition}, \hyperpage{22}
+    \subitem {getRay}, \hyperpage{22}
+    \subitem {getWidth}, \hyperpage{22}
+    \subitem {rotate}, \hyperpage{23}
+    \subitem {setPosition}, \hyperpage{23}
+    \subitem {setRay}, \hyperpage{23}
+    \subitem {shear}, \hyperpage{24}
+    \subitem {translate}, \hyperpage{24}
+  \item {checkSceneFile}
+    \subitem {Core}, \hyperpage{39}
+  \item {ChessboardMaterial}, \hyperpage{24}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ChessboardMaterial}, 
+		\hyperpage{26}
+    \subitem {ChessboardMaterial}, \hyperpage{25}
+    \subitem {getColorAt}, \hyperpage{26}
+  \item {clamp}
+    \subitem {Color}, \hyperpage{28}
+  \item {Color}, \hyperpage{26}
+    \subitem {applyIntensity}, \hyperpage{28}
+    \subitem {clamp}, \hyperpage{28}
+    \subitem {Color}, \hyperpage{27}
+    \subitem {getB}, \hyperpage{28}
+    \subitem {getG}, \hyperpage{29}
+    \subitem {getR}, \hyperpage{29}
+    \subitem {operator+}, \hyperpage{31}
+    \subitem {operator+=}, \hyperpage{31}
+    \subitem {operator-\/}, \hyperpage{31}
+    \subitem {operator/}, \hyperpage{32}
+    \subitem {operator/=}, \hyperpage{32}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{29, 30}
+    \subitem {operator\texorpdfstring{$\ast$}{*}=}, \hyperpage{30}
+    \subitem {setColor}, \hyperpage{32}
+  \item {Color.cpp}
+    \subitem {operator$<$$<$}, \hyperpage{229}
+  \item {Color.hpp}
+    \subitem {operator$<$$<$}, \hyperpage{207}
+  \item {COLOR\_THRESHOLD}
+    \subitem {Define.hpp}, \hyperpage{161}
+  \item {ComputeDiffuseLights}
+    \subitem {Render}, \hyperpage{113}
+  \item {computeFastRender}
+    \subitem {Render}, \hyperpage{113}
+  \item {ComputePixelColor}
+    \subitem {Render}, \hyperpage{113}
+  \item {computeRender}
+    \subitem {Render}, \hyperpage{113}
+  \item {ComputeSpecularLight}
+    \subitem {Render}, \hyperpage{113}
+  \item {Cone}, \hyperpage{33}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Cone}, \hyperpage{34}
+    \subitem {Cone}, \hyperpage{33}
+    \subitem {getColor}, \hyperpage{34}
+    \subitem {getIntersectBase}, \hyperpage{34}
+    \subitem {getIntersectCone}, \hyperpage{35}
+    \subitem {getIntersection}, \hyperpage{35}
+    \subitem {getMaterial}, \hyperpage{35}
+    \subitem {getType}, \hyperpage{36}
+    \subitem {intersect}, \hyperpage{36}
+    \subitem {intersect\_base}, \hyperpage{36}
+    \subitem {intersectCone}, \hyperpage{37}
+    \subitem {normal\_at}, \hyperpage{37}
+  \item {Cone.hpp}
+    \subitem {createPrimitive}, \hyperpage{185}
+    \subitem {registerPlugin}, \hyperpage{185}
+  \item {Core}, \hyperpage{38}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Core}, \hyperpage{38}
+    \subitem {checkSceneFile}, \hyperpage{39}
+    \subitem {Core}, \hyperpage{38}
+    \subitem {createGuiThread}, \hyperpage{39}
+    \subitem {createRenderThread}, \hyperpage{39}
+    \subitem {init}, \hyperpage{39}
+    \subitem {loop}, \hyperpage{40}
+    \subitem {notifyRenderThread}, \hyperpage{40}
+    \subitem {reloadScene}, \hyperpage{40}
+    \subitem {setCtrl}, \hyperpage{40}
+    \subitem {setHandleRotation}, \hyperpage{40}
+    \subitem {setHandleTranslation}, \hyperpage{41}
+  \item {createDirAndFileName}
+    \subitem {Image}, \hyperpage{66}
+  \item {createGuiThread}
+    \subitem {Core}, \hyperpage{39}
+  \item {createImage}
+    \subitem {Gui}, \hyperpage{58}
+  \item {createLight}
+    \subitem {AmbientLight.hpp}, \hyperpage{175}
+    \subitem {DirectionalLight.hpp}, \hyperpage{177}
+    \subitem {PluginsManager}, \hyperpage{97}
+    \subitem {PointLight.hpp}, \hyperpage{179}
+  \item {createPrimitive}
+    \subitem {Cone.hpp}, \hyperpage{185}
+    \subitem {Cylindre.hpp}, \hyperpage{188}
+    \subitem {InfinitCone.hpp}, \hyperpage{190}
+    \subitem {InfiniteCylindre.hpp}, \hyperpage{193}
+    \subitem {Plane.hpp}, \hyperpage{196}
+    \subitem {PluginsManager}, \hyperpage{97}
+    \subitem {Sphere.hpp}, \hyperpage{198}
+    \subitem {Triangle.hpp}, \hyperpage{201}
+  \item {createRenderThread}
+    \subitem {Core}, \hyperpage{39}
+  \item {crossProduct}
+    \subitem {Math::Vector}, \hyperpage{144}
+  \item {Cursor}, \hyperpage{41}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Cursor}, \hyperpage{42}
+    \subitem {Cursor}, \hyperpage{42}
+    \subitem {getCursorLine}, \hyperpage{42}
+    \subitem {getCursorTitleText}, \hyperpage{42}
+    \subitem {getPosCursor}, \hyperpage{42}
+    \subitem {getRectangle}, \hyperpage{43}
+    \subitem {getText}, \hyperpage{43}
+    \subitem {getType}, \hyperpage{43}
+    \subitem {initShape}, \hyperpage{43}
+    \subitem {initText}, \hyperpage{43}
+    \subitem {isCursorSelected}, \hyperpage{44}
+    \subitem {mouseClickedOnCursor}, \hyperpage{44}
+    \subitem {moveCursor}, \hyperpage{44}
+    \subitem {moveRectangleShape}, \hyperpage{44}
+    \subitem {setCursorSelected}, \hyperpage{45}
+    \subitem {setCursorText}, \hyperpage{45}
+    \subitem {updateCursor}, \hyperpage{45}
+  \item {Cursor.hpp}
+    \subitem {CursorType}, \hyperpage{208}
+    \subitem {ROTATE}, \hyperpage{208}
+    \subitem {TRANSLATE}, \hyperpage{208}
+  \item {CursorType}
+    \subitem {Cursor.hpp}, \hyperpage{208}
+  \item {Cylindre}, \hyperpage{46}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Cylindre}, 
+		\hyperpage{47}
+    \subitem {Cylindre}, \hyperpage{46}
+    \subitem {getColor}, \hyperpage{47}
+    \subitem {getIntersection}, \hyperpage{47}
+    \subitem {getMaterial}, \hyperpage{47}
+    \subitem {getType}, \hyperpage{48}
+    \subitem {intersect}, \hyperpage{48}
+    \subitem {intersection\_cap}, \hyperpage{48}
+    \subitem {normal\_at}, \hyperpage{49}
+  \item {Cylindre.hpp}
+    \subitem {createPrimitive}, \hyperpage{188}
+    \subitem {registerPlugin}, \hyperpage{188}
+
+  \indexspace
+
+  \item {Default}, \hyperpage{49}
+    \subitem {Default}, \hyperpage{50}
+  \item {Define.hpp}
+    \subitem {BACKGROUNDCOLOR}, \hyperpage{161}
+    \subitem {COLOR\_THRESHOLD}, \hyperpage{161}
+    \subitem {FAST\_RENDER\_RATIO}, \hyperpage{162}
+    \subitem {FONT}, \hyperpage{162}
+    \subitem {MAX\_DEPTH}, \hyperpage{162}
+    \subitem {OCCLUSION\_SAMPLE\_PX}, \hyperpage{162}
+    \subitem {RENDER\_COLOMNS\_DIVISION\_PIXEL}, \hyperpage{162}
+    \subitem {ROTATE\_X}, \hyperpage{162}
+    \subitem {ROTATE\_Y}, \hyperpage{162}
+    \subitem {ROTATE\_Z}, \hyperpage{162}
+    \subitem {THREADS\_NUMBER}, \hyperpage{162}
+    \subitem {TRANSLATE\_X}, \hyperpage{162}
+    \subitem {TRANSLATE\_Y}, \hyperpage{163}
+    \subitem {TRANSLATE\_Z}, \hyperpage{163}
+  \item {DirectionalLight}, \hyperpage{50}
+    \subitem {DirectionalLight}, \hyperpage{51}
+    \subitem {getAmbientComponent}, \hyperpage{52}
+    \subitem {getColor}, \hyperpage{52}
+    \subitem {getDiffuseComponent}, \hyperpage{52}
+    \subitem {getDirection}, \hyperpage{52}
+    \subitem {getIntensity}, \hyperpage{52}
+    \subitem {getPosition}, \hyperpage{53}
+    \subitem {getSpecularComponent}, \hyperpage{53}
+    \subitem {getType}, \hyperpage{53}
+  \item {DirectionalLight.hpp}
+    \subitem {createLight}, \hyperpage{177}
+    \subitem {registerPlugin}, \hyperpage{177}
+  \item {dot}
+    \subitem {Math::Point}, \hyperpage{101}
+    \subitem {Math::Vector}, \hyperpage{144}
+
+  \indexspace
+
+  \item {Face}, \hyperpage{54}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Face}, \hyperpage{55}
+    \subitem {Face}, \hyperpage{54}
+    \subitem {getColor}, \hyperpage{55}
+    \subitem {getIntersection}, \hyperpage{55}
+    \subitem {getMaterial}, \hyperpage{55}
+    \subitem {getType}, \hyperpage{56}
+    \subitem {intersect}, \hyperpage{56}
+    \subitem {normal\_at}, \hyperpage{56}
+  \item {FAST\_RENDER\_RATIO}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {FONT}
+    \subitem {Define.hpp}, \hyperpage{162}
+
+  \indexspace
+
+  \item {getAmbient}
+    \subitem {AMaterial}, \hyperpage{14}
+  \item {getAmbientComponent}
+    \subitem {AmbientLight}, \hyperpage{18}
+    \subitem {DirectionalLight}, \hyperpage{52}
+    \subitem {ILight}, \hyperpage{63}
+    \subitem {PointLight}, \hyperpage{106}
+  \item {getB}
+    \subitem {Color}, \hyperpage{28}
+  \item {getCamera}
+    \subitem {Scene}, \hyperpage{122}
+  \item {getCol}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{80}
+  \item {getColor}
+    \subitem {AmbientLight}, \hyperpage{18}
+    \subitem {Cone}, \hyperpage{34}
+    \subitem {Cylindre}, \hyperpage{47}
+    \subitem {DirectionalLight}, \hyperpage{52}
+    \subitem {Face}, \hyperpage{55}
+    \subitem {HitInfo}, \hyperpage{61}
+    \subitem {ILight}, \hyperpage{63}
+    \subitem {InfinitCone}, \hyperpage{70}
+    \subitem {InfiniteCylindre}, \hyperpage{73}
+    \subitem {IPrimitive}, \hyperpage{75}
+    \subitem {Plane}, \hyperpage{90}
+    \subitem {PointLight}, \hyperpage{106}
+    \subitem {Sphere}, \hyperpage{131}
+    \subitem {Triangle}, \hyperpage{140}
+  \item {getColorAt}
+    \subitem {AMaterial}, \hyperpage{14}
+    \subitem {ChessboardMaterial}, \hyperpage{26}
+    \subitem {PerlinNoiseMaterial}, \hyperpage{88}
+  \item {getCursorLine}
+    \subitem {Cursor}, \hyperpage{42}
+  \item {getCursorTitleText}
+    \subitem {Cursor}, \hyperpage{42}
+  \item {getDiffuse}
+    \subitem {AMaterial}, \hyperpage{14}
+    \subitem {Scene}, \hyperpage{122}
+  \item {getDiffuseColor}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getDiffuseComponent}
+    \subitem {AmbientLight}, \hyperpage{18}
+    \subitem {DirectionalLight}, \hyperpage{52}
+    \subitem {ILight}, \hyperpage{63}
+    \subitem {PointLight}, \hyperpage{106}
+  \item {getDirection}
+    \subitem {AmbientLight}, \hyperpage{19}
+    \subitem {DirectionalLight}, \hyperpage{52}
+    \subitem {ILight}, \hyperpage{63}
+    \subitem {PointLight}, \hyperpage{106}
+    \subitem {Ray}, \hyperpage{109}
+  \item {getDistance}
+    \subitem {HitInfo}, \hyperpage{61}
+  \item {getFov}
+    \subitem {Camera}, \hyperpage{21}
+  \item {getG}
+    \subitem {Color}, \hyperpage{29}
+  \item {getHeight}
+    \subitem {Camera}, \hyperpage{21}
+  \item {getIntensity}
+    \subitem {AmbientLight}, \hyperpage{19}
+    \subitem {DirectionalLight}, \hyperpage{52}
+    \subitem {ILight}, \hyperpage{64}
+    \subitem {PointLight}, \hyperpage{106}
+  \item {getIntersectBase}
+    \subitem {Cone}, \hyperpage{34}
+  \item {getIntersectCone}
+    \subitem {Cone}, \hyperpage{35}
+  \item {getIntersection}
+    \subitem {Cone}, \hyperpage{35}
+    \subitem {Cylindre}, \hyperpage{47}
+    \subitem {Face}, \hyperpage{55}
+    \subitem {InfinitCone}, \hyperpage{70}
+    \subitem {InfiniteCylindre}, \hyperpage{73}
+    \subitem {IPrimitive}, \hyperpage{75}
+    \subitem {Plane}, \hyperpage{90}
+    \subitem {Sphere}, \hyperpage{131}
+    \subitem {Triangle}, \hyperpage{140}
+  \item {getLights}
+    \subitem {Scene}, \hyperpage{123}
+  \item {getMaterial}
+    \subitem {Cone}, \hyperpage{35}
+    \subitem {Cylindre}, \hyperpage{47}
+    \subitem {Face}, \hyperpage{55}
+    \subitem {InfinitCone}, \hyperpage{70}
+    \subitem {InfiniteCylindre}, \hyperpage{73}
+    \subitem {IPrimitive}, \hyperpage{76}
+    \subitem {Plane}, \hyperpage{90}
+    \subitem {Sphere}, \hyperpage{133}
+    \subitem {Triangle}, \hyperpage{140}
+  \item {getModifableCamera}
+    \subitem {Scene}, \hyperpage{123}
+  \item {getName}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getNormal}
+    \subitem {HitInfo}, \hyperpage{61}
+  \item {getOrigin}
+    \subitem {Ray}, \hyperpage{109}
+    \subitem {Screen}, \hyperpage{128}
+  \item {getPosCursor}
+    \subitem {Cursor}, \hyperpage{42}
+  \item {getPosition}
+    \subitem {AmbientLight}, \hyperpage{19}
+    \subitem {Camera}, \hyperpage{22}
+    \subitem {DirectionalLight}, \hyperpage{53}
+    \subitem {HitInfo}, \hyperpage{61}
+    \subitem {ILight}, \hyperpage{64}
+    \subitem {PointLight}, \hyperpage{107}
+  \item {getPrimitives}
+    \subitem {Scene}, \hyperpage{123}
+  \item {getR}
+    \subitem {Color}, \hyperpage{29}
+  \item {getRay}
+    \subitem {Camera}, \hyperpage{22}
+  \item {getRectangle}
+    \subitem {Cursor}, \hyperpage{43}
+  \item {getRefractionIndex}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getRow}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{80}
+  \item {getShininess}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getSpecular}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getSpecularColor}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getSpecularComponent}
+    \subitem {AmbientLight}, \hyperpage{19}
+    \subitem {DirectionalLight}, \hyperpage{53}
+    \subitem {ILight}, \hyperpage{64}
+    \subitem {PointLight}, \hyperpage{107}
+  \item {getSymbol}
+    \subitem {PluginsHandle}, \hyperpage{95}
+    \subitem {PluginsManager}, \hyperpage{97}
+  \item {getText}
+    \subitem {Cursor}, \hyperpage{43}
+  \item {getTransparency}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {getType}
+    \subitem {AmbientLight}, \hyperpage{20}
+    \subitem {Cone}, \hyperpage{36}
+    \subitem {Cursor}, \hyperpage{43}
+    \subitem {Cylindre}, \hyperpage{48}
+    \subitem {DirectionalLight}, \hyperpage{53}
+    \subitem {Face}, \hyperpage{56}
+    \subitem {ILight}, \hyperpage{64}
+    \subitem {InfinitCone}, \hyperpage{70}
+    \subitem {InfiniteCylindre}, \hyperpage{73}
+    \subitem {IPrimitive}, \hyperpage{76}
+    \subitem {Plane}, \hyperpage{90}
+    \subitem {PointLight}, \hyperpage{107}
+    \subitem {Sphere}, \hyperpage{133}
+    \subitem {Triangle}, \hyperpage{141}
+  \item {getWidth}
+    \subitem {Camera}, \hyperpage{22}
+  \item {getX}
+    \subitem {Math::Point}, \hyperpage{101}
+    \subitem {Math::Vector}, \hyperpage{144}
+  \item {getY}
+    \subitem {Math::Point}, \hyperpage{101}
+    \subitem {Math::Vector}, \hyperpage{144}
+  \item {getZ}
+    \subitem {Math::Point}, \hyperpage{101}
+    \subitem {Math::Vector}, \hyperpage{145}
+  \item {Gui}, \hyperpage{57}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Gui}, \hyperpage{58}
+    \subitem {createImage}, \hyperpage{58}
+    \subitem {Gui}, \hyperpage{57}
+    \subitem {handleInput}, \hyperpage{58}
+    \subitem {isOpen}, \hyperpage{59}
+    \subitem {renderScene}, \hyperpage{59}
+    \subitem {updateScene}, \hyperpage{59}
+
+  \indexspace
+
+  \item {handleInput}
+    \subitem {Gui}, \hyperpage{58}
+  \item {help}
+    \subitem {Main.cpp}, \hyperpage{221}
+  \item {HitInfo}, \hyperpage{59}
+    \subitem {getColor}, \hyperpage{61}
+    \subitem {getDistance}, \hyperpage{61}
+    \subitem {getNormal}, \hyperpage{61}
+    \subitem {getPosition}, \hyperpage{61}
+    \subitem {HitInfo}, \hyperpage{60}
+
+  \indexspace
+
+  \item {ILight}, \hyperpage{62}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ILight}, \hyperpage{63}
+    \subitem {getAmbientComponent}, \hyperpage{63}
+    \subitem {getColor}, \hyperpage{63}
+    \subitem {getDiffuseComponent}, \hyperpage{63}
+    \subitem {getDirection}, \hyperpage{63}
+    \subitem {getIntensity}, \hyperpage{64}
+    \subitem {getPosition}, \hyperpage{64}
+    \subitem {getSpecularComponent}, \hyperpage{64}
+    \subitem {getType}, \hyperpage{64}
+  \item {Image}, \hyperpage{65}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Image}, \hyperpage{66}
+    \subitem {createDirAndFileName}, \hyperpage{66}
+    \subitem {Image}, \hyperpage{65}
+    \subitem {save}, \hyperpage{66}
+  \item {ImageException}, \hyperpage{67}
+    \subitem {ImageException}, \hyperpage{67}
+  \item {include/core/Camera.hpp}, \hyperpage{153}
+  \item {include/core/Core.hpp}, \hyperpage{154, 155}
+  \item {include/core/Gui.hpp}, \hyperpage{156}
+  \item {include/core/Render.hpp}, \hyperpage{157, 158}
+  \item {include/core/Scene.hpp}, \hyperpage{159}
+  \item {include/core/Screen.hpp}, \hyperpage{160}
+  \item {include/Define.hpp}, \hyperpage{161}, \hyperpage{163}
+  \item {include/exceptions/Exception.hpp}, \hyperpage{164}
+  \item {include/images/Image.hpp}, \hyperpage{165}
+  \item {include/interfaces/ILight.hpp}, \hyperpage{166}
+  \item {include/interfaces/IPrimitive.hpp}, \hyperpage{167}
+  \item {include/interfaces/ITransformations.hpp}, \hyperpage{168}
+  \item {include/loader/ObjParser.hpp}, \hyperpage{168, 169}
+  \item {include/loader/SceneLoader.hpp}, \hyperpage{169, 170}
+  \item {include/materials/AMaterial.hpp}, \hyperpage{170, 171}
+  \item {include/materials/Chessboard.hpp}, \hyperpage{171, 172}
+  \item {include/materials/Default.hpp}, \hyperpage{172}
+  \item {include/materials/Metal.hpp}, \hyperpage{173}
+  \item {include/materials/Mtl.hpp}, \hyperpage{173}
+  \item {include/materials/PerlinNoise.hpp}, \hyperpage{174}
+  \item {include/materials/Transparent.hpp}, \hyperpage{174, 175}
+  \item {include/plugins/lights/AmbientLight.hpp}, \hyperpage{175, 176}
+  \item {include/plugins/lights/DirectionalLight.hpp}, 
+		\hyperpage{177, 178}
+  \item {include/plugins/lights/PointLight.hpp}, \hyperpage{179, 180}
+  \item {include/plugins/PluginsFactory.hpp}, \hyperpage{181, 182}
+  \item {include/plugins/PluginsHandle.hpp}, \hyperpage{182, 183}
+  \item {include/plugins/PluginsManager.hpp}, \hyperpage{183, 184}
+  \item {include/plugins/primitives/Cone.hpp}, \hyperpage{185, 186}
+  \item {include/plugins/primitives/Cylindre.hpp}, \hyperpage{187, 188}
+  \item {include/plugins/primitives/InfinitCone.hpp}, 
+		\hyperpage{190, 191}
+  \item {include/plugins/primitives/InfiniteCylindre.hpp}, 
+		\hyperpage{192}, \hyperpage{194}
+  \item {include/plugins/primitives/Plane.hpp}, \hyperpage{195, 196}
+  \item {include/plugins/primitives/Sphere.hpp}, \hyperpage{198, 199}
+  \item {include/plugins/primitives/Triangle.hpp}, \hyperpage{200}, 
+		\hyperpage{202}
+  \item {include/transformations/Rotation.hpp}, \hyperpage{203, 204}
+  \item {include/transformations/Shear.hpp}, \hyperpage{204, 205}
+  \item {include/transformations/Translation.hpp}, \hyperpage{205, 206}
+  \item {include/utilitaries/Color.hpp}, \hyperpage{206, 207}
+  \item {include/utilitaries/Cursor.hpp}, \hyperpage{207, 208}
+  \item {include/utilitaries/Face.hpp}, \hyperpage{209}
+  \item {include/utilitaries/HitInfo.hpp}, \hyperpage{210}
+  \item {include/utilitaries/Matrix.hpp}, \hyperpage{211}
+  \item {include/utilitaries/Point.hpp}, \hyperpage{212}
+  \item {include/utilitaries/Ray.hpp}, \hyperpage{213, 214}
+  \item {include/utilitaries/Vector.hpp}, \hyperpage{214, 215}
+  \item {InfinitCone}, \hyperpage{68}
+    \subitem {\texorpdfstring{$\sim$}{\string~}InfinitCone}, 
+		\hyperpage{69}
+    \subitem {getColor}, \hyperpage{70}
+    \subitem {getIntersection}, \hyperpage{70}
+    \subitem {getMaterial}, \hyperpage{70}
+    \subitem {getType}, \hyperpage{70}
+    \subitem {InfinitCone}, \hyperpage{69}
+    \subitem {intersect}, \hyperpage{70}
+    \subitem {normal\_at}, \hyperpage{71}
+  \item {InfinitCone.hpp}
+    \subitem {createPrimitive}, \hyperpage{190}
+    \subitem {registerPlugin}, \hyperpage{190}
+  \item {InfiniteCylindre}, \hyperpage{71}
+    \subitem {\texorpdfstring{$\sim$}{\string~}InfiniteCylindre}, 
+		\hyperpage{72}
+    \subitem {getColor}, \hyperpage{73}
+    \subitem {getIntersection}, \hyperpage{73}
+    \subitem {getMaterial}, \hyperpage{73}
+    \subitem {getType}, \hyperpage{73}
+    \subitem {InfiniteCylindre}, \hyperpage{72}
+    \subitem {intersect}, \hyperpage{74}
+    \subitem {normal\_at}, \hyperpage{74}
+  \item {InfiniteCylindre.hpp}
+    \subitem {createPrimitive}, \hyperpage{193}
+    \subitem {registerPlugin}, \hyperpage{193}
+  \item {init}
+    \subitem {Core}, \hyperpage{39}
+  \item {initShape}
+    \subitem {Cursor}, \hyperpage{43}
+  \item {initText}
+    \subitem {Cursor}, \hyperpage{43}
+  \item {intersect}
+    \subitem {Cone}, \hyperpage{36}
+    \subitem {Cylindre}, \hyperpage{48}
+    \subitem {Face}, \hyperpage{56}
+    \subitem {InfinitCone}, \hyperpage{70}
+    \subitem {InfiniteCylindre}, \hyperpage{74}
+    \subitem {IPrimitive}, \hyperpage{76}
+    \subitem {Plane}, \hyperpage{91}
+    \subitem {Sphere}, \hyperpage{133}
+    \subitem {Triangle}, \hyperpage{141}
+  \item {intersect\_base}
+    \subitem {Cone}, \hyperpage{36}
+  \item {intersectCone}
+    \subitem {Cone}, \hyperpage{37}
+  \item {intersection\_cap}
+    \subitem {Cylindre}, \hyperpage{48}
+  \item {invert}
+    \subitem {Math::Vector}, \hyperpage{145}
+  \item {IPrimitive}, \hyperpage{75}
+    \subitem {\texorpdfstring{$\sim$}{\string~}IPrimitive}, 
+		\hyperpage{75}
+    \subitem {getColor}, \hyperpage{75}
+    \subitem {getIntersection}, \hyperpage{75}
+    \subitem {getMaterial}, \hyperpage{76}
+    \subitem {getType}, \hyperpage{76}
+    \subitem {intersect}, \hyperpage{76}
+    \subitem {normal\_at}, \hyperpage{77}
+  \item {isCursorSelected}
+    \subitem {Cursor}, \hyperpage{44}
+  \item {isInShadowOfShape}
+    \subitem {Render}, \hyperpage{114}
+  \item {isOpen}
+    \subitem {Gui}, \hyperpage{59}
+  \item {ITransformations}, \hyperpage{77}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ITransformations}, 
+		\hyperpage{78}
+    \subitem {apply}, \hyperpage{78}
+
+  \indexspace
+
+  \item {length}
+    \subitem {Math::Vector}, \hyperpage{145}
+  \item {LightsFactory}
+    \subitem {PluginsFactory.hpp}, \hyperpage{182}
+  \item {loadFromMtlLine}
+    \subitem {AMaterial}, \hyperpage{15}
+  \item {loadMaterials}
+    \subitem {ObjParser}, \hyperpage{85}
+  \item {loadPlugins}
+    \subitem {PluginsManager}, \hyperpage{98}
+  \item {loop}
+    \subitem {Core}, \hyperpage{40}
+
+  \indexspace
+
+  \item {main}
+    \subitem {Main.cpp}, \hyperpage{221}
+  \item {Main.cpp}
+    \subitem {help}, \hyperpage{221}
+    \subitem {main}, \hyperpage{221}
+  \item {Math}, \hyperpage{11}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{11}
+  \item {Math::Matrix$<$ X, Y $>$}, \hyperpage{79}
+    \subitem {\_col}, \hyperpage{82}
+    \subitem {\_matrix}, \hyperpage{82}
+    \subitem {\_row}, \hyperpage{82}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Matrix}, \hyperpage{80}
+    \subitem {getCol}, \hyperpage{80}
+    \subitem {getRow}, \hyperpage{80}
+    \subitem {Matrix}, \hyperpage{80}
+    \subitem {operator()}, \hyperpage{80, 81}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{81}
+  \item {Math::Point}, \hyperpage{99}
+    \subitem {dot}, \hyperpage{101}
+    \subitem {getX}, \hyperpage{101}
+    \subitem {getY}, \hyperpage{101}
+    \subitem {getZ}, \hyperpage{101}
+    \subitem {operator+}, \hyperpage{101, 102}
+    \subitem {operator+=}, \hyperpage{102}
+    \subitem {operator-\/}, \hyperpage{102, 103}
+    \subitem {operator==}, \hyperpage{103}
+    \subitem {Point}, \hyperpage{100}
+    \subitem {pointToMatrix}, \hyperpage{103}
+    \subitem {setX}, \hyperpage{103}
+    \subitem {setY}, \hyperpage{104}
+    \subitem {setZ}, \hyperpage{104}
+    \subitem {shearToMatrix}, \hyperpage{104}
+  \item {Math::Vector}, \hyperpage{142}
+    \subitem {crossProduct}, \hyperpage{144}
+    \subitem {dot}, \hyperpage{144}
+    \subitem {getX}, \hyperpage{144}
+    \subitem {getY}, \hyperpage{144}
+    \subitem {getZ}, \hyperpage{145}
+    \subitem {invert}, \hyperpage{145}
+    \subitem {length}, \hyperpage{145}
+    \subitem {near\_zero}, \hyperpage{145}
+    \subitem {normalize}, \hyperpage{146}
+    \subitem {operator+}, \hyperpage{147}
+    \subitem {operator+=}, \hyperpage{147}
+    \subitem {operator-\/}, \hyperpage{148}
+    \subitem {operator-\/=}, \hyperpage{148}
+    \subitem {operator/}, \hyperpage{148, 149}
+    \subitem {operator/=}, \hyperpage{149}
+    \subitem {operator==}, \hyperpage{150}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{146}
+    \subitem {operator\texorpdfstring{$\ast$}{*}=}, 
+		\hyperpage{146, 147}
+    \subitem {random}, \hyperpage{150}
+    \subitem {random\_double}, \hyperpage{150, 151}
+    \subitem {reflect}, \hyperpage{151}
+    \subitem {shearToMatrix}, \hyperpage{151}
+    \subitem {Vector}, \hyperpage{143}
+    \subitem {vectorToMatrix}, \hyperpage{151}
+  \item {Matrix}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{80}
+  \item {MAX\_DEPTH}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {Metal}, \hyperpage{82}
+    \subitem {Metal}, \hyperpage{83}
+  \item {mouseClickedOnCursor}
+    \subitem {Cursor}, \hyperpage{44}
+  \item {moveCursor}
+    \subitem {Cursor}, \hyperpage{44}
+  \item {moveRectangleShape}
+    \subitem {Cursor}, \hyperpage{44}
+  \item {Mtl}, \hyperpage{83}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Mtl}, \hyperpage{84}
+    \subitem {Mtl}, \hyperpage{84}
+
+  \indexspace
+
+  \item {near\_zero}
+    \subitem {Math::Vector}, \hyperpage{145}
+  \item {normal\_at}
+    \subitem {Cone}, \hyperpage{37}
+    \subitem {Cylindre}, \hyperpage{49}
+    \subitem {Face}, \hyperpage{56}
+    \subitem {InfinitCone}, \hyperpage{71}
+    \subitem {InfiniteCylindre}, \hyperpage{74}
+    \subitem {IPrimitive}, \hyperpage{77}
+    \subitem {Plane}, \hyperpage{91}
+    \subitem {Sphere}, \hyperpage{134}
+    \subitem {Triangle}, \hyperpage{141}
+  \item {normalize}
+    \subitem {Math::Vector}, \hyperpage{146}
+  \item {notifyRenderThread}
+    \subitem {Core}, \hyperpage{40}
+
+  \indexspace
+
+  \item {obj/core/CalculateRender.d}, \hyperpage{218}
+  \item {obj/core/Camera.d}, \hyperpage{218}
+  \item {obj/core/Core.d}, \hyperpage{218}
+  \item {obj/core/Gui.d}, \hyperpage{218}
+  \item {obj/core/hotreload.d}, \hyperpage{218}
+  \item {obj/core/Main.d}, \hyperpage{218}
+  \item {obj/core/PluginsHandle.d}, \hyperpage{218}
+  \item {obj/core/PluginsManager.d}, \hyperpage{218}
+  \item {obj/core/Render.d}, \hyperpage{218}
+  \item {obj/core/Scene.d}, \hyperpage{218}
+  \item {obj/core/Screen.d}, \hyperpage{218}
+  \item {obj/exceptions/Exception.d}, \hyperpage{218}
+  \item {obj/images/Image.d}, \hyperpage{218}
+  \item {obj/loader/ObjParser.d}, \hyperpage{218}
+  \item {obj/loader/SceneLoader.d}, \hyperpage{218}
+  \item {obj/materials/AMaterial.d}, \hyperpage{218}
+  \item {obj/materials/Chessboard.d}, \hyperpage{218}
+  \item {obj/materials/Default.d}, \hyperpage{218}
+  \item {obj/materials/Metal.d}, \hyperpage{218}
+  \item {obj/materials/PerlinNoise.d}, \hyperpage{218}
+  \item {obj/materials/Transparent.d}, \hyperpage{218}
+  \item {obj/transformation/Rotation.d}, \hyperpage{218}
+  \item {obj/transformation/Shear.d}, \hyperpage{218}
+  \item {obj/transformation/Translation.d}, \hyperpage{218}
+  \item {obj/utilitaries/Color.d}, \hyperpage{218}
+  \item {obj/utilitaries/Cursor.d}, \hyperpage{218}
+  \item {obj/utilitaries/Face.d}, \hyperpage{218}
+  \item {obj/utilitaries/HitInfo.d}, \hyperpage{218}
+  \item {obj/utilitaries/Point.d}, \hyperpage{218}
+  \item {obj/utilitaries/Ray.d}, \hyperpage{218}
+  \item {obj/utilitaries/Vector.d}, \hyperpage{218}
+  \item {ObjParser}, \hyperpage{85}
+    \subitem {loadMaterials}, \hyperpage{85}
+    \subitem {parse}, \hyperpage{85}
+    \subitem {parseMaterial}, \hyperpage{86}
+  \item {OCCLUSION\_SAMPLE\_PX}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {operator$<$$<$}
+    \subitem {Color.cpp}, \hyperpage{229}
+    \subitem {Color.hpp}, \hyperpage{207}
+  \item {operator()}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{80, 81}
+  \item {operator+}
+    \subitem {Color}, \hyperpage{31}
+    \subitem {Math::Point}, \hyperpage{101, 102}
+    \subitem {Math::Vector}, \hyperpage{147}
+  \item {operator+=}
+    \subitem {Color}, \hyperpage{31}
+    \subitem {Math::Point}, \hyperpage{102}
+    \subitem {Math::Vector}, \hyperpage{147}
+  \item {operator-\/}
+    \subitem {Color}, \hyperpage{31}
+    \subitem {Math::Point}, \hyperpage{102, 103}
+    \subitem {Math::Vector}, \hyperpage{148}
+  \item {operator-\/=}
+    \subitem {Math::Vector}, \hyperpage{148}
+  \item {operator/}
+    \subitem {Color}, \hyperpage{32}
+    \subitem {Math::Vector}, \hyperpage{148, 149}
+  \item {operator/=}
+    \subitem {Color}, \hyperpage{32}
+    \subitem {Math::Vector}, \hyperpage{149}
+  \item {operator=}
+    \subitem {PluginsHandle}, \hyperpage{95, 96}
+  \item {operator==}
+    \subitem {Math::Point}, \hyperpage{103}
+    \subitem {Math::Vector}, \hyperpage{150}
+  \item {operator\texorpdfstring{$\ast$}{*}}
+    \subitem {Color}, \hyperpage{29, 30}
+    \subitem {Math}, \hyperpage{11}
+    \subitem {Math::Matrix$<$ X, Y $>$}, \hyperpage{81}
+    \subitem {Math::Vector}, \hyperpage{146}
+  \item {operator\texorpdfstring{$\ast$}{*}=}
+    \subitem {Color}, \hyperpage{30}
+    \subitem {Math::Vector}, \hyperpage{146, 147}
+  \item {orthogonalVector}
+    \subitem {CalculateRender.cpp}, \hyperpage{219}
+
+  \indexspace
+
+  \item {parse}
+    \subitem {ObjParser}, \hyperpage{85}
+  \item {parseMaterial}
+    \subitem {ObjParser}, \hyperpage{86}
+  \item {parseSceneCamera}
+    \subitem {SceneLoader}, \hyperpage{125}
+  \item {parseSceneFile}
+    \subitem {SceneLoader}, \hyperpage{126}
+  \item {parseSceneLight}
+    \subitem {SceneLoader}, \hyperpage{126}
+  \item {parseScenePrimitive}
+    \subitem {SceneLoader}, \hyperpage{126}
+  \item {PerlinNoiseMaterial}, \hyperpage{86}
+    \subitem {\texorpdfstring{$\sim$}{\string~}PerlinNoiseMaterial}, 
+		\hyperpage{87}
+    \subitem {getColorAt}, \hyperpage{88}
+    \subitem {PerlinNoiseMaterial}, \hyperpage{87}
+  \item {Plane}, \hyperpage{88}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Plane}, \hyperpage{89}
+    \subitem {getColor}, \hyperpage{90}
+    \subitem {getIntersection}, \hyperpage{90}
+    \subitem {getMaterial}, \hyperpage{90}
+    \subitem {getType}, \hyperpage{90}
+    \subitem {intersect}, \hyperpage{91}
+    \subitem {normal\_at}, \hyperpage{91}
+    \subitem {Plane}, \hyperpage{89}
+  \item {Plane.hpp}
+    \subitem {createPrimitive}, \hyperpage{196}
+    \subitem {registerPlugin}, \hyperpage{196}
+  \item {PlugInException}, \hyperpage{92}
+  \item {PluginsException}, \hyperpage{92}
+    \subitem {PluginsException}, \hyperpage{92}
+  \item {PluginsFactory.hpp}
+    \subitem {LightsFactory}, \hyperpage{182}
+    \subitem {PrimitivesFactory}, \hyperpage{182}
+  \item {PluginsHandle}, \hyperpage{93}
+    \subitem {\texorpdfstring{$\sim$}{\string~}PluginsHandle}, 
+		\hyperpage{93}
+    \subitem {getSymbol}, \hyperpage{95}
+    \subitem {operator=}, \hyperpage{95, 96}
+    \subitem {PluginsHandle}, \hyperpage{93}, \hyperpage{95}
+  \item {PluginsManager}, \hyperpage{96}
+    \subitem {createLight}, \hyperpage{97}
+    \subitem {createPrimitive}, \hyperpage{97}
+    \subitem {getSymbol}, \hyperpage{97}
+    \subitem {loadPlugins}, \hyperpage{98}
+    \subitem {registerLightFactory}, \hyperpage{98}
+    \subitem {registerPrimitiveFactory}, \hyperpage{98}
+    \subitem {unregisterAllFactories}, \hyperpage{99}
+  \item {Point}
+    \subitem {Math::Point}, \hyperpage{100}
+  \item {pointAt}
+    \subitem {Screen}, \hyperpage{128}
+  \item {PointLight}, \hyperpage{104}
+    \subitem {getAmbientComponent}, \hyperpage{106}
+    \subitem {getColor}, \hyperpage{106}
+    \subitem {getDiffuseComponent}, \hyperpage{106}
+    \subitem {getDirection}, \hyperpage{106}
+    \subitem {getIntensity}, \hyperpage{106}
+    \subitem {getPosition}, \hyperpage{107}
+    \subitem {getSpecularComponent}, \hyperpage{107}
+    \subitem {getType}, \hyperpage{107}
+    \subitem {PointLight}, \hyperpage{105}
+  \item {PointLight.hpp}
+    \subitem {createLight}, \hyperpage{179}
+    \subitem {registerPlugin}, \hyperpage{180}
+  \item {pointToMatrix}
+    \subitem {Math::Point}, \hyperpage{103}
+  \item {PrimitivesFactory}
+    \subitem {PluginsFactory.hpp}, \hyperpage{182}
+
+  \indexspace
+
+  \item {random}
+    \subitem {Math::Vector}, \hyperpage{150}
+  \item {random\_double}
+    \subitem {CalculateRender.cpp}, \hyperpage{219}
+    \subitem {Math::Vector}, \hyperpage{150, 151}
+  \item {randomHemisphereDirection}
+    \subitem {Render}, \hyperpage{114}
+  \item {Ray}, \hyperpage{108}
+    \subitem {getDirection}, \hyperpage{109}
+    \subitem {getOrigin}, \hyperpage{109}
+    \subitem {Ray}, \hyperpage{108}
+    \subitem {setDirection}, \hyperpage{109}
+    \subitem {setOrigin}, \hyperpage{109}
+  \item {RaytracerException}, \hyperpage{110}
+    \subitem {RaytracerException}, \hyperpage{110}
+  \item {reflect}
+    \subitem {Math::Vector}, \hyperpage{151}
+    \subitem {Render}, \hyperpage{114}
+  \item {registerLightFactory}
+    \subitem {PluginsManager}, \hyperpage{98}
+  \item {registerPlugin}
+    \subitem {AmbientLight.hpp}, \hyperpage{175}
+    \subitem {Cone.hpp}, \hyperpage{185}
+    \subitem {Cylindre.hpp}, \hyperpage{188}
+    \subitem {DirectionalLight.hpp}, \hyperpage{177}
+    \subitem {InfinitCone.hpp}, \hyperpage{190}
+    \subitem {InfiniteCylindre.hpp}, \hyperpage{193}
+    \subitem {Plane.hpp}, \hyperpage{196}
+    \subitem {PointLight.hpp}, \hyperpage{180}
+    \subitem {Sphere.hpp}, \hyperpage{199}
+    \subitem {Triangle.hpp}, \hyperpage{201}
+  \item {registerPrimitiveFactory}
+    \subitem {PluginsManager}, \hyperpage{98}
+  \item {reloadScene}
+    \subitem {Core}, \hyperpage{40}
+  \item {Render}, \hyperpage{110}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Render}, \hyperpage{112}
+    \subitem {adaptiveSample}, \hyperpage{112}
+    \subitem {AmbiantOcclusion}, \hyperpage{112}
+    \subitem {ComputeDiffuseLights}, \hyperpage{113}
+    \subitem {computeFastRender}, \hyperpage{113}
+    \subitem {ComputePixelColor}, \hyperpage{113}
+    \subitem {computeRender}, \hyperpage{113}
+    \subitem {ComputeSpecularLight}, \hyperpage{113}
+    \subitem {isInShadowOfShape}, \hyperpage{114}
+    \subitem {randomHemisphereDirection}, \hyperpage{114}
+    \subitem {reflect}, \hyperpage{114}
+    \subitem {Render}, \hyperpage{111}
+    \subitem {renderPixel}, \hyperpage{114}
+    \subitem {renderReflection}, \hyperpage{116}
+    \subitem {renderRefraction}, \hyperpage{116}
+    \subitem {sendRay}, \hyperpage{116}
+    \subitem {setProgressCallback}, \hyperpage{117}
+  \item {RENDER\_COLOMNS\_DIVISION\_PIXEL}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {RenderException}, \hyperpage{117}
+    \subitem {RenderException}, \hyperpage{118}
+  \item {renderPixel}
+    \subitem {Render}, \hyperpage{114}
+  \item {renderReflection}
+    \subitem {Render}, \hyperpage{116}
+  \item {renderRefraction}
+    \subitem {Render}, \hyperpage{116}
+  \item {renderScene}
+    \subitem {Gui}, \hyperpage{59}
+  \item {ROTATE}
+    \subitem {Cursor.hpp}, \hyperpage{208}
+  \item {rotate}
+    \subitem {Camera}, \hyperpage{23}
+    \subitem {Screen}, \hyperpage{128}
+  \item {ROTATE\_X}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {ROTATE\_Y}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {ROTATE\_Z}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {RotateX}
+    \subitem {Rotation}, \hyperpage{120}
+  \item {RotateY}
+    \subitem {Rotation}, \hyperpage{120}
+  \item {RotateZ}
+    \subitem {Rotation}, \hyperpage{120}
+  \item {Rotation}, \hyperpage{118}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Rotation}, 
+		\hyperpage{119}
+    \subitem {apply}, \hyperpage{120}
+    \subitem {RotateX}, \hyperpage{120}
+    \subitem {RotateY}, \hyperpage{120}
+    \subitem {RotateZ}, \hyperpage{120}
+    \subitem {Rotation}, \hyperpage{119}
+
+  \indexspace
+
+  \item {save}
+    \subitem {Image}, \hyperpage{66}
+  \item {Scene}, \hyperpage{121}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Scene}, \hyperpage{121}
+    \subitem {addCamera}, \hyperpage{122}
+    \subitem {addLight}, \hyperpage{122}
+    \subitem {addPrimitive}, \hyperpage{122}
+    \subitem {getCamera}, \hyperpage{122}
+    \subitem {getDiffuse}, \hyperpage{122}
+    \subitem {getLights}, \hyperpage{123}
+    \subitem {getModifableCamera}, \hyperpage{123}
+    \subitem {getPrimitives}, \hyperpage{123}
+    \subitem {Scene}, \hyperpage{121}
+    \subitem {setDiffuse}, \hyperpage{123}
+    \subitem {setRotate}, \hyperpage{124}
+    \subitem {setShear}, \hyperpage{124}
+    \subitem {setTranslateScene}, \hyperpage{124}
+  \item {SceneException}, \hyperpage{124}
+    \subitem {SceneException}, \hyperpage{125}
+  \item {SceneLoader}, \hyperpage{125}
+    \subitem {parseSceneCamera}, \hyperpage{125}
+    \subitem {parseSceneFile}, \hyperpage{126}
+    \subitem {parseSceneLight}, \hyperpage{126}
+    \subitem {parseScenePrimitive}, \hyperpage{126}
+  \item {Screen}, \hyperpage{127}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Screen}, \hyperpage{127}
+    \subitem {getOrigin}, \hyperpage{128}
+    \subitem {pointAt}, \hyperpage{128}
+    \subitem {rotate}, \hyperpage{128}
+    \subitem {Screen}, \hyperpage{127}
+    \subitem {shear}, \hyperpage{128}
+    \subitem {translate}, \hyperpage{128}
+  \item {sendRay}
+    \subitem {Render}, \hyperpage{116}
+  \item {setColor}
+    \subitem {Color}, \hyperpage{32}
+  \item {setCtrl}
+    \subitem {Core}, \hyperpage{40}
+  \item {setCursorSelected}
+    \subitem {Cursor}, \hyperpage{45}
+  \item {setCursorText}
+    \subitem {Cursor}, \hyperpage{45}
+  \item {setDiffuse}
+    \subitem {Scene}, \hyperpage{123}
+  \item {setDiffuseColor}
+    \subitem {AMaterial}, \hyperpage{16}
+  \item {setDirection}
+    \subitem {Ray}, \hyperpage{109}
+  \item {setHandleRotation}
+    \subitem {Core}, \hyperpage{40}
+  \item {setHandleTranslation}
+    \subitem {Core}, \hyperpage{41}
+  \item {setOrigin}
+    \subitem {Ray}, \hyperpage{109}
+  \item {setPosition}
+    \subitem {Camera}, \hyperpage{23}
+  \item {setProgressCallback}
+    \subitem {Render}, \hyperpage{117}
+  \item {setRay}
+    \subitem {Camera}, \hyperpage{23}
+  \item {setRefractionIndex}
+    \subitem {AMaterial}, \hyperpage{16}
+  \item {setRotate}
+    \subitem {Scene}, \hyperpage{124}
+  \item {setShear}
+    \subitem {Scene}, \hyperpage{124}
+  \item {setShininess}
+    \subitem {AMaterial}, \hyperpage{16}
+  \item {setSpecularColor}
+    \subitem {AMaterial}, \hyperpage{16}
+  \item {setTranslateScene}
+    \subitem {Scene}, \hyperpage{124}
+  \item {setTransparency}
+    \subitem {AMaterial}, \hyperpage{17}
+  \item {setX}
+    \subitem {Math::Point}, \hyperpage{103}
+  \item {setY}
+    \subitem {Math::Point}, \hyperpage{104}
+  \item {setZ}
+    \subitem {Math::Point}, \hyperpage{104}
+  \item {Shear}, \hyperpage{128}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Shear}, \hyperpage{129}
+    \subitem {apply}, \hyperpage{129}
+    \subitem {Shear}, \hyperpage{129}
+    \subitem {shear}, \hyperpage{130}
+  \item {shear}
+    \subitem {Camera}, \hyperpage{24}
+    \subitem {Screen}, \hyperpage{128}
+    \subitem {Shear}, \hyperpage{130}
+  \item {shearToMatrix}
+    \subitem {Math::Point}, \hyperpage{104}
+    \subitem {Math::Vector}, \hyperpage{151}
+  \item {Sphere}, \hyperpage{130}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Sphere}, \hyperpage{131}
+    \subitem {getColor}, \hyperpage{131}
+    \subitem {getIntersection}, \hyperpage{131}
+    \subitem {getMaterial}, \hyperpage{133}
+    \subitem {getType}, \hyperpage{133}
+    \subitem {intersect}, \hyperpage{133}
+    \subitem {normal\_at}, \hyperpage{134}
+    \subitem {Sphere}, \hyperpage{131}
+  \item {Sphere.hpp}
+    \subitem {createPrimitive}, \hyperpage{198}
+    \subitem {registerPlugin}, \hyperpage{199}
+  \item {src/core/CalculateRender.cpp}, \hyperpage{218}
+  \item {src/core/Camera.cpp}, \hyperpage{219}
+  \item {src/core/Core.cpp}, \hyperpage{220}
+  \item {src/core/Gui.cpp}, \hyperpage{220}
+  \item {src/core/hotreload.cpp}, \hyperpage{220}
+  \item {src/core/Main.cpp}, \hyperpage{220}
+  \item {src/core/PluginsHandle.cpp}, \hyperpage{222}
+  \item {src/core/PluginsManager.cpp}, \hyperpage{222}
+  \item {src/core/Render.cpp}, \hyperpage{222}
+  \item {src/core/Scene.cpp}, \hyperpage{222}
+  \item {src/core/Screen.cpp}, \hyperpage{223}
+  \item {src/exceptions/Exception.cpp}, \hyperpage{223}
+  \item {src/images/Image.cpp}, \hyperpage{223}
+  \item {src/loader/ObjParser.cpp}, \hyperpage{223}
+  \item {src/loader/SceneLoader.cpp}, \hyperpage{223}
+  \item {src/materials/AMaterial.cpp}, \hyperpage{224}
+  \item {src/materials/Chessboard.cpp}, \hyperpage{224}
+  \item {src/materials/Default.cpp}, \hyperpage{224}
+  \item {src/materials/Metal.cpp}, \hyperpage{224}
+  \item {src/materials/PerlinNoise.cpp}, \hyperpage{224}
+  \item {src/materials/Transparent.cpp}, \hyperpage{224}
+  \item {src/plugins/lights/AmbientLight.cpp}, \hyperpage{225}
+  \item {src/plugins/lights/DirectionalLight.cpp}, \hyperpage{225}
+  \item {src/plugins/lights/PointLight.cpp}, \hyperpage{225}
+  \item {src/plugins/primitives/Cone.cpp}, \hyperpage{226}
+  \item {src/plugins/primitives/Cylindre.cpp}, \hyperpage{226}
+  \item {src/plugins/primitives/InfinitCone.cpp}, \hyperpage{226}
+  \item {src/plugins/primitives/InfiniteCylindre.cpp}, \hyperpage{227}
+  \item {src/plugins/primitives/Plane.cpp}, \hyperpage{227}
+  \item {src/plugins/primitives/Sphere.cpp}, \hyperpage{228}
+  \item {src/plugins/primitives/Triangle.cpp}, \hyperpage{228}
+  \item {src/transformation/Rotation.cpp}, \hyperpage{228}
+  \item {src/transformation/Shear.cpp}, \hyperpage{228}
+  \item {src/transformation/Translation.cpp}, \hyperpage{229}
+  \item {src/utilitaries/Color.cpp}, \hyperpage{229}
+  \item {src/utilitaries/Cursor.cpp}, \hyperpage{230}
+  \item {src/utilitaries/Face.cpp}, \hyperpage{230}
+  \item {src/utilitaries/HitInfo.cpp}, \hyperpage{230}
+  \item {src/utilitaries/Point.cpp}, \hyperpage{230}
+  \item {src/utilitaries/Ray.cpp}, \hyperpage{231}
+  \item {src/utilitaries/Vector.cpp}, \hyperpage{231}
+
+  \indexspace
+
+  \item {THREADS\_NUMBER}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {TRANSLATE}
+    \subitem {Cursor.hpp}, \hyperpage{208}
+  \item {translate}
+    \subitem {Camera}, \hyperpage{24}
+    \subitem {Screen}, \hyperpage{128}
+  \item {TRANSLATE\_X}
+    \subitem {Define.hpp}, \hyperpage{162}
+  \item {TRANSLATE\_Y}
+    \subitem {Define.hpp}, \hyperpage{163}
+  \item {TRANSLATE\_Z}
+    \subitem {Define.hpp}, \hyperpage{163}
+  \item {translateDown}
+    \subitem {Translation}, \hyperpage{136}
+  \item {translateIn}
+    \subitem {Translation}, \hyperpage{136}
+  \item {translateLeft}
+    \subitem {Translation}, \hyperpage{137}
+  \item {translateOut}
+    \subitem {Translation}, \hyperpage{137}
+  \item {translateRight}
+    \subitem {Translation}, \hyperpage{137}
+  \item {translateUp}
+    \subitem {Translation}, \hyperpage{137}
+  \item {Translation}, \hyperpage{134}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Translation}, 
+		\hyperpage{136}
+    \subitem {apply}, \hyperpage{136}
+    \subitem {translateDown}, \hyperpage{136}
+    \subitem {translateIn}, \hyperpage{136}
+    \subitem {translateLeft}, \hyperpage{137}
+    \subitem {translateOut}, \hyperpage{137}
+    \subitem {translateRight}, \hyperpage{137}
+    \subitem {translateUp}, \hyperpage{137}
+    \subitem {Translation}, \hyperpage{135}
+  \item {Transparent}, \hyperpage{137}
+    \subitem {Transparent}, \hyperpage{138}
+  \item {Triangle}, \hyperpage{139}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Triangle}, 
+		\hyperpage{140}
+    \subitem {getColor}, \hyperpage{140}
+    \subitem {getIntersection}, \hyperpage{140}
+    \subitem {getMaterial}, \hyperpage{140}
+    \subitem {getType}, \hyperpage{141}
+    \subitem {intersect}, \hyperpage{141}
+    \subitem {normal\_at}, \hyperpage{141}
+    \subitem {Triangle}, \hyperpage{139}
+  \item {Triangle.hpp}
+    \subitem {createPrimitive}, \hyperpage{201}
+    \subitem {registerPlugin}, \hyperpage{201}
+
+  \indexspace
+
+  \item {unregisterAllFactories}
+    \subitem {PluginsManager}, \hyperpage{99}
+  \item {updateCursor}
+    \subitem {Cursor}, \hyperpage{45}
+  \item {updateScene}
+    \subitem {Gui}, \hyperpage{59}
+
+  \indexspace
+
+  \item {Vector}
+    \subitem {Math::Vector}, \hyperpage{143}
+  \item {vectorToMatrix}
+    \subitem {Math::Vector}, \hyperpage{151}
+
+\end{theindex}

@@ -1,0 +1,76 @@
+\doxysection{ITransformations Class Reference}
+\hypertarget{class_i_transformations}{}\label{class_i_transformations}\index{ITransformations@{ITransformations}}
+
+
+An interface for transformations in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$ITransformations.\+hpp$>$}
+
+
+
+Inheritance diagram for ITransformations\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_transformations_ae4d8434f4c9e24a3ed7231d9e1ee9e1a}{\texorpdfstring{$\sim$}{\string~}\+ITransformations}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_transformations}{ITransformations} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_transformations_a0b0a60a9df2ca27f13dd5e85881046e8}{apply}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&origin, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} translation)=0
+\begin{DoxyCompactList}\small\item\em Apply the transformation to the given vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for transformations in the raytracer project. 
+
+This interface is used to define the transformations of the objects in the raytracer project. \begin{DoxyNote}{Note}
+All transformations must implement this interface. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_transformations_ae4d8434f4c9e24a3ed7231d9e1ee9e1a}\index{ITransformations@{ITransformations}!````~ITransformations@{\texorpdfstring{$\sim$}{\string~}ITransformations}}
+\index{````~ITransformations@{\texorpdfstring{$\sim$}{\string~}ITransformations}!ITransformations@{ITransformations}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ITransformations()}{\string~ITransformations()}}
+{\footnotesize\ttfamily \label{class_i_transformations_ae4d8434f4c9e24a3ed7231d9e1ee9e1a} 
+virtual ITransformations\+::\texorpdfstring{$\sim$}{\string~}\+ITransformations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{class_i_transformations}{ITransformations} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure proper cleanup of derived classes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_transformations_a0b0a60a9df2ca27f13dd5e85881046e8}\index{ITransformations@{ITransformations}!apply@{apply}}
+\index{apply@{apply}!ITransformations@{ITransformations}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily \label{class_i_transformations_a0b0a60a9df2ca27f13dd5e85881046e8} 
+virtual void ITransformations\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{origin}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Apply the transformation to the given vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverted} & A boolean indicating whether to apply the transformation in reverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function applies the transformation to the given vector. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{class_rotation_a6e51a2c156f6c442ba59df29832b1121}{Rotation}}, \mbox{\hyperlink{class_shear_a30c899e675854890b875f5c174f61aec}{Shear}}, and \mbox{\hyperlink{class_translation_a7428f9aa75c692732e5cd9ef14425690}{Translation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/interfaces/\mbox{\hyperlink{_i_transformations_8hpp}{ITransformations.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\doxysection{Shear Class Reference}
+\hypertarget{class_shear}{}\label{class_shear}\index{Shear@{Shear}}
+
+
+A class to represent a \doxylink{class_shear}{Shear} transformation.  
+
+
+
+
+{\ttfamily \#include $<$Shear.\+hpp$>$}
+
+
+
+Inheritance diagram for Shear\+:
+% FIG 0
+
+
+Collaboration diagram for Shear\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shear_a7cd03eec0bcc3c53f1006a1df8a8558e}{Shear}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_shear}{Shear} class. Initializes the \doxylink{class_shear}{Shear} with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shear_a75878c9f2941e816794d67ffbd184916}{\texorpdfstring{$\sim$}{\string~}\+Shear}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_shear}{Shear} class. Cleans up resources used by the \doxylink{class_shear}{Shear}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shear_a30c899e675854890b875f5c174f61aec}{apply}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&origin, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_shear}{Shear}}) override
+\begin{DoxyCompactList}\small\item\em Apply the \doxylink{class_shear}{Shear} to the given vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shear_adcd1a578a5824d06814feaa3b897aba4}{shear}} (\mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Rotate in the X axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_transformations}{ITransformations}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_transformations_ae4d8434f4c9e24a3ed7231d9e1ee9e1a}{\texorpdfstring{$\sim$}{\string~}\+ITransformations}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_transformations}{ITransformations} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a \doxylink{class_shear}{Shear} transformation. 
+
+This class is used to represent a \doxylink{class_shear}{Shear} transformation in the raytracer project. It inherits from the \doxylink{class_i_transformations}{ITransformations} interface. \begin{DoxyNote}{Note}
+The \doxylink{class_shear}{Shear} class is responsible for applying \doxylink{class_shear}{Shear} transformations 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shear_a7cd03eec0bcc3c53f1006a1df8a8558e}\index{Shear@{Shear}!Shear@{Shear}}
+\index{Shear@{Shear}!Shear@{Shear}}
+\doxysubsubsection{\texorpdfstring{Shear()}{Shear()}}
+{\footnotesize\ttfamily \label{class_shear_a7cd03eec0bcc3c53f1006a1df8a8558e} 
+Shear\+::\+Shear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_shear}{Shear} class. Initializes the \doxylink{class_shear}{Shear} with default values. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a \doxylink{class_shear}{Shear} with default values. 
+\end{DoxyNote}
+\Hypertarget{class_shear_a75878c9f2941e816794d67ffbd184916}\index{Shear@{Shear}!````~Shear@{\texorpdfstring{$\sim$}{\string~}Shear}}
+\index{````~Shear@{\texorpdfstring{$\sim$}{\string~}Shear}!Shear@{Shear}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Shear()}{\string~Shear()}}
+{\footnotesize\ttfamily \label{class_shear_a75878c9f2941e816794d67ffbd184916} 
+Shear\+::\texorpdfstring{$\sim$}{\string~}\+Shear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for \doxylink{class_shear}{Shear} class. Cleans up resources used by the \doxylink{class_shear}{Shear}. 
+
+\begin{DoxyNote}{Note}
+This destructor is called when the \doxylink{class_shear}{Shear} object is destroyed. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shear_a30c899e675854890b875f5c174f61aec}\index{Shear@{Shear}!apply@{apply}}
+\index{apply@{apply}!Shear@{Shear}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily \label{class_shear_a30c899e675854890b875f5c174f61aec} 
+void Shear\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{origin}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Apply the \doxylink{class_shear}{Shear} to the given vector. 
+
+Apply the translation to the given vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverted} & A boolean indicating whether to apply the transformation in reverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function applies the \doxylink{class_shear}{Shear} to the given vector.
+
+This function applies the translation to the given vector. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_i_transformations_a0b0a60a9df2ca27f13dd5e85881046e8}{ITransformations}}.
+
+\Hypertarget{class_shear_adcd1a578a5824d06814feaa3b897aba4}\index{Shear@{Shear}!shear@{shear}}
+\index{shear@{shear}!Shear@{Shear}}
+\doxysubsubsection{\texorpdfstring{shear()}{shear()}}
+{\footnotesize\ttfamily \label{class_shear_adcd1a578a5824d06814feaa3b897aba4} 
+void Shear\+::shear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Rotate in the X axis. 
+
+Rotate in the Y axis. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/transformations/\mbox{\hyperlink{_shear_8hpp}{Shear.\+hpp}}\item 
+src/transformation/\mbox{\hyperlink{_shear_8cpp}{Shear.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\doxysection{Sphere.\+hpp}
+\hypertarget{_sphere_8hpp_source}{}\label{_sphere_8hpp_source}\index{include/plugins/primitives/Sphere.hpp@{include/plugins/primitives/Sphere.hpp}}
+\mbox{\hyperlink{_sphere_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Sphere}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugins_manager_8hpp}{PluginsManager.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_material_8hpp}{AMaterial.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_8hpp}{Default.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_metal_8hpp}{Metal.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_chessboard_8hpp}{Chessboard.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_perlin_noise_8hpp}{PerlinNoise.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_transparent_8hpp}{Transparent.hpp}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sphere_aa78ca7fd11b11a0c23a774133e9ea541}{Sphere}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_primitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sphere_aa78ca7fd11b11a0c23a774133e9ea541}{Sphere}}(\mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ center,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color,\ \textcolor{keyword}{const}\ std::shared\_ptr<AMaterial>\ \&mat);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sphere_a49ced142bd3b79b528af3363cccbaf7e}{\string~Sphere}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_sphere_aa5aeda0882b74309321401d87cd37218}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sphere_a02dd5d865b852dbe994b76f1a1fc295f}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \mbox{\hyperlink{class_sphere_a6aa2896fd0c4d247d1b11e8a47351cb4}{getIntersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \mbox{\hyperlink{class_sphere_a4cc8d739230691fc260f44876c59c68d}{normal\_at}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \mbox{\hyperlink{class_sphere_acca8daa2b57aee5e921cd8eee75e687a}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \mbox{\hyperlink{class_sphere_a15ccf54f3975f93614e7186fdc6970cf}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \_center;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_radius;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_color;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \_material;}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00100\ \ \ \ \ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{_sphere_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}}(\textcolor{keyword}{const}\ libconfig::Setting\ \&setting)}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}radius"{}})\ ||}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}color"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}material"{}}))}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Missing\ required\ fields\ (x,\ y,\ z,\ radius,\ color,\ material)\ in\ Sphere\ settings."{}});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting[\textcolor{stringliteral}{"{}color"{}}].isGroup()\ ||\ setting[\textcolor{stringliteral}{"{}material"{}}].getType()\ !=\ libconfig::Setting::TypeString)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Sphere:\ color\ is\ not\ a\ group"{}});}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&colorSetting\ =\ setting[\textcolor{stringliteral}{"{}color"{}}];}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!colorSetting.exists(\textcolor{stringliteral}{"{}r"{}})\ ||\ !colorSetting.exists(\textcolor{stringliteral}{"{}g"{}})\ ||}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting.exists(\textcolor{stringliteral}{"{}b"{}})\ ||\ !colorSetting[\textcolor{stringliteral}{"{}r"{}}].isNumber()\ ||}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting[\textcolor{stringliteral}{"{}g"{}}].isNumber()\ ||\ !colorSetting[\textcolor{stringliteral}{"{}b"{}}].isNumber())}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ or\ missing\ color\ fields\ (r,\ g,\ b)\ in\ Sphere\ settings."{}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ getFloatOrInt\ =\ [](\textcolor{keyword}{const}\ libconfig::Setting\ \&s)\ -\/>\ \textcolor{keywordtype}{float}\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeFloat)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeInt)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(s));}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Sphere:\ value\ is\ not\ a\ number"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ material\ =\ setting[\textcolor{stringliteral}{"{}material"{}}].c\_str();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ mat;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Default"{}})\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Default>();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Metal"{}})\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Metal>();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Chessboard"{}})\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<ChessboardMaterial>();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}PerlinNoise"{}})\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<PerlinNoiseMaterial>();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Transparent"{}})\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Transparent>();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Sphere:\ Unknown\ material\ type"{}});}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ position(}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}x"{}}]),}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}y"{}}]),}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}z"{}}])}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radius\ =\ getFloatOrInt(setting[\textcolor{stringliteral}{"{}radius"{}}]);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ color(}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}r"{}}]),}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}g"{}}]),}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}b"{}}])}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<Sphere>(position,\ radius,\ color,\ mat);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}[Sphere]\ Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_sphere_8hpp_a5103d5f079a351497d19fb22b5c76683}{registerPlugin}}()}
+\DoxyCodeLine{00162\ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307}{PluginsManager::registerPrimitiveFactory}}(\textcolor{stringliteral}{"{}sphere"{}},\ \&\mbox{\hyperlink{_cone_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}});}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \};}
+
+\end{DoxyCode}

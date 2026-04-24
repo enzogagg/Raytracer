@@ -1,0 +1,297 @@
+\doxysection{Cursor Class Reference}
+\hypertarget{class_cursor}{}\label{class_cursor}\index{Cursor@{Cursor}}
+
+
+{\ttfamily \#include $<$Cursor.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cursor_a501fd0fe188f360a08a4da1cf5b25cae}{Cursor}} (std\+::pair$<$ double, double $>$ percentage\+Start\+Line, std\+::pair$<$ double, double $>$ percentage\+Finish\+Line, int width, int height, const sf\+::\+Font \&font, std\+::string cursor\+Title\+Text)
+\item 
+\mbox{\hyperlink{class_cursor_a025d505a120236dc61a889bd5b0aef16}{\texorpdfstring{$\sim$}{\string~}\+Cursor}} ()
+\item 
+void \mbox{\hyperlink{class_cursor_a59a3b560a15f95c089ae77690721dea2}{init\+Text}} (const sf\+::\+Font \&font, sf\+::\+Vector2f \+\_\+start\+Line, sf\+::\+Vector2f \+\_\+finish\+Line, std\+::string cursor\+Title\+Text)
+\begin{DoxyCompactList}\small\item\em Initialise all the text of the cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cursor_aa687ab6d6989edd28824c1d275109f02}{init\+Shape}} (sf\+::\+Vector2f \+\_\+start\+Line, sf\+::\+Vector2f \+\_\+finish\+Line)
+\begin{DoxyCompactList}\small\item\em Initialise the shape of the cursor. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_cursor_ac6be5caf4daa801976dd3f8d0d4d7036}{get\+Text}} () const
+\begin{DoxyCompactList}\small\item\em get the Text of the cursor \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_cursor_ac8ef36196dcecb1bf7b60fc82d951414}{get\+Cursor\+Title\+Text}} () const
+\begin{DoxyCompactList}\small\item\em get the title text of the cursor \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_cursor_a31169b63861ef2407e42712d317e8320}{get\+Rectangle}} () const
+\begin{DoxyCompactList}\small\item\em get the rectangle shape of the cursor \end{DoxyCompactList}\item 
+std\+::array$<$ sf\+::\+Vertex, 2 $>$ \mbox{\hyperlink{class_cursor_aa83699e46116aba53ec533e332353861}{get\+Cursor\+Line}} () const
+\begin{DoxyCompactList}\small\item\em get the cursor line of the cursor \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cursor_a5bf90b781a7a71bb8c9228083b6676f8}{get\+Pos\+Cursor}} () const
+\begin{DoxyCompactList}\small\item\em get the position of the cursor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cursor_a0afc308e4e2765434cedca4533721237}{is\+Cursor\+Selected}} () const
+\begin{DoxyCompactList}\small\item\em check if the cursor is selected \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cursor_af392b53371f613892a532a07f3ee13da}{set\+Cursor\+Selected}} (const bool cursor\+Select)
+\begin{DoxyCompactList}\small\item\em set if the cursors is selected of not \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cursor_aca61e035eae7de51cf7f1f72f2954f9f}{move\+Cursor}} (const int offset)
+\begin{DoxyCompactList}\small\item\em move the cursor position by an offset \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cursor_a4e75c6bc5078b4ae06266f6b0c05fae6}{set\+Cursor\+Text}} (const std\+::string cursors\+Text)
+\begin{DoxyCompactList}\small\item\em set the text of the cursors \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cursor_a27944f4db45e179b34332fa418c2e944}{move\+Rectangle\+Shape}} (const sf\+::\+Vector2f offset)
+\begin{DoxyCompactList}\small\item\em move the rectangle shape along the cursor axis \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_cursor_a9d8de11508e62347d278ce17f3d13bee}{update\+Cursor}} (sf\+::\+Vector2i mouse\+Pos, sf\+::\+Vector2i prev\+Mouse\+Pos, int \&event\+Key)
+\begin{DoxyCompactList}\small\item\em if the cursor is selected, update all the value to it \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cursor_a0a75aa46a4bca34054a0b8c4cedc165f}{mouse\+Clicked\+On\+Cursor}} (sf\+::\+Vector2i \&prev\+Mous\+Pos)
+\begin{DoxyCompactList}\small\item\em Check if the cursor as been selected by the user using the mouse button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031fa}{Cursor\+Type}} \mbox{\hyperlink{class_cursor_ac0340ffde93b03e1e825510d0c96225c}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em getter for the type of the cursor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cursor_a501fd0fe188f360a08a4da1cf5b25cae}\index{Cursor@{Cursor}!Cursor@{Cursor}}
+\index{Cursor@{Cursor}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{Cursor()}{Cursor()}}
+{\footnotesize\ttfamily \label{class_cursor_a501fd0fe188f360a08a4da1cf5b25cae} 
+Cursor\+::\+Cursor (\begin{DoxyParamCaption}\item[{std\+::pair$<$ double, double $>$}]{percentage\+Start\+Line}{, }\item[{std\+::pair$<$ double, double $>$}]{percentage\+Finish\+Line}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{const sf\+::\+Font \&}]{font}{, }\item[{std\+::string}]{cursor\+Title\+Text}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_cursor_a025d505a120236dc61a889bd5b0aef16}\index{Cursor@{Cursor}!````~Cursor@{\texorpdfstring{$\sim$}{\string~}Cursor}}
+\index{````~Cursor@{\texorpdfstring{$\sim$}{\string~}Cursor}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cursor()}{\string~Cursor()}}
+{\footnotesize\ttfamily \label{class_cursor_a025d505a120236dc61a889bd5b0aef16} 
+Cursor\+::\texorpdfstring{$\sim$}{\string~}\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cursor_aa83699e46116aba53ec533e332353861}\index{Cursor@{Cursor}!getCursorLine@{getCursorLine}}
+\index{getCursorLine@{getCursorLine}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{getCursorLine()}{getCursorLine()}}
+{\footnotesize\ttfamily \label{class_cursor_aa83699e46116aba53ec533e332353861} 
+std\+::array$<$ sf\+::\+Vertex, 2 $>$ Cursor\+::get\+Cursor\+Line (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+get the cursor line of the cursor 
+
+\begin{DoxyReturn}{Returns}
+the array of vertex reprensenting the cursor line of the cursor 
+\end{DoxyReturn}
+\Hypertarget{class_cursor_ac8ef36196dcecb1bf7b60fc82d951414}\index{Cursor@{Cursor}!getCursorTitleText@{getCursorTitleText}}
+\index{getCursorTitleText@{getCursorTitleText}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{getCursorTitleText()}{getCursorTitleText()}}
+{\footnotesize\ttfamily \label{class_cursor_ac8ef36196dcecb1bf7b60fc82d951414} 
+sf\+::\+Text Cursor\+::get\+Cursor\+Title\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+get the title text of the cursor 
+
+\begin{DoxyReturn}{Returns}
+the title text of the cursor 
+\end{DoxyReturn}
+\Hypertarget{class_cursor_a5bf90b781a7a71bb8c9228083b6676f8}\index{Cursor@{Cursor}!getPosCursor@{getPosCursor}}
+\index{getPosCursor@{getPosCursor}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{getPosCursor()}{getPosCursor()}}
+{\footnotesize\ttfamily \label{class_cursor_a5bf90b781a7a71bb8c9228083b6676f8} 
+int Cursor\+::get\+Pos\+Cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+get the position of the cursor 
+
+\begin{DoxyReturn}{Returns}
+the position of the cursor 
+\end{DoxyReturn}
+\Hypertarget{class_cursor_a31169b63861ef2407e42712d317e8320}\index{Cursor@{Cursor}!getRectangle@{getRectangle}}
+\index{getRectangle@{getRectangle}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{getRectangle()}{getRectangle()}}
+{\footnotesize\ttfamily \label{class_cursor_a31169b63861ef2407e42712d317e8320} 
+sf\+::\+Rectangle\+Shape Cursor\+::get\+Rectangle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+get the rectangle shape of the cursor 
+
+\begin{DoxyReturn}{Returns}
+the rectangle shape of the cursor 
+\end{DoxyReturn}
+\Hypertarget{class_cursor_ac6be5caf4daa801976dd3f8d0d4d7036}\index{Cursor@{Cursor}!getText@{getText}}
+\index{getText@{getText}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily \label{class_cursor_ac6be5caf4daa801976dd3f8d0d4d7036} 
+sf\+::\+Text Cursor\+::get\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+get the Text of the cursor 
+
+\begin{DoxyReturn}{Returns}
+the Text of the cursor 
+\end{DoxyReturn}
+\Hypertarget{class_cursor_ac0340ffde93b03e1e825510d0c96225c}\index{Cursor@{Cursor}!getType@{getType}}
+\index{getType@{getType}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_cursor_ac0340ffde93b03e1e825510d0c96225c} 
+\mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031fa}{Cursor\+Type}} Cursor\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+getter for the type of the cursor 
+
+\Hypertarget{class_cursor_aa687ab6d6989edd28824c1d275109f02}\index{Cursor@{Cursor}!initShape@{initShape}}
+\index{initShape@{initShape}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{initShape()}{initShape()}}
+{\footnotesize\ttfamily \label{class_cursor_aa687ab6d6989edd28824c1d275109f02} 
+void Cursor\+::init\+Shape (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{\+\_\+start\+Line}{, }\item[{sf\+::\+Vector2f}]{\+\_\+finish\+Line}{}\end{DoxyParamCaption})}
+
+
+
+Initialise the shape of the cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+start\+Line} & position of the starting line of the cursor \\
+\hline
+{\em \+\_\+finish\+Line} & position of the finish line of the cursor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cursor_a59a3b560a15f95c089ae77690721dea2}\index{Cursor@{Cursor}!initText@{initText}}
+\index{initText@{initText}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{initText()}{initText()}}
+{\footnotesize\ttfamily \label{class_cursor_a59a3b560a15f95c089ae77690721dea2} 
+void Cursor\+::init\+Text (\begin{DoxyParamCaption}\item[{const sf\+::\+Font \&}]{font}{, }\item[{sf\+::\+Vector2f}]{\+\_\+start\+Line}{, }\item[{sf\+::\+Vector2f}]{\+\_\+finish\+Line}{, }\item[{std\+::string}]{cursor\+Title\+Text}{}\end{DoxyParamCaption})}
+
+
+
+Initialise all the text of the cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & The font for all the text of the cursor \\
+\hline
+{\em \+\_\+start\+Line} & position of the starting line of the cursor \\
+\hline
+{\em \+\_\+finish\+Line} & position of the finish line of the cursor \\
+\hline
+{\em cursor\+Title\+Text} & The title of the cursor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cursor_a0afc308e4e2765434cedca4533721237}\index{Cursor@{Cursor}!isCursorSelected@{isCursorSelected}}
+\index{isCursorSelected@{isCursorSelected}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{isCursorSelected()}{isCursorSelected()}}
+{\footnotesize\ttfamily \label{class_cursor_a0afc308e4e2765434cedca4533721237} 
+bool Cursor\+::is\+Cursor\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+check if the cursor is selected 
+
+\begin{DoxyReturn}{Returns}
+true or false \+:) 
+\end{DoxyReturn}
+\Hypertarget{class_cursor_a0a75aa46a4bca34054a0b8c4cedc165f}\index{Cursor@{Cursor}!mouseClickedOnCursor@{mouseClickedOnCursor}}
+\index{mouseClickedOnCursor@{mouseClickedOnCursor}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{mouseClickedOnCursor()}{mouseClickedOnCursor()}}
+{\footnotesize\ttfamily \label{class_cursor_a0a75aa46a4bca34054a0b8c4cedc165f} 
+void Cursor\+::mouse\+Clicked\+On\+Cursor (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i \&}]{prev\+Mous\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Check if the cursor as been selected by the user using the mouse button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prev\+Mous\+Pos} & Previous position of the mouse \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cursor_aca61e035eae7de51cf7f1f72f2954f9f}\index{Cursor@{Cursor}!moveCursor@{moveCursor}}
+\index{moveCursor@{moveCursor}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{moveCursor()}{moveCursor()}}
+{\footnotesize\ttfamily \label{class_cursor_aca61e035eae7de51cf7f1f72f2954f9f} 
+void Cursor\+::move\+Cursor (\begin{DoxyParamCaption}\item[{const int}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+move the cursor position by an offset 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & value to move the cursor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cursor_a27944f4db45e179b34332fa418c2e944}\index{Cursor@{Cursor}!moveRectangleShape@{moveRectangleShape}}
+\index{moveRectangleShape@{moveRectangleShape}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{moveRectangleShape()}{moveRectangleShape()}}
+{\footnotesize\ttfamily \label{class_cursor_a27944f4db45e179b34332fa418c2e944} 
+void Cursor\+::move\+Rectangle\+Shape (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+move the rectangle shape along the cursor axis 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & vector to move the rectangle\\
+\hline
+{\em offset} & pair to move the rectangle to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cursor_af392b53371f613892a532a07f3ee13da}\index{Cursor@{Cursor}!setCursorSelected@{setCursorSelected}}
+\index{setCursorSelected@{setCursorSelected}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{setCursorSelected()}{setCursorSelected()}}
+{\footnotesize\ttfamily \label{class_cursor_af392b53371f613892a532a07f3ee13da} 
+void Cursor\+::set\+Cursor\+Selected (\begin{DoxyParamCaption}\item[{const bool}]{cursor\+Select}{}\end{DoxyParamCaption})}
+
+
+
+set if the cursors is selected of not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor\+Selected} & boolean to switch mode \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cursor_a4e75c6bc5078b4ae06266f6b0c05fae6}\index{Cursor@{Cursor}!setCursorText@{setCursorText}}
+\index{setCursorText@{setCursorText}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{setCursorText()}{setCursorText()}}
+{\footnotesize\ttfamily \label{class_cursor_a4e75c6bc5078b4ae06266f6b0c05fae6} 
+void Cursor\+::set\+Cursor\+Text (\begin{DoxyParamCaption}\item[{const std\+::string}]{cursors\+Text}{}\end{DoxyParamCaption})}
+
+
+
+set the text of the cursors 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursors\+Text} & text to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+it\textquotesingle{}s mainly remind the user by how many pixel he moves the scene 
+
+it use the position of the cursor 
+\end{DoxyNote}
+\Hypertarget{class_cursor_a9d8de11508e62347d278ce17f3d13bee}\index{Cursor@{Cursor}!updateCursor@{updateCursor}}
+\index{updateCursor@{updateCursor}!Cursor@{Cursor}}
+\doxysubsubsection{\texorpdfstring{updateCursor()}{updateCursor()}}
+{\footnotesize\ttfamily \label{class_cursor_a9d8de11508e62347d278ce17f3d13bee} 
+sf\+::\+Vector2i Cursor\+::update\+Cursor (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{mouse\+Pos}{, }\item[{sf\+::\+Vector2i}]{prev\+Mouse\+Pos}{, }\item[{int \&}]{event\+Key}{}\end{DoxyParamCaption})}
+
+
+
+if the cursor is selected, update all the value to it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Pos} & current position of the mouse to compare with the previous \\
+\hline
+{\em prev\+Mouss\+Pos} & previous position of the mouse \\
+\hline
+{\em event\+Key} & tell the program to move to a direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the update position of the mouse 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_cursor_8hpp}{Cursor.\+hpp}}\item 
+src/utilitaries/\mbox{\hyperlink{_cursor_8cpp}{Cursor.\+cpp}}\end{DoxyCompactItemize}

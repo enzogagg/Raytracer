@@ -1,0 +1,121 @@
+\doxysection{Infinite\+Cylindre.\+hpp}
+\hypertarget{_infinite_cylindre_8hpp_source}{}\label{_infinite_cylindre_8hpp_source}\index{include/plugins/primitives/InfiniteCylindre.hpp@{include/plugins/primitives/InfiniteCylindre.hpp}}
+\mbox{\hyperlink{_infinite_cylindre_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ InfiniteCylindre}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugins_manager_8hpp}{PluginsManager.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_material_8hpp}{AMaterial.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_8hpp}{Default.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_metal_8hpp}{Metal.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_chessboard_8hpp}{Chessboard.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_perlin_noise_8hpp}{PerlinNoise.hpp}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_infinite_cylindre_af99c5c34d663850c5f0c804e3a95b11e}{InfiniteCylindre}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_primitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_infinite_cylindre_af99c5c34d663850c5f0c804e3a95b11e}{InfiniteCylindre}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_infinite_cylindre_af99c5c34d663850c5f0c804e3a95b11e}{InfiniteCylindre}}(\mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ center,\ \textcolor{keywordtype}{double}\ radius,\ \textcolor{keywordtype}{double}\ height,\ \mbox{\hyperlink{class_color}{Color}}\ \&color,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<AMaterial>\ \&mat);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_infinite_cylindre_aff50f1876b5c6855fd46e136e94a38d6}{\string~InfiniteCylindre}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_infinite_cylindre_acd1f463e553e38a11ab3e4cf5ec1016b}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_infinite_cylindre_afc314d447416d82110538281d900373e}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \mbox{\hyperlink{class_infinite_cylindre_a8460cae3a8126c92eddc478c2e83c9ba}{getIntersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \mbox{\hyperlink{class_infinite_cylindre_a4ef089f2e8d84b1bfa45bc299df44702}{normal\_at}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \mbox{\hyperlink{class_infinite_cylindre_a3839a3cf800c09a657bf2265442683c7}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \mbox{\hyperlink{class_infinite_cylindre_aec2565218e9c18cf0f650bfee95975a0}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \_center;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_radius;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_height;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_color;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \_material;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{_infinite_cylindre_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}}(\textcolor{keyword}{const}\ libconfig::Setting\ \&setting)}
+\DoxyCodeLine{00110\ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}height"{}})\ ||}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}angle"{}})\ \ ||\ !setting.exists(\textcolor{stringliteral}{"{}color"{}}))}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Missing\ required\ fields\ (x,\ y,\ z,\ radius,\ color)\ in\ InfiniteCylindre\ settings."{}});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting[\textcolor{stringliteral}{"{}color"{}}].isGroup())}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}InfiniteCylindre:\ color\ is\ not\ a\ group"{}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&colorSetting\ =\ setting[\textcolor{stringliteral}{"{}color"{}}];}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!colorSetting.exists(\textcolor{stringliteral}{"{}r"{}})\ ||\ !colorSetting.exists(\textcolor{stringliteral}{"{}g"{}})\ ||}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting.exists(\textcolor{stringliteral}{"{}b"{}})\ ||\ !colorSetting[\textcolor{stringliteral}{"{}r"{}}].isNumber()\ ||}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting[\textcolor{stringliteral}{"{}g"{}}].isNumber()\ ||\ !colorSetting[\textcolor{stringliteral}{"{}b"{}}].isNumber())}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ or\ missing\ color\ fields\ (r,\ g,\ b)\ in\ InfiniteCylindre\ settings."{}});}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ getFloatOrInt\ =\ [](\textcolor{keyword}{const}\ libconfig::Setting\ \&s)\ -\/>\ \textcolor{keywordtype}{float}\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeFloat)}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeInt)}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(s));}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}InfiniteCylindre:\ value\ is\ not\ a\ number"{}});}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ position(}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}x"{}}]),}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}y"{}}]),}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}z"{}}])}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ height\ =\ getFloatOrInt(setting[\textcolor{stringliteral}{"{}height"{}}]);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ angle\ =\ getFloatOrInt(setting[\textcolor{stringliteral}{"{}angle"{}}]);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ color(}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}r"{}}]),}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}g"{}}]),}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}b"{}}])}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ material\ =\ setting[\textcolor{stringliteral}{"{}material"{}}].c\_str();}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ mat;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Default"{}})\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Default>();}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Metal"{}})\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Metal>();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Chessboard"{}})\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<ChessboardMaterial>();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}PerlinNoise"{}})\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<PerlinNoiseMaterial>();}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Cylinder:\ Unknown\ material\ type"{}});}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<InfiniteCylindre>(position,\ angle,\ height,\ color,\ mat);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_infinite_cylindre_8hpp_a5103d5f079a351497d19fb22b5c76683}{registerPlugin}}()}
+\DoxyCodeLine{00172\ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307}{PluginsManager::registerPrimitiveFactory}}(\textcolor{stringliteral}{"{}infinite\_cylindre"{}},\ \&\mbox{\hyperlink{_cone_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}});}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \};}
+\DoxyCodeLine{00176\ }
+
+\end{DoxyCode}

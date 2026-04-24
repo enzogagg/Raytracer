@@ -1,0 +1,97 @@
+\doxysection{Point\+Light.\+hpp}
+\hypertarget{_point_light_8hpp_source}{}\label{_point_light_8hpp_source}\index{include/plugins/lights/PointLight.hpp@{include/plugins/lights/PointLight.hpp}}
+\mbox{\hyperlink{_point_light_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ PointLight}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugins_manager_8hpp}{PluginsManager.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_light_8hpp}{ILight.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_point_light_a3bcaf47d46c36d5f2155f0febf13c49e}{PointLight}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_light}{ILight}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_point_light_a3bcaf47d46c36d5f2155f0febf13c49e}{PointLight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \&position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color,\ \textcolor{keywordtype}{float}\ intensity);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_point_light_aee29b056171f0a3883dc614d1856f4f5}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&\mbox{\hyperlink{class_point_light_aa3203050158f703c4dcc470d48674378}{getPosition}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \&\mbox{\hyperlink{class_point_light_af0c0225fb5884feef6e400dc0e540c56}{getDirection}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_point_light_a63fc23fb119838b3379f7fa49934de1c}{getIntensity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&\mbox{\hyperlink{class_point_light_a13e3e215e02dc6ea250f3955ce482412}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&\mbox{\hyperlink{class_point_light_a256686d34074cd1c951b2c9ac67e6766}{getAmbientComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&\mbox{\hyperlink{class_point_light_a470e05253bce2a929e7c2876a7768769}{getDiffuseComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&\mbox{\hyperlink{class_point_light_adec49817001af05b3bf9a4ac47c36dae}{getSpecularComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \_position;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_intensity;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_color;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_ambient;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_diffuse;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_specular;}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ std::shared\_ptr<ILight>\ \mbox{\hyperlink{_point_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7}{createLight}}(\textcolor{keyword}{const}\ libconfig::Setting\ \&setting)}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}intensity"{}})\ ||}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}color"{}}))}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Missing\ required\ fields\ (x,\ y,\ z,\ intensity,\ color)\ in\ PointLight\ settings."{}});}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting[\textcolor{stringliteral}{"{}color"{}}].isGroup())}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}PointLight:\ color\ is\ not\ a\ group"{}});}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&colorSetting\ =\ setting[\textcolor{stringliteral}{"{}color"{}}];}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!colorSetting.exists(\textcolor{stringliteral}{"{}r"{}})\ ||\ !colorSetting.exists(\textcolor{stringliteral}{"{}g"{}})\ ||}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting.exists(\textcolor{stringliteral}{"{}b"{}})\ ||\ !colorSetting[\textcolor{stringliteral}{"{}r"{}}].isNumber()\ ||}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting[\textcolor{stringliteral}{"{}g"{}}].isNumber()\ ||\ !colorSetting[\textcolor{stringliteral}{"{}b"{}}].isNumber())}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}PointLight:\ r,\ g,\ b\ is\ not\ a\ number"{}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ getFloatOrInt\ =\ [](\textcolor{keyword}{const}\ libconfig::Setting\ \&s)\ -\/>\ \textcolor{keywordtype}{float}\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeFloat)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeInt)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(s));}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}PointLight:\ value\ is\ not\ a\ number"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ position(}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}x"{}}]),}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}y"{}}]),}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(setting[\textcolor{stringliteral}{"{}z"{}}])}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ intensity\ =\ getFloatOrInt(setting[\textcolor{stringliteral}{"{}intensity"{}}]);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ color(}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}r"{}}]),}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}g"{}}]),}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}b"{}}])}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<PointLight>(position,\ color,\ intensity);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}[PointLight]\ Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_point_light_8hpp_a5103d5f079a351497d19fb22b5c76683}{registerPlugin}}()}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plugins_manager_a32d1092f17e837b6f3d78a02f4d8df6d}{PluginsManager::registerLightFactory}}(\textcolor{stringliteral}{"{}point"{}},\ \&\mbox{\hyperlink{_ambient_light_8hpp_ad5bbf4e6b5c472e98daf46791e80fca7}{createLight}});}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \};}
+
+\end{DoxyCode}

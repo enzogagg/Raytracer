@@ -1,0 +1,78 @@
+\doxysection{Point.\+hpp}
+\hypertarget{_point_8hpp_source}{}\label{_point_8hpp_source}\index{include/utilitaries/Point.hpp@{include/utilitaries/Point.hpp}}
+\mbox{\hyperlink{_point_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Point}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector_8hpp}{Vector.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_matrix_8hpp}{Matrix.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_math}{Math}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}(\textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y,\ \textcolor{keywordtype}{double}\ z);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \mbox{\hyperlink{class_math_1_1_point_a2cec4900c07ede6b3d3f16fe22c44696}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \&point)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \mbox{\hyperlink{class_math_1_1_point_a2cec4900c07ede6b3d3f16fe22c44696}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_vector}{Vector}}\ \&vector)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \mbox{\hyperlink{class_math_1_1_point_ab9e42624aa5e0a16fa758c47887b9e92}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_vector}{Vector}}\ \&vector)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \&\mbox{\hyperlink{class_math_1_1_point_a9351819dbae628fe76b58ee1b4944e87}{operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_vector}{Vector}}\ \&vector);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_math_1_1_point_a8fc3a71e1f8f25543d50c871a23f2ce3}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \&point)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Vector}}\ \mbox{\hyperlink{class_math_1_1_point_ab9e42624aa5e0a16fa758c47887b9e92}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point_a6c2c8ee9fecabf08d16606106e3f9cd1}{Point}}\ \&other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_math_1_1_point_a12a51be86cdd89c33e05d32e33921014}{getX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_math_1_1_point_adeed1ea8e835a0003457bfda1a1ed91b}{getY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_math_1_1_point_a208b81ae0377788fa3f647bb3093fc2e}{getZ}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_math_1_1_point_a8d7d175c9d3970bb852ae7c7a4aacae1}{setX}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_math_1_1_point_a27c4b00bd54586ff4b99c1767ce9ea4f}{setY}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_math_1_1_point_acf46839facb6f1574958f1f5c615a2b3}{setZ}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ z);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_matrix}{Math::Matrix<4,\ 1>}}\ \mbox{\hyperlink{class_math_1_1_point_a450c05f7c6b0e005a92e0f5d82329e73}{pointToMatrix}}()}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_matrix}{Math::Matrix<4,\ 1>}}\ result;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\_matrix}}[0][0]\ =\ \_x;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\_matrix}}[1][0]\ =\ \_y;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\_matrix}}[2][0]\ =\ \_z;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\_matrix}}[3][0]\ =\ 1.0;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_matrix}{Math::Matrix<1,\ 2>}}\ \mbox{\hyperlink{class_math_1_1_point_a9ecf1cdd7120c46912af7d7342031d00}{shearToMatrix}}()}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_matrix}{Math::Matrix<1,\ 2>}}\ result;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\_matrix}}[0][0]\ =\ \_x;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{class_math_1_1_matrix_a9b90eef2a1f6e2a1ffcb8c32fec186e9}{\_matrix}}[0][1]\ =\ \_y;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_math_1_1_point_af71ad9403174302a6876a84ceb23a0d5}{dot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_vector}{Vector}}\ \&other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_x;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_y;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_z;}
+\DoxyCodeLine{00146\ \ \ \ \ \};}
+\DoxyCodeLine{00147\ \}}
+
+\end{DoxyCode}

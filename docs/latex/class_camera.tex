@@ -1,0 +1,253 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+A class to represent a camera in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_a047261f373113f85442321f20b0f8d0c}{Camera}} (const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&position=\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}(), const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&rotation=\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}(), double fov=90.\+0f, int width=800, int height=600)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_camera}{Camera} class. Initializes the camera with a position and rotation. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \& \mbox{\hyperlink{class_camera_afa5a36561e24105bfbbea6b122f40003}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the camera. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_camera_ac3f615fd674977d065592c1635fc40bc}{get\+Fov}} () const
+\begin{DoxyCompactList}\small\item\em Get the field of view of the camera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_camera_ae1ed75ac812ad9484a9cff67eb384709}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the camera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_camera_a9f7814df00fbe30066495336fbf9461f}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a66c89b7b9f64ff68843481f943303e3b}{set\+Ray}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Set the attribute of a ray. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_camera_a788948a539eb28b45ca8a80b8299cdee}{get\+Ray}} () const
+\begin{DoxyCompactList}\small\item\em Get the current ray send by the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a92509133a93ce17149065c678e522699}{set\+Position}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&position)
+\begin{DoxyCompactList}\small\item\em Set the position of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_afc5679ee5bec60b29407b62cde398652}{translate}} (\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} translation)
+\begin{DoxyCompactList}\small\item\em Translate the camera base on a vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a38bbccc69e41c5ea8dd832a525e1808e}{rotate}} (double angle, std\+::string axis)
+\item 
+void \mbox{\hyperlink{class_camera_a07c8f0c55528245a5847714e757a65a9}{shear}} (double strength)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a camera in the raytracer project. 
+
+The \doxylink{class_camera}{Camera} class contains a position and a direction vector. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_a047261f373113f85442321f20b0f8d0c}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily \label{class_camera_a047261f373113f85442321f20b0f8d0c} 
+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{position}{ = {\ttfamily \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}()}, }\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{rotation}{ = {\ttfamily \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}()}, }\item[{double}]{fov}{ = {\ttfamily 90.0f}, }\item[{int}]{width}{ = {\ttfamily 800}, }\item[{int}]{height}{ = {\ttfamily 600}}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_camera}{Camera} class. Initializes the camera with a position and rotation. 
+
+Constructor for the \doxylink{class_camera}{Camera} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the camera. \\
+\hline
+{\em rotation} & The rotation of the camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If no parameters are provided, the camera is initialized to (0, 0, 0). 
+
+This constructor can be used to create a camera with specific position and rotation.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the camera in 3D space. \\
+\hline
+{\em rotation} & The rotation the camera is facing. \\
+\hline
+{\em fov} & The field of view of the camera. \\
+\hline
+{\em width} & The width of the camera\textquotesingle{}s viewport. \\
+\hline
+{\em height} & The height of the camera\textquotesingle{}s viewport. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_ac3f615fd674977d065592c1635fc40bc}\index{Camera@{Camera}!getFov@{getFov}}
+\index{getFov@{getFov}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getFov()}{getFov()}}
+{\footnotesize\ttfamily \label{class_camera_ac3f615fd674977d065592c1635fc40bc} 
+double Camera\+::get\+Fov (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the field of view of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The field of view of the camera. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the field of view of the camera in degrees.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The field of view of the camera in degrees. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a9f7814df00fbe30066495336fbf9461f}\index{Camera@{Camera}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{class_camera_a9f7814df00fbe30066495336fbf9461f} 
+int Camera\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the camera. 
+
+Get the height of the camera\textquotesingle{}s viewport.
+
+\begin{DoxyReturn}{Returns}
+The height of the camera. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the height of the camera in pixels.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The height of the camera\textquotesingle{}s viewport. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_afa5a36561e24105bfbbea6b122f40003}\index{Camera@{Camera}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_camera_afa5a36561e24105bfbbea6b122f40003} 
+const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \& Camera\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the position of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The position of the camera. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the position point of the camera.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The position of the camera in 3D space. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a788948a539eb28b45ca8a80b8299cdee}\index{Camera@{Camera}!getRay@{getRay}}
+\index{getRay@{getRay}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getRay()}{getRay()}}
+{\footnotesize\ttfamily \label{class_camera_a788948a539eb28b45ca8a80b8299cdee} 
+\mbox{\hyperlink{class_ray}{Ray}} Camera\+::get\+Ray (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current ray send by the camera. 
+
+\begin{DoxyReturn}{Returns}
+a copy of the pointer to the ray 
+\end{DoxyReturn}
+\Hypertarget{class_camera_ae1ed75ac812ad9484a9cff67eb384709}\index{Camera@{Camera}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{class_camera_ae1ed75ac812ad9484a9cff67eb384709} 
+int Camera\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the width of the camera. 
+
+Get the width of the camera\textquotesingle{}s viewport.
+
+\begin{DoxyReturn}{Returns}
+The width of the camera. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the width of the camera in pixels.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The width of the camera\textquotesingle{}s viewport. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a38bbccc69e41c5ea8dd832a525e1808e}\index{Camera@{Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \label{class_camera_a38bbccc69e41c5ea8dd832a525e1808e} 
+void Camera\+::rotate (\begin{DoxyParamCaption}\item[{double}]{angle}{, }\item[{std\+::string}]{axis}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_camera_a92509133a93ce17149065c678e522699}\index{Camera@{Camera}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{class_camera_a92509133a93ce17149065c678e522699} 
+void Camera\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Set the position of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position of the camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method sets the position vector of the camera.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position of the camera in 3D space. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a66c89b7b9f64ff68843481f943303e3b}\index{Camera@{Camera}!setRay@{setRay}}
+\index{setRay@{setRay}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setRay()}{setRay()}}
+{\footnotesize\ttfamily \label{class_camera_a66c89b7b9f64ff68843481f943303e3b} 
+void Camera\+::set\+Ray (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Set the attribute of a ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & the origin of the ray \\
+\hline
+{\em direction} & the direction of the ray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The height of the camera 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a07c8f0c55528245a5847714e757a65a9}\index{Camera@{Camera}!shear@{shear}}
+\index{shear@{shear}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{shear()}{shear()}}
+{\footnotesize\ttfamily \label{class_camera_a07c8f0c55528245a5847714e757a65a9} 
+void Camera\+::shear (\begin{DoxyParamCaption}\item[{double}]{strength}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_camera_afc5679ee5bec60b29407b62cde398652}\index{Camera@{Camera}!translate@{translate}}
+\index{translate@{translate}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_camera_afc5679ee5bec60b29407b62cde398652} 
+void Camera\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})}
+
+
+
+Translate the camera base on a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation} & the vector that define the translation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_camera_8hpp}{Camera.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

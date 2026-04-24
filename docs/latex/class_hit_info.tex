@@ -1,0 +1,144 @@
+\doxysection{Hit\+Info Class Reference}
+\hypertarget{class_hit_info}{}\label{class_hit_info}\index{HitInfo@{HitInfo}}
+
+
+A class to represent hit information in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Hit\+Info.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hit_info_a1de9006f38d7d6c0d0aecd4154f80a46}{Hit\+Info}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_hit_info}{Hit\+Info} class. Initializes the hit information with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hit_info_abb7a3ac37454c2a464033fd4284a0c78}{Hit\+Info}} (const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&position, const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&normal, const \mbox{\hyperlink{class_color}{Color}} \&color, float distance)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_hit_info}{Hit\+Info} class with parameters. Initializes the hit information with specific values. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& \mbox{\hyperlink{class_hit_info_a8923e357477e4ce204a88f5596885a71}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the hit. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& \mbox{\hyperlink{class_hit_info_a65941f0bf8b0537639260ca133f7bd5b}{get\+Normal}} () const
+\begin{DoxyCompactList}\small\item\em Get the normal vector at the hit point. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_hit_info_a5539d49403d1cd5a4fdc20e23340afe0}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the color of the hit. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_hit_info_a8a513684fa6e162f83fcf57bd5a369d8}{get\+Distance}} () const
+\begin{DoxyCompactList}\small\item\em Get the distance from the ray origin to the hit point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent hit information in the raytracer project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_hit_info_a1de9006f38d7d6c0d0aecd4154f80a46}\index{HitInfo@{HitInfo}!HitInfo@{HitInfo}}
+\index{HitInfo@{HitInfo}!HitInfo@{HitInfo}}
+\doxysubsubsection{\texorpdfstring{HitInfo()}{HitInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_hit_info_a1de9006f38d7d6c0d0aecd4154f80a46} 
+Hit\+Info\+::\+Hit\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_hit_info}{Hit\+Info} class. Initializes the hit information with default values. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a \doxylink{class_hit_info}{Hit\+Info} object with default values. 
+\end{DoxyNote}
+\Hypertarget{class_hit_info_abb7a3ac37454c2a464033fd4284a0c78}\index{HitInfo@{HitInfo}!HitInfo@{HitInfo}}
+\index{HitInfo@{HitInfo}!HitInfo@{HitInfo}}
+\doxysubsubsection{\texorpdfstring{HitInfo()}{HitInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_hit_info_abb7a3ac37454c2a464033fd4284a0c78} 
+Hit\+Info\+::\+Hit\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{position}{, }\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{normal}{, }\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{color}{, }\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_hit_info}{Hit\+Info} class with parameters. Initializes the hit information with specific values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the hit. \\
+\hline
+{\em normal} & The normal vector at the hit point. \\
+\hline
+{\em color} & The color of the hit. \\
+\hline
+{\em distance} & The distance from the ray origin to the hit point. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hit_info_a5539d49403d1cd5a4fdc20e23340afe0}\index{HitInfo@{HitInfo}!getColor@{getColor}}
+\index{getColor@{getColor}!HitInfo@{HitInfo}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_hit_info_a5539d49403d1cd5a4fdc20e23340afe0} 
+const \mbox{\hyperlink{class_color}{Color}} \& Hit\+Info\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the color of the hit. 
+
+\begin{DoxyReturn}{Returns}
+The color of the hit. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the color of the hit. 
+\end{DoxyNote}
+\Hypertarget{class_hit_info_a8a513684fa6e162f83fcf57bd5a369d8}\index{HitInfo@{HitInfo}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!HitInfo@{HitInfo}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily \label{class_hit_info_a8a513684fa6e162f83fcf57bd5a369d8} 
+float Hit\+Info\+::get\+Distance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the distance from the ray origin to the hit point. 
+
+\begin{DoxyReturn}{Returns}
+The distance from the ray origin to the hit point. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the distance of the hit. 
+
+The distance is a float value representing the distance from the ray origin to the hit point. 
+
+This method can be used to determine how far the hit point is from the ray origin. 
+
+Example usage\+: \doxylink{class_hit_info}{Hit\+Info} hit\+Info; 
+\end{DoxyNote}
+\Hypertarget{class_hit_info_a65941f0bf8b0537639260ca133f7bd5b}\index{HitInfo@{HitInfo}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!HitInfo@{HitInfo}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{class_hit_info_a65941f0bf8b0537639260ca133f7bd5b} 
+const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& Hit\+Info\+::get\+Normal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the normal vector at the hit point. 
+
+\begin{DoxyReturn}{Returns}
+The normal vector at the hit point. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the normal vector of the hit. 
+\end{DoxyNote}
+\Hypertarget{class_hit_info_a8923e357477e4ce204a88f5596885a71}\index{HitInfo@{HitInfo}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!HitInfo@{HitInfo}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_hit_info_a8923e357477e4ce204a88f5596885a71} 
+const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \& Hit\+Info\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the position of the hit. 
+
+\begin{DoxyReturn}{Returns}
+The position of the hit. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method returns the position vector of the hit. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_hit_info_8hpp}{Hit\+Info.\+hpp}}\end{DoxyCompactItemize}

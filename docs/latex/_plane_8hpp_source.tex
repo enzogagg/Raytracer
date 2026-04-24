@@ -1,0 +1,139 @@
+\doxysection{Plane.\+hpp}
+\hypertarget{_plane_8hpp_source}{}\label{_plane_8hpp_source}\index{include/plugins/primitives/Plane.hpp@{include/plugins/primitives/Plane.hpp}}
+\mbox{\hyperlink{_plane_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Plane}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugins_manager_8hpp}{PluginsManager.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_point_8hpp}{Point.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_material_8hpp}{AMaterial.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_8hpp}{Default.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_metal_8hpp}{Metal.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_chessboard_8hpp}{Chessboard.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_perlin_noise_8hpp}{PerlinNoise.hpp}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plane_ad841f4be2120b93be0c78609bc31ec4f}{Plane}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_primitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plane_ad841f4be2120b93be0c78609bc31ec4f}{Plane}}(\mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ p0,\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ p1,\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ p2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color,\ \textcolor{keyword}{const}\ std::shared\_ptr<AMaterial>\ \&mat);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plane_a6f8564cebff68a5decc254e886adc0eb}{\string~Plane}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_plane_aa360e9300568bb1188a05757c8f9561c}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_plane_abf6a4bbfe957a9e85822060e1dd00be1}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \mbox{\hyperlink{class_plane_a4d5b44aabc49c295d2fe2bef707ebed8}{getIntersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \mbox{\hyperlink{class_plane_a1b1e4a97ade621d197ad1d30ebfe1408}{normal\_at}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \mbox{\hyperlink{class_plane_abdccd676cc482b21a4694ebf9dd6e4b5}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \mbox{\hyperlink{class_plane_a982f80e7f58a905ec6b78811770cf024}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::string\ \_axis;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_position;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \_a,\ \_b,\ \_c;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \_normal;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_color;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \_material;}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{_plane_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}}(\textcolor{keyword}{const}\ libconfig::Setting\ \&setting)}
+\DoxyCodeLine{00104\ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting.exists(\textcolor{stringliteral}{"{}p0"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}p1"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}p2"{}})\ ||}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}color"{}}))\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}[Plane]\ Missing\ required\ fields\ (p0,\ p1,\ p2,\ color)\ in\ Plane\ settings."{}});}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting[\textcolor{stringliteral}{"{}color"{}}].isGroup())\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}[Plane]\ Plane:\ color\ is\ not\ a\ group"{}});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&p0Setting\ =\ setting[\textcolor{stringliteral}{"{}p0"{}}];}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&p1Setting\ =\ setting[\textcolor{stringliteral}{"{}p1"{}}];}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&p2Setting\ =\ setting[\textcolor{stringliteral}{"{}p2"{}}];}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&colorSetting\ =\ setting[\textcolor{stringliteral}{"{}color"{}}];}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!p0Setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !p0Setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !p0Setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !p0Setting[\textcolor{stringliteral}{"{}x"{}}].isNumber()\ ||}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !p0Setting[\textcolor{stringliteral}{"{}y"{}}].isNumber()\ ||\ !p0Setting[\textcolor{stringliteral}{"{}z"{}}].isNumber())\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}[Plane]\ Invalid\ or\ missing\ p0\ fields\ (x,\ y,\ z)\ in\ Plane\ settings."{}});}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!p1Setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !p1Setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !p1Setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !p1Setting[\textcolor{stringliteral}{"{}x"{}}].isNumber()\ ||}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !p1Setting[\textcolor{stringliteral}{"{}y"{}}].isNumber()\ ||\ !p1Setting[\textcolor{stringliteral}{"{}z"{}}].isNumber())\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}[Plane]\ Invalid\ or\ missing\ p1\ fields\ (x,\ y,\ z)\ in\ Plane\ settings."{}});}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!p2Setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !p2Setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !p2Setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !p2Setting[\textcolor{stringliteral}{"{}x"{}}].isNumber()\ ||}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !p2Setting[\textcolor{stringliteral}{"{}y"{}}].isNumber()\ ||\ !p2Setting[\textcolor{stringliteral}{"{}z"{}}].isNumber())\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}[Plane]\ Invalid\ or\ missing\ p2\ fields\ (x,\ y,\ z)\ in\ Plane\ settings."{}});}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!colorSetting.exists(\textcolor{stringliteral}{"{}r"{}})\ ||\ !colorSetting.exists(\textcolor{stringliteral}{"{}g"{}})\ ||}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting.exists(\textcolor{stringliteral}{"{}b"{}})\ ||\ !colorSetting[\textcolor{stringliteral}{"{}r"{}}].isNumber()\ ||}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting[\textcolor{stringliteral}{"{}g"{}}].isNumber()\ ||\ !colorSetting[\textcolor{stringliteral}{"{}b"{}}].isNumber())\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}[Plane]\ Invalid\ or\ missing\ color\ fields\ (r,\ g,\ b)\ in\ Plane\ settings."{}});}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p0x\ =\ (p0Setting[\textcolor{stringliteral}{"{}x"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p0Setting[\textcolor{stringliteral}{"{}x"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p0Setting[\textcolor{stringliteral}{"{}x"{}}];}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p0y\ =\ (p0Setting[\textcolor{stringliteral}{"{}y"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p0Setting[\textcolor{stringliteral}{"{}y"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p0Setting[\textcolor{stringliteral}{"{}y"{}}];}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p0z\ =\ (p0Setting[\textcolor{stringliteral}{"{}z"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p0Setting[\textcolor{stringliteral}{"{}z"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p0Setting[\textcolor{stringliteral}{"{}z"{}}];}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p1x\ =\ (p1Setting[\textcolor{stringliteral}{"{}x"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p1Setting[\textcolor{stringliteral}{"{}x"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p1Setting[\textcolor{stringliteral}{"{}x"{}}];}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p1y\ =\ (p1Setting[\textcolor{stringliteral}{"{}y"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p1Setting[\textcolor{stringliteral}{"{}y"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p1Setting[\textcolor{stringliteral}{"{}y"{}}];}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p1z\ =\ (p1Setting[\textcolor{stringliteral}{"{}z"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p1Setting[\textcolor{stringliteral}{"{}z"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p1Setting[\textcolor{stringliteral}{"{}z"{}}];}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p2x\ =\ (p2Setting[\textcolor{stringliteral}{"{}x"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p2Setting[\textcolor{stringliteral}{"{}x"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p2Setting[\textcolor{stringliteral}{"{}x"{}}];}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p2y\ =\ (p2Setting[\textcolor{stringliteral}{"{}y"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p2Setting[\textcolor{stringliteral}{"{}y"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p2Setting[\textcolor{stringliteral}{"{}y"{}}];}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p2z\ =\ (p2Setting[\textcolor{stringliteral}{"{}z"{}}].getType()\ ==\ libconfig::Setting::TypeFloat)\ ?\ (float)p2Setting[\textcolor{stringliteral}{"{}z"{}}]\ :\ (float)(\textcolor{keywordtype}{int})p2Setting[\textcolor{stringliteral}{"{}z"{}}];}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ r\ =\ (int)colorSetting[\textcolor{stringliteral}{"{}r"{}}];}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ g\ =\ (int)colorSetting[\textcolor{stringliteral}{"{}g"{}}];}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ b\ =\ (int)colorSetting[\textcolor{stringliteral}{"{}b"{}}];}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ p0(p0x,\ p0y,\ p0z);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ p1(p1x,\ p1y,\ p1z);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ p2(p2x,\ p2y,\ p2z);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ color(r,\ g,\ b);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ material\ =\ setting[\textcolor{stringliteral}{"{}material"{}}].c\_str();}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ mat;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Default"{}})\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Default>();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Metal"{}})\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Metal>();}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Chessboard"{}})\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<ChessboardMaterial>();}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}PerlinNoise"{}})\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<PerlinNoiseMaterial>();}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Plane:\ Unknown\ material\ type"{}});}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<Plane>(p0,\ p1,\ p2,\ color,\ mat);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_plane_8hpp_a5103d5f079a351497d19fb22b5c76683}{registerPlugin}}()}
+\DoxyCodeLine{00188\ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307}{PluginsManager::registerPrimitiveFactory}}(\textcolor{stringliteral}{"{}plane"{}},\ \&\mbox{\hyperlink{_cone_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}});}
+\DoxyCodeLine{00190\ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \};}
+
+\end{DoxyCode}

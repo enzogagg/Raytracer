@@ -1,0 +1,141 @@
+\doxysection{Rotation Class Reference}
+\hypertarget{class_rotation}{}\label{class_rotation}\index{Rotation@{Rotation}}
+
+
+A class to represent a \doxylink{class_rotation}{Rotation} transformation.  
+
+
+
+
+{\ttfamily \#include $<$Rotation.\+hpp$>$}
+
+
+
+Inheritance diagram for Rotation\+:
+% FIG 0
+
+
+Collaboration diagram for Rotation\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rotation_a13ea1d345ca0a92c0f09b4de544ca460}{Rotation}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_rotation}{Rotation} class. Initializes the \doxylink{class_rotation}{Rotation} with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rotation_a053787d46734a5c3aae6acad4b9fea0d}{\texorpdfstring{$\sim$}{\string~}\+Rotation}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_rotation}{Rotation} class. Cleans up resources used by the \doxylink{class_rotation}{Rotation}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotation_a6e51a2c156f6c442ba59df29832b1121}{apply}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&origin, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_rotation}{Rotation}}) override
+\begin{DoxyCompactList}\small\item\em Apply the \doxylink{class_rotation}{Rotation} to the given vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotation_a22923336caec007ae61f66773b365e6d}{RotateX}} (bool Ctrl\+\_\+pressed, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Rotate in the X axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotation_a6d547925b0a084df7b39ff1d2d4e0da1}{RotateY}} (bool Ctrl\+\_\+pressed, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Rotate in the Y axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotation_afab9c79daab12091939ef805a790aaef}{RotateZ}} (bool Ctrl\+\_\+pressed, \mbox{\hyperlink{class_scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Rotate in the Y axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_transformations}{ITransformations}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_transformations_ae4d8434f4c9e24a3ed7231d9e1ee9e1a}{\texorpdfstring{$\sim$}{\string~}\+ITransformations}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_transformations}{ITransformations} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a \doxylink{class_rotation}{Rotation} transformation. 
+
+This class is used to represent a \doxylink{class_rotation}{Rotation} transformation in the raytracer project. It inherits from the \doxylink{class_i_transformations}{ITransformations} interface. \begin{DoxyNote}{Note}
+The \doxylink{class_rotation}{Rotation} class is responsible for applying \doxylink{class_rotation}{Rotation} transformations 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rotation_a13ea1d345ca0a92c0f09b4de544ca460}\index{Rotation@{Rotation}!Rotation@{Rotation}}
+\index{Rotation@{Rotation}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{Rotation()}{Rotation()}}
+{\footnotesize\ttfamily \label{class_rotation_a13ea1d345ca0a92c0f09b4de544ca460} 
+Rotation\+::\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_rotation}{Rotation} class. Initializes the \doxylink{class_rotation}{Rotation} with default values. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a \doxylink{class_rotation}{Rotation} with default values. 
+\end{DoxyNote}
+\Hypertarget{class_rotation_a053787d46734a5c3aae6acad4b9fea0d}\index{Rotation@{Rotation}!````~Rotation@{\texorpdfstring{$\sim$}{\string~}Rotation}}
+\index{````~Rotation@{\texorpdfstring{$\sim$}{\string~}Rotation}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Rotation()}{\string~Rotation()}}
+{\footnotesize\ttfamily \label{class_rotation_a053787d46734a5c3aae6acad4b9fea0d} 
+Rotation\+::\texorpdfstring{$\sim$}{\string~}\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for \doxylink{class_rotation}{Rotation} class. Cleans up resources used by the \doxylink{class_rotation}{Rotation}. 
+
+\begin{DoxyNote}{Note}
+This destructor is called when the \doxylink{class_rotation}{Rotation} object is destroyed. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rotation_a6e51a2c156f6c442ba59df29832b1121}\index{Rotation@{Rotation}!apply@{apply}}
+\index{apply@{apply}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily \label{class_rotation_a6e51a2c156f6c442ba59df29832b1121} 
+void Rotation\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{origin}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{translation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Apply the \doxylink{class_rotation}{Rotation} to the given vector. 
+
+Apply the translation to the given vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inverted} & A boolean indicating whether to apply the transformation in reverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function applies the \doxylink{class_rotation}{Rotation} to the given vector.
+
+This function applies the translation to the given vector. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_i_transformations_a0b0a60a9df2ca27f13dd5e85881046e8}{ITransformations}}.
+
+\Hypertarget{class_rotation_a22923336caec007ae61f66773b365e6d}\index{Rotation@{Rotation}!RotateX@{RotateX}}
+\index{RotateX@{RotateX}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{RotateX()}{RotateX()}}
+{\footnotesize\ttfamily \label{class_rotation_a22923336caec007ae61f66773b365e6d} 
+void Rotation\+::\+RotateX (\begin{DoxyParamCaption}\item[{bool}]{Ctrl\+\_\+pressed}{, }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Rotate in the X axis. 
+
+\Hypertarget{class_rotation_a6d547925b0a084df7b39ff1d2d4e0da1}\index{Rotation@{Rotation}!RotateY@{RotateY}}
+\index{RotateY@{RotateY}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{RotateY()}{RotateY()}}
+{\footnotesize\ttfamily \label{class_rotation_a6d547925b0a084df7b39ff1d2d4e0da1} 
+void Rotation\+::\+RotateY (\begin{DoxyParamCaption}\item[{bool}]{Ctrl\+\_\+pressed}{, }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Rotate in the Y axis. 
+
+\Hypertarget{class_rotation_afab9c79daab12091939ef805a790aaef}\index{Rotation@{Rotation}!RotateZ@{RotateZ}}
+\index{RotateZ@{RotateZ}!Rotation@{Rotation}}
+\doxysubsubsection{\texorpdfstring{RotateZ()}{RotateZ()}}
+{\footnotesize\ttfamily \label{class_rotation_afab9c79daab12091939ef805a790aaef} 
+void Rotation\+::\+RotateZ (\begin{DoxyParamCaption}\item[{bool}]{Ctrl\+\_\+pressed}{, }\item[{\mbox{\hyperlink{class_scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Rotate in the Y axis. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/transformations/\mbox{\hyperlink{_rotation_8hpp}{Rotation.\+hpp}}\item 
+src/transformation/\mbox{\hyperlink{_rotation_8cpp}{Rotation.\+cpp}}\end{DoxyCompactItemize}

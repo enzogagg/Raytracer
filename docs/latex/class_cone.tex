@@ -1,0 +1,309 @@
+\doxysection{Cone Class Reference}
+\hypertarget{class_cone}{}\label{class_cone}\index{Cone@{Cone}}
+
+
+{\ttfamily \#include $<$Cone.\+hpp$>$}
+
+
+
+Inheritance diagram for Cone\+:
+% FIG 0
+
+
+Collaboration diagram for Cone\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cone_aec709e915b3271a750d420b14b215bfb}{Cone}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for the cone shape. By default tip is at (0, 0, 0), height at (0, 0, 0) and angle at 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cone_aeb256912b16ee0e46a050897c8a353ec}{Cone}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} tip, \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} height, double angle, \mbox{\hyperlink{class_color}{Color}} \&color, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Constructor of the cone shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cone_a36a6a946043f7b24a34e42cb88b5a4e8}{\texorpdfstring{$\sim$}{\string~}\+Cone}} ()
+\begin{DoxyCompactList}\small\item\em basic destructor of the \doxylink{class_cone}{Cone} class \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_cone_ada3c7c2c8a14d2a0ad102a2f85b5f516}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the primitive shape. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cone_a100610c7c583bd1a76d4a57d94dd3d97}{intersect\+\_\+base}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const
+\begin{DoxyCompactList}\small\item\em Check if a ray intersect with the base of the cone (represented by a circle) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cone_a14e2137028e21fdd74425c64e77fba90}{intersect\+Cone}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const
+\begin{DoxyCompactList}\small\item\em Check if a ray intersect with the cone. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cone_a5f75c10a942a9c01e5a1e5776c41275a}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the primitive shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_cone_a07afb891af1dbe4bc455e9f3d7416cbd}{get\+Intersect\+Base}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const
+\begin{DoxyCompactList}\small\item\em Get the intersection point with the base of the cone (represented by a circle) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_cone_afa8d4cb59691c75bdeb606e7e449ad9d}{get\+Intersect\+Cone}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const
+\begin{DoxyCompactList}\small\item\em Get the intersection point with the cone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_cone_ae2d58cfeae2fda7f191af02c0dc7975d}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_cone_a7a8b9f32e39e4bacdd5dc0766b62de7b}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_cone_a9905d5b73186fb42435d9dffcdffc335}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Get the color of the primitive shape. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_cone_afd99b295b95bdb431881d3e1ab9c7dd4}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_primitive}{IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cone_aec709e915b3271a750d420b14b215bfb}\index{Cone@{Cone}!Cone@{Cone}}
+\index{Cone@{Cone}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{Cone()}{Cone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_cone_aec709e915b3271a750d420b14b215bfb} 
+Cone\+::\+Cone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for the cone shape. By default tip is at (0, 0, 0), height at (0, 0, 0) and angle at 0. 
+
+\Hypertarget{class_cone_aeb256912b16ee0e46a050897c8a353ec}\index{Cone@{Cone}!Cone@{Cone}}
+\index{Cone@{Cone}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{Cone()}{Cone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_cone_aeb256912b16ee0e46a050897c8a353ec} 
+Cone\+::\+Cone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{tip}{, }\item[{\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}}}]{height}{, }\item[{double}]{angle}{, }\item[{\mbox{\hyperlink{class_color}{Color}} \&}]{color}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Constructor of the cone shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tip} & Point that represent the tip of the cone \\
+\hline
+{\em height} & height vector, the vector\textquotesingle{}s origin is the tip of the cone \\
+\hline
+{\em angle} & the angle in degree represented between the height vector and the surface of the shape \\
+\hline
+{\em color} & The color of the cone.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If you want a straight, x and z align axis cone a basic height vector 
+
+would looks like height = (0, -\/1, 0)
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em tip} & Point that represent the tip of the cone \\
+\hline
+{\em height} & height vector, the vector\textquotesingle{}s origin is the tip of the cone \\
+\hline
+{\em angle} & the angle in degree represented between the height vector and the surface of the shape\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If you want a straight, x and z align axis cone a basic height vector 
+
+would looks like height = (0, -\/1, 0) 
+\end{DoxyNote}
+\Hypertarget{class_cone_a36a6a946043f7b24a34e42cb88b5a4e8}\index{Cone@{Cone}!````~Cone@{\texorpdfstring{$\sim$}{\string~}Cone}}
+\index{````~Cone@{\texorpdfstring{$\sim$}{\string~}Cone}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cone()}{\string~Cone()}}
+{\footnotesize\ttfamily \label{class_cone_a36a6a946043f7b24a34e42cb88b5a4e8} 
+Cone\+::\texorpdfstring{$\sim$}{\string~}\+Cone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+basic destructor of the \doxylink{class_cone}{Cone} class 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cone_a9905d5b73186fb42435d9dffcdffc335}\index{Cone@{Cone}!getColor@{getColor}}
+\index{getColor@{getColor}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_cone_a9905d5b73186fb42435d9dffcdffc335} 
+\mbox{\hyperlink{class_color}{Color}} Cone\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the color of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The color of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{IPrimitive}}.
+
+\Hypertarget{class_cone_a07afb891af1dbe4bc455e9f3d7416cbd}\index{Cone@{Cone}!getIntersectBase@{getIntersectBase}}
+\index{getIntersectBase@{getIntersectBase}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{getIntersectBase()}{getIntersectBase()}}
+{\footnotesize\ttfamily \label{class_cone_a07afb891af1dbe4bc455e9f3d7416cbd} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Cone\+::get\+Intersect\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the intersection point with the base of the cone (represented by a circle) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between the ray and the base 
+\end{DoxyReturn}
+\Hypertarget{class_cone_afa8d4cb59691c75bdeb606e7e449ad9d}\index{Cone@{Cone}!getIntersectCone@{getIntersectCone}}
+\index{getIntersectCone@{getIntersectCone}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{getIntersectCone()}{getIntersectCone()}}
+{\footnotesize\ttfamily \label{class_cone_afa8d4cb59691c75bdeb606e7e449ad9d} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Cone\+::get\+Intersect\+Cone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the intersection point with the cone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between the ray and the cone 
+\end{DoxyReturn}
+\Hypertarget{class_cone_ae2d58cfeae2fda7f191af02c0dc7975d}\index{Cone@{Cone}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_cone_ae2d58cfeae2fda7f191af02c0dc7975d} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Cone\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{IPrimitive}}.
+
+\Hypertarget{class_cone_afd99b295b95bdb431881d3e1ab9c7dd4}\index{Cone@{Cone}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_cone_afd99b295b95bdb431881d3e1ab9c7dd4} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ Cone\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{IPrimitive}}.
+
+\Hypertarget{class_cone_ada3c7c2c8a14d2a0ad102a2f85b5f516}\index{Cone@{Cone}!getType@{getType}}
+\index{getType@{getType}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_cone_ada3c7c2c8a14d2a0ad102a2f85b5f516} 
+const std\+::string \& Cone\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The type of the shape as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{IPrimitive}}.
+
+\Hypertarget{class_cone_a5f75c10a942a9c01e5a1e5776c41275a}\index{Cone@{Cone}!intersect@{intersect}}
+\index{intersect@{intersect}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_cone_a5f75c10a942a9c01e5a1e5776c41275a} 
+bool Cone\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a ray intersects with the primitive shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the shape, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{IPrimitive}}.
+
+\Hypertarget{class_cone_a100610c7c583bd1a76d4a57d94dd3d97}\index{Cone@{Cone}!intersect\_base@{intersect\_base}}
+\index{intersect\_base@{intersect\_base}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{intersect\_base()}{intersect\_base()}}
+{\footnotesize\ttfamily \label{class_cone_a100610c7c583bd1a76d4a57d94dd3d97} 
+bool Cone\+::intersect\+\_\+base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if a ray intersect with the base of the cone (represented by a circle) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it does, false if not 
+\end{DoxyReturn}
+\Hypertarget{class_cone_a14e2137028e21fdd74425c64e77fba90}\index{Cone@{Cone}!intersectCone@{intersectCone}}
+\index{intersectCone@{intersectCone}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{intersectCone()}{intersectCone()}}
+{\footnotesize\ttfamily \label{class_cone_a14e2137028e21fdd74425c64e77fba90} 
+bool Cone\+::intersect\+Cone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if a ray intersect with the cone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it does, false if not 
+\end{DoxyReturn}
+\Hypertarget{class_cone_a7a8b9f32e39e4bacdd5dc0766b62de7b}\index{Cone@{Cone}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!Cone@{Cone}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_cone_a7a8b9f32e39e4bacdd5dc0766b62de7b} 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} Cone\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/plugins/primitives/\mbox{\hyperlink{_cone_8hpp}{Cone.\+hpp}}\item 
+src/plugins/primitives/\mbox{\hyperlink{_cone_8cpp}{Cone.\+cpp}}\end{DoxyCompactItemize}

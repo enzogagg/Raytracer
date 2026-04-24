@@ -1,0 +1,58 @@
+\doxysection{include/plugins/\+Plugins\+Factory.hpp File Reference}
+\hypertarget{_plugins_factory_8hpp}{}\label{_plugins_factory_8hpp}\index{include/plugins/PluginsFactory.hpp@{include/plugins/PluginsFactory.hpp}}
+
+
+File that declares the factory type for the plugins.  
+
+
+{\ttfamily \#include "{}ILight.\+hpp"{}}\newline
+{\ttfamily \#include "{}IPrimitive.\+hpp"{}}\newline
+{\ttfamily \#include "{}Define.\+hpp"{}}\newline
+Include dependency graph for Plugins\+Factory.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940}{Primitives\+Factory}} = std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_i_primitive}{IPrimitive}}$>$(const libconfig\+::\+Setting \&)$>$
+\begin{DoxyCompactList}\small\item\em Type definition for a factory that creates \doxylink{class_i_primitive}{IPrimitive} objects. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61}{Lights\+Factory}} = std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_i_light}{ILight}}$>$(const libconfig\+::\+Setting \&)$>$
+\begin{DoxyCompactList}\small\item\em Type definition for a factory that creates \doxylink{class_i_light}{ILight} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File that declares the factory type for the plugins. 
+
+\begin{DoxyNote}{Note}
+This file is part of the Raytracer project. 
+\end{DoxyNote}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61}\index{PluginsFactory.hpp@{PluginsFactory.hpp}!LightsFactory@{LightsFactory}}
+\index{LightsFactory@{LightsFactory}!PluginsFactory.hpp@{PluginsFactory.hpp}}
+\doxysubsubsection{\texorpdfstring{LightsFactory}{LightsFactory}}
+{\footnotesize\ttfamily \label{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61} 
+using \mbox{\hyperlink{_plugins_factory_8hpp_abb1f150d951c897bf47d3c2266640e61}{Lights\+Factory}} = std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_i_light}{ILight}}$>$(const libconfig\+::\+Setting \&)$>$}
+
+
+
+Type definition for a factory that creates \doxylink{class_i_light}{ILight} objects. 
+
+This using is a definition for a function that takes a libconfig\+::\+Setting object and returns a pointer to an \doxylink{class_i_light}{ILight} object. \begin{DoxyNote}{Note}
+The function is expected to be used as a factory for creating \doxylink{class_i_light}{ILight} objects. 
+\end{DoxyNote}
+\Hypertarget{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940}\index{PluginsFactory.hpp@{PluginsFactory.hpp}!PrimitivesFactory@{PrimitivesFactory}}
+\index{PrimitivesFactory@{PrimitivesFactory}!PluginsFactory.hpp@{PluginsFactory.hpp}}
+\doxysubsubsection{\texorpdfstring{PrimitivesFactory}{PrimitivesFactory}}
+{\footnotesize\ttfamily \label{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940} 
+using \mbox{\hyperlink{_plugins_factory_8hpp_a1fb90011ac26b8f9a72f05bb32f5c940}{Primitives\+Factory}} = std\+::function$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_i_primitive}{IPrimitive}}$>$(const libconfig\+::\+Setting \&)$>$}
+
+
+
+Type definition for a factory that creates \doxylink{class_i_primitive}{IPrimitive} objects. 
+
+This using is a definition for a function that takes a libconfig\+::\+Setting object and returns a pointer to an \doxylink{class_i_primitive}{IPrimitive} object. \begin{DoxyNote}{Note}
+The function is expected to be used as a factory for creating \doxylink{class_i_primitive}{IPrimitive} objects. 
+\end{DoxyNote}

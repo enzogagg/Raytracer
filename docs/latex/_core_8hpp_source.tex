@@ -1,0 +1,85 @@
+\doxysection{Core.\+hpp}
+\hypertarget{_core_8hpp_source}{}\label{_core_8hpp_source}\index{include/core/Core.hpp@{include/core/Core.hpp}}
+\mbox{\hyperlink{_core_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Core}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_scene_8hpp}{Scene.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_scene_loader_8hpp}{SceneLoader.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gui_8hpp}{Gui.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_render_8hpp}{Render.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_image_8hpp}{Image.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_define_8hpp}{Define.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_translation_8hpp}{Translation.hpp}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rotation_8hpp}{Rotation.hpp}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shear_8hpp}{Shear.hpp}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_core_a14e63188e0aa7c4a6f72d5501384d1f9}{Core}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_core_a14e63188e0aa7c4a6f72d5501384d1f9}{Core}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_core_a776f8c46504b14183883c6273f93eaed}{\string~Core}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_ae711d5e66578753e1047be2f2e9360ad}{init}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a6d790cc20ecf986fc0bc04d85fc1412a}{loop}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a29e7fad335fcb7d31475ec6429ebf97d}{createGuiThread}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_ac42f1eddc3ca241ca9d2d9bc2d740236}{createRenderThread}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a7a8abc309a4b215f3a0b7f4305520cdf}{setCtrl}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_aa8ae7ac4bdda106f061030818775a84e}{setHandleTranslation}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a7e5fbf434f794377670787724194a27b}{setHandleRotation}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a2a50cc0e31a09b2c40c1996f75a25b4a}{notifyRenderThread}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a27acaac94e3cd49d6b5f5ef4e9223c99}{checkSceneFile}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_a7d1e15af96914db86dc23be602aeeaf3}{reloadScene}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_guiReady\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ std::string\ \_scenePath;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ std::filesystem::file\_time\_type\ \_lastModificationTime;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scene}{Scene}}\ \_scene;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plugins_manager}{PluginsManager}}\ \_pluginsManager;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ std::shared\_ptr<Gui>\ \_gui;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ std::shared\_ptr<Render>\ \_render;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::mutex\ \_guiMutex;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ std::mutex\ \_guiReadyMutex;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::mutex\ \_renderMutex;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::condition\_variable\ \_renderCondition;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::condition\_variable\ \_guiReadyCond;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ std::atomic<bool>\ \_needRenderUpdate;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ std::thread\ \_guiThread;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ std::thread\ \_renderThread;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ std::vector<Color>\ \_pixelsRender;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::vector<Color>\ \_pixelsFastRender;}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ std::unique\_ptr<Translation>\_translate;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ std::unique\_ptr<Rotation>\_rotation;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ std::unique\_ptr<Shear>\_shear;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_Ctrl\_pressed;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_eventKey;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ std::map<int,\ void\ (\mbox{\hyperlink{class_translation}{Translation}}::*)(\mbox{\hyperlink{class_scene}{Scene}}\&)>\ \_handle\_translation;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ std::map<int,\ void\ (\mbox{\hyperlink{class_rotation}{Rotation}}::*)(bool,\ \mbox{\hyperlink{class_scene}{Scene}}\&)>\ \_handle\_rotation;}
+\DoxyCodeLine{00133\ \};}
+
+\end{DoxyCode}

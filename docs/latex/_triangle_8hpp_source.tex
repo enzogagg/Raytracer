@@ -1,0 +1,142 @@
+\doxysection{Triangle.\+hpp}
+\hypertarget{_triangle_8hpp_source}{}\label{_triangle_8hpp_source}\index{include/plugins/primitives/Triangle.hpp@{include/plugins/primitives/Triangle.hpp}}
+\mbox{\hyperlink{_triangle_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Triangle}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_plugins_manager_8hpp}{PluginsManager.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_point_8hpp}{Point.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_material_8hpp}{AMaterial.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_default_8hpp}{Default.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_metal_8hpp}{Metal.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_chessboard_8hpp}{Chessboard.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_perlin_noise_8hpp}{PerlinNoise.hpp}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_triangle_a6a856283ec837ed0599e158f2818d90c}{Triangle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_primitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_triangle_a6a856283ec837ed0599e158f2818d90c}{Triangle}}(\mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v0,\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v1,\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<AMaterial>\ \&mat);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_triangle_a7fa3602358b15ad95071695a1cbb2ac2}{\string~Triangle}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_triangle_ab784cf5c051b2ee9765436a49cc4b269}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_triangle_a1c953c2343f3e2f9a34ca3f158bfb01f}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \mbox{\hyperlink{class_triangle_afc80638be81112093ddf6d0fb2a6e5e6}{getIntersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\ \&ray)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \mbox{\hyperlink{class_triangle_a3e046cad555e712489dfdfe2df0a4024}{normal\_at}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \mbox{\hyperlink{class_triangle_ac31e9a45f69cccd312497be3d3b2f021}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \mbox{\hyperlink{class_triangle_ad79ba1187965d022cea88f04e2158b23}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::string\ \_axis;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \_v0,\ \_v1,\ \_v2;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_color;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ \_normal;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ \_material;}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \ \ \ \ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{_triangle_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}}(\textcolor{keyword}{const}\ libconfig::Setting\ \&setting)}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting.exists(\textcolor{stringliteral}{"{}v0"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}v1"{}})\ ||\ !setting.exists(\textcolor{stringliteral}{"{}v2"{}})\ ||}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !setting.exists(\textcolor{stringliteral}{"{}color"{}}))}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Missing\ required\ fields\ (v0,\ v1,\ v2,\ color)\ in\ Triangle\ settings."{}});}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!setting[\textcolor{stringliteral}{"{}color"{}}].isGroup())}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Triangle:\ color\ is\ not\ a\ group"{}});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&v0Setting\ =\ setting[\textcolor{stringliteral}{"{}v0"{}}];}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&v1Setting\ =\ setting[\textcolor{stringliteral}{"{}v1"{}}];}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&v2Setting\ =\ setting[\textcolor{stringliteral}{"{}v2"{}}];}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ libconfig::Setting\ \&colorSetting\ =\ setting[\textcolor{stringliteral}{"{}color"{}}];}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!v0Setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !v0Setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !v0Setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !v0Setting[\textcolor{stringliteral}{"{}x"{}}].isNumber()\ ||}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !v0Setting[\textcolor{stringliteral}{"{}y"{}}].isNumber()\ ||\ !v0Setting[\textcolor{stringliteral}{"{}z"{}}].isNumber())}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ or\ missing\ v0\ fields\ (x,\ y,\ z)\ in\ Triangle\ settings."{}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!v1Setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !v1Setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !v1Setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !v1Setting[\textcolor{stringliteral}{"{}x"{}}].isNumber()\ ||}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !v1Setting[\textcolor{stringliteral}{"{}y"{}}].isNumber()\ ||\ !v1Setting[\textcolor{stringliteral}{"{}z"{}}].isNumber())}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ or\ missing\ v1\ fields\ (x,\ y,\ z)\ in\ Triangle\ settings."{}});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!v2Setting.exists(\textcolor{stringliteral}{"{}x"{}})\ ||\ !v2Setting.exists(\textcolor{stringliteral}{"{}y"{}})\ ||}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !v2Setting.exists(\textcolor{stringliteral}{"{}z"{}})\ ||\ !v2Setting[\textcolor{stringliteral}{"{}x"{}}].isNumber()\ ||}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !v2Setting[\textcolor{stringliteral}{"{}y"{}}].isNumber()\ ||\ !v2Setting[\textcolor{stringliteral}{"{}z"{}}].isNumber())}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ or\ missing\ v2\ fields\ (x,\ y,\ z)\ in\ Triangle\ settings."{}});}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!colorSetting.exists(\textcolor{stringliteral}{"{}r"{}})\ ||\ !colorSetting.exists(\textcolor{stringliteral}{"{}g"{}})\ ||}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting.exists(\textcolor{stringliteral}{"{}b"{}})\ ||\ !colorSetting[\textcolor{stringliteral}{"{}r"{}}].isNumber()\ ||}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !colorSetting[\textcolor{stringliteral}{"{}g"{}}].isNumber()\ ||\ !colorSetting[\textcolor{stringliteral}{"{}b"{}}].isNumber())\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ or\ missing\ color\ fields\ (r,\ g,\ b)\ in\ Triangle\ settings."{}});}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ getFloatOrInt\ =\ [](\textcolor{keyword}{const}\ libconfig::Setting\ \&s)\ -\/>\ \textcolor{keywordtype}{float}\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeFloat)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.getType()\ ==\ libconfig::Setting::TypeInt)}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(s));}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Triangle:\ value\ is\ not\ a\ number"{}});}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v0(}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v0Setting[\textcolor{stringliteral}{"{}x"{}}]),}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v0Setting[\textcolor{stringliteral}{"{}y"{}}]),}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v0Setting[\textcolor{stringliteral}{"{}z"{}}])}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v1(}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v1Setting[\textcolor{stringliteral}{"{}x"{}}]),}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v1Setting[\textcolor{stringliteral}{"{}y"{}}]),}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v1Setting[\textcolor{stringliteral}{"{}z"{}}])}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ v2(}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v2Setting[\textcolor{stringliteral}{"{}x"{}}]),}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v2Setting[\textcolor{stringliteral}{"{}y"{}}]),}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getFloatOrInt(v2Setting[\textcolor{stringliteral}{"{}z"{}}])}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ color(}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}r"{}}]),}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}g"{}}]),}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(colorSetting[\textcolor{stringliteral}{"{}b"{}}])}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ material\ =\ setting[\textcolor{stringliteral}{"{}material"{}}].c\_str();}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ std::shared\_ptr<AMaterial>\ mat;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Default"{}})\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Default>();}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Metal"{}})\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<Metal>();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}Chessboard"{}})\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<ChessboardMaterial>();}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (material\ ==\ \textcolor{stringliteral}{"{}PerlinNoise"{}})\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ std::make\_shared<PerlinNoiseMaterial>();}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Triangle:\ Unknown\ material\ type"{}});}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<Triangle>(v0,\ v1,\ v2,\ color,\ mat);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_triangle_8hpp_a5103d5f079a351497d19fb22b5c76683}{registerPlugin}}()}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_plugins_manager_acfdf775677e73f3c0b1646bc5dbda307}{PluginsManager::registerPrimitiveFactory}}(\textcolor{stringliteral}{"{}triangle"{}},\ \&\mbox{\hyperlink{_cone_8hpp_a1054de0203b7aaa07367873bc1c37118}{createPrimitive}});}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \};}
+
+\end{DoxyCode}

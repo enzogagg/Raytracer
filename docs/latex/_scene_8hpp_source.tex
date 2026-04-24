@@ -1,0 +1,58 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{_scene_8hpp_source}{}\label{_scene_8hpp_source}\index{include/core/Scene.hpp@{include/core/Scene.hpp}}
+\mbox{\hyperlink{_scene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Sans\ titre(Espace\ de\ travail)}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Scene}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_camera_8hpp}{Camera.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector_8hpp}{Vector.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_light_8hpp}{ILight.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_define_8hpp}{Define.hpp}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{\string~Scene}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a2348d0b300d61758800e01c7d8995d75}{addCamera}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_camera}{Camera}}\ \&camera);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a468d3d9f12f977efabed6dffc352900d}{addLight}}(\textcolor{keyword}{const}\ std::shared\_ptr<ILight>\ \&light);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_ac742da0a917a3c111b2c29eced2c7be4}{addPrimitive}}(\textcolor{keyword}{const}\ std::shared\_ptr<IPrimitive>\ \&primitive);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\ \mbox{\hyperlink{class_scene_a6d0a3d4d98ee8c259109cdc14e7c5408}{getCamera}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\&\ \mbox{\hyperlink{class_scene_a8727db0cbc4e3737dd7bc61762fd862e}{getModifableCamera}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<IPrimitive>>\&\ \mbox{\hyperlink{class_scene_a955c52cfe1a8b4dd9da533338eddfc93}{getPrimitives}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<ILight>>\&\ \mbox{\hyperlink{class_scene_aee097ee0182fd02b13d3084676ceeb17}{getLights}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_scene_ab43977182f2258d7264cc6c65da76a19}{getDiffuse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a10052ef0c9e39f095c385972b1784f6d}{setDiffuse}}(\textcolor{keywordtype}{double}\ diffuse);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a4a6af18c9355251a9d1583ca1c89f0b5}{setTranslateScene}}(\mbox{\hyperlink{class_math_1_1_vector}{Math::Vector}}\ translation);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_a7aa042d8a05e63c5b2a7235947889fa9}{setRotate}}(\textcolor{keywordtype}{double}\ angle,\ std::string\ axis);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_aeabcecb8fe463f6fd043b59d3fd7fa7e}{setShear}}(\textcolor{keywordtype}{double}\ strength);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_camera}{Camera}}\ \_camera;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr\ <ILight>>\ \_lights;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr\ <IPrimitive>>\ \_primitives;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_diffuse\ =\ 0.0f;}
+\DoxyCodeLine{00111\ \};}
+
+\end{DoxyCode}

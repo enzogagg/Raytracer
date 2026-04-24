@@ -1,0 +1,207 @@
+\doxysection{Plane Class Reference}
+\hypertarget{class_plane}{}\label{class_plane}\index{Plane@{Plane}}
+
+
+A class to represent a plane in 3D space.  
+
+
+
+
+{\ttfamily \#include $<$Plane.\+hpp$>$}
+
+
+
+Inheritance diagram for Plane\+:
+% FIG 0
+
+
+Collaboration diagram for Plane\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plane_ad841f4be2120b93be0c78609bc31ec4f}{Plane}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} p0, \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} p1, \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} p2, const \mbox{\hyperlink{class_color}{Color}} \&color, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_plane}{Plane} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plane_a6f8564cebff68a5decc254e886adc0eb}{\texorpdfstring{$\sim$}{\string~}\+Plane}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_plane}{Plane} class. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_plane_aa360e9300568bb1188a05757c8f9561c}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the plane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_plane_abf6a4bbfe957a9e85822060e1dd00be1}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_plane_a4d5b44aabc49c295d2fe2bef707ebed8}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_plane_a1b1e4a97ade621d197ad1d30ebfe1408}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_plane_abdccd676cc482b21a4694ebf9dd6e4b5}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Get the color of the plane. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_plane_a982f80e7f58a905ec6b78811770cf024}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_primitive}{IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a plane in 3D space. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_plane_ad841f4be2120b93be0c78609bc31ec4f}\index{Plane@{Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}}
+{\footnotesize\ttfamily \label{class_plane_ad841f4be2120b93be0c78609bc31ec4f} 
+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{p0}{, }\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{p1}{, }\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{p2}{, }\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{color}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_plane}{Plane} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis of the plane (x, y, or z). \\
+\hline
+{\em position} & The position of the plane along the specified axis. \\
+\hline
+{\em color} & The color of the plane. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plane_a6f8564cebff68a5decc254e886adc0eb}\index{Plane@{Plane}!````~Plane@{\texorpdfstring{$\sim$}{\string~}Plane}}
+\index{````~Plane@{\texorpdfstring{$\sim$}{\string~}Plane}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Plane()}{\string~Plane()}}
+{\footnotesize\ttfamily \label{class_plane_a6f8564cebff68a5decc254e886adc0eb} 
+Plane\+::\texorpdfstring{$\sim$}{\string~}\+Plane (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for the \doxylink{class_plane}{Plane} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure proper cleanup of derived classes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plane_abdccd676cc482b21a4694ebf9dd6e4b5}\index{Plane@{Plane}!getColor@{getColor}}
+\index{getColor@{getColor}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_plane_abdccd676cc482b21a4694ebf9dd6e4b5} 
+\mbox{\hyperlink{class_color}{Color}} Plane\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the color of the plane. 
+
+\begin{DoxyReturn}{Returns}
+The color of the plane. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{IPrimitive}}.
+
+\Hypertarget{class_plane_a4d5b44aabc49c295d2fe2bef707ebed8}\index{Plane@{Plane}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_plane_a4d5b44aabc49c295d2fe2bef707ebed8} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Plane\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{IPrimitive}}.
+
+\Hypertarget{class_plane_a982f80e7f58a905ec6b78811770cf024}\index{Plane@{Plane}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_plane_a982f80e7f58a905ec6b78811770cf024} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ Plane\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{IPrimitive}}.
+
+\Hypertarget{class_plane_aa360e9300568bb1188a05757c8f9561c}\index{Plane@{Plane}!getType@{getType}}
+\index{getType@{getType}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_plane_aa360e9300568bb1188a05757c8f9561c} 
+const std\+::string \& Plane\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the plane. 
+
+\begin{DoxyReturn}{Returns}
+The type of the plane as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{IPrimitive}}.
+
+\Hypertarget{class_plane_abf6a4bbfe957a9e85822060e1dd00be1}\index{Plane@{Plane}!intersect@{intersect}}
+\index{intersect@{intersect}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_plane_abf6a4bbfe957a9e85822060e1dd00be1} 
+bool Plane\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a ray intersects with the plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the plane, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{IPrimitive}}.
+
+\Hypertarget{class_plane_a1b1e4a97ade621d197ad1d30ebfe1408}\index{Plane@{Plane}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!Plane@{Plane}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_plane_a1b1e4a97ade621d197ad1d30ebfe1408} 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} Plane\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/plugins/primitives/\mbox{\hyperlink{_plane_8hpp}{Plane.\+hpp}}\item 
+src/plugins/primitives/\mbox{\hyperlink{_plane_8cpp}{Plane.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,232 @@
+\doxysection{Cylindre Class Reference}
+\hypertarget{class_cylindre}{}\label{class_cylindre}\index{Cylindre@{Cylindre}}
+
+
+{\ttfamily \#include $<$Cylindre.\+hpp$>$}
+
+
+
+Inheritance diagram for Cylindre\+:
+% FIG 0
+
+
+Collaboration diagram for Cylindre\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cylindre_a99d1f13cd19ecc9a3b6f21f39ab07f68}{Cylindre}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for the \doxylink{class_cylindre}{Cylindre} shape. By default tip is at (0, 0, 0), height at (0, 0, 0) and angle at 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cylindre_a55d62aef7e63ec120a147b679028bb9b}{Cylindre}} (\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} center, double radius, double height, \mbox{\hyperlink{class_color}{Color}} \&color, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&mat)
+\begin{DoxyCompactList}\small\item\em Constructor of the \doxylink{class_cylindre}{Cylindre} shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cylindre_a6ccf730b2e4e108c128c74dcce53be88}{\texorpdfstring{$\sim$}{\string~}\+Cylindre}} ()
+\begin{DoxyCompactList}\small\item\em basic destructor of the \doxylink{class_cylindre}{Cylindre} class \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_cylindre_ad1c171410641537d755ec2477ea65727}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the primitive shape. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cylindre_a9471b0e82bcbdd263713449b3ff3cfb1}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the primitive shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_cylindre_add36c37db5f45574f23da34df93781db}{intersection\+\_\+cap}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray, const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&cap\+\_\+center, const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&normal) const
+\begin{DoxyCompactList}\small\item\em Get the intersection point with the base of the \doxylink{class_cylindre}{Cylindre} (represented by a circle) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_cylindre_abc942c648a329a52805196f57b114771}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const override
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_cylindre_a0ed8a781e098d680a82d9ecacf2aa0f1}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_cylindre_aa9f2a0ebf9198c18da056d86d46a96a0}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Get the color of the primitive shape. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_cylindre_aac76762940e7a4c6d5233da63cef3272}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_primitive}{IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cylindre_a99d1f13cd19ecc9a3b6f21f39ab07f68}\index{Cylindre@{Cylindre}!Cylindre@{Cylindre}}
+\index{Cylindre@{Cylindre}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{Cylindre()}{Cylindre()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_cylindre_a99d1f13cd19ecc9a3b6f21f39ab07f68} 
+Cylindre\+::\+Cylindre (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for the \doxylink{class_cylindre}{Cylindre} shape. By default tip is at (0, 0, 0), height at (0, 0, 0) and angle at 0. 
+
+\Hypertarget{class_cylindre_a55d62aef7e63ec120a147b679028bb9b}\index{Cylindre@{Cylindre}!Cylindre@{Cylindre}}
+\index{Cylindre@{Cylindre}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{Cylindre()}{Cylindre()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_cylindre_a55d62aef7e63ec120a147b679028bb9b} 
+Cylindre\+::\+Cylindre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}}}]{center}{, }\item[{double}]{radius}{, }\item[{double}]{height}{, }\item[{\mbox{\hyperlink{class_color}{Color}} \&}]{color}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Constructor of the \doxylink{class_cylindre}{Cylindre} shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & Point that represents the center of the bottom cap of the \doxylink{class_cylindre}{Cylindre} \\
+\hline
+{\em radius} & The radius of both cap of the \doxylink{class_cylindre}{Cylindre} \\
+\hline
+{\em height} & height of the \doxylink{class_cylindre}{Cylindre} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cylindre_a6ccf730b2e4e108c128c74dcce53be88}\index{Cylindre@{Cylindre}!````~Cylindre@{\texorpdfstring{$\sim$}{\string~}Cylindre}}
+\index{````~Cylindre@{\texorpdfstring{$\sim$}{\string~}Cylindre}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cylindre()}{\string~Cylindre()}}
+{\footnotesize\ttfamily \label{class_cylindre_a6ccf730b2e4e108c128c74dcce53be88} 
+Cylindre\+::\texorpdfstring{$\sim$}{\string~}\+Cylindre (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+basic destructor of the \doxylink{class_cylindre}{Cylindre} class 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cylindre_aa9f2a0ebf9198c18da056d86d46a96a0}\index{Cylindre@{Cylindre}!getColor@{getColor}}
+\index{getColor@{getColor}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_cylindre_aa9f2a0ebf9198c18da056d86d46a96a0} 
+\mbox{\hyperlink{class_color}{Color}} Cylindre\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the color of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The color of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{IPrimitive}}.
+
+\Hypertarget{class_cylindre_abc942c648a329a52805196f57b114771}\index{Cylindre@{Cylindre}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_cylindre_abc942c648a329a52805196f57b114771} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Cylindre\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{IPrimitive}}.
+
+\Hypertarget{class_cylindre_aac76762940e7a4c6d5233da63cef3272}\index{Cylindre@{Cylindre}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_cylindre_aac76762940e7a4c6d5233da63cef3272} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ Cylindre\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{IPrimitive}}.
+
+\Hypertarget{class_cylindre_ad1c171410641537d755ec2477ea65727}\index{Cylindre@{Cylindre}!getType@{getType}}
+\index{getType@{getType}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_cylindre_ad1c171410641537d755ec2477ea65727} 
+const std\+::string \& Cylindre\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The type of the shape as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{IPrimitive}}.
+
+\Hypertarget{class_cylindre_a9471b0e82bcbdd263713449b3ff3cfb1}\index{Cylindre@{Cylindre}!intersect@{intersect}}
+\index{intersect@{intersect}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_cylindre_a9471b0e82bcbdd263713449b3ff3cfb1} 
+bool Cylindre\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a ray intersects with the primitive shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the shape, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{IPrimitive}}.
+
+\Hypertarget{class_cylindre_add36c37db5f45574f23da34df93781db}\index{Cylindre@{Cylindre}!intersection\_cap@{intersection\_cap}}
+\index{intersection\_cap@{intersection\_cap}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{intersection\_cap()}{intersection\_cap()}}
+{\footnotesize\ttfamily \label{class_cylindre_add36c37db5f45574f23da34df93781db} 
+\mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} Cylindre\+::intersection\+\_\+cap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{, }\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{cap\+\_\+center}{, }\item[{const \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \&}]{normal}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the intersection point with the base of the \doxylink{class_cylindre}{Cylindre} (represented by a circle) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+{\em cap\+\_\+center} & Center of the bottom cap of the \doxylink{class_cylindre}{Cylindre} \\
+\hline
+{\em normal} & vector normal at the cylindre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between one of the cap of the \doxylink{class_cylindre}{Cylindre} and the ray 
+\end{DoxyReturn}
+\Hypertarget{class_cylindre_a0ed8a781e098d680a82d9ecacf2aa0f1}\index{Cylindre@{Cylindre}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!Cylindre@{Cylindre}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_cylindre_a0ed8a781e098d680a82d9ecacf2aa0f1} 
+\mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} Cylindre\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/plugins/primitives/\mbox{\hyperlink{_cylindre_8hpp}{Cylindre.\+hpp}}\item 
+src/plugins/primitives/\mbox{\hyperlink{_cylindre_8cpp}{Cylindre.\+cpp}}\end{DoxyCompactItemize}

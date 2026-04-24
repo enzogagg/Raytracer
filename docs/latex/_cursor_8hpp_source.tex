@@ -1,0 +1,70 @@
+\doxysection{Cursor.\+hpp}
+\hypertarget{_cursor_8hpp_source}{}\label{_cursor_8hpp_source}\index{include/utilitaries/Cursor.hpp@{include/utilitaries/Cursor.hpp}}
+\mbox{\hyperlink{_cursor_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Cursor}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_define_8hpp}{Define.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031fa}{CursorType}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031faabc6501410409b0638909b580970b35f7}{TRANSLATE}},}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031faa3dcfe0046eb5876e287dbf0914819b16}{ROTATE}}}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cursor_a501fd0fe188f360a08a4da1cf5b25cae}{Cursor}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cursor_a501fd0fe188f360a08a4da1cf5b25cae}{Cursor}}(std::pair<double,\ double>\ percentageStartLine,\ std::pair<double,\ double>\ percentageFinishLine,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ sf::Font\&\ font,\ std::string\ cursorTitleText);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cursor_a025d505a120236dc61a889bd5b0aef16}{\string~Cursor}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_a59a3b560a15f95c089ae77690721dea2}{initText}}(\textcolor{keyword}{const}\ sf::Font\&\ font,\ sf::Vector2f\ \_startLine,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ \_finishLine,\ std::string\ cursorTitleText);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_aa687ab6d6989edd28824c1d275109f02}{initShape}}(sf::Vector2f\ \_startLine,\ sf::Vector2f\ \_finishLine);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_cursor_ac6be5caf4daa801976dd3f8d0d4d7036}{getText}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_cursor_ac8ef36196dcecb1bf7b60fc82d951414}{getCursorTitleText}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_cursor_a31169b63861ef2407e42712d317e8320}{getRectangle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::array<sf::Vertex,\ 2>\ \mbox{\hyperlink{class_cursor_aa83699e46116aba53ec533e332353861}{getCursorLine}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cursor_a5bf90b781a7a71bb8c9228083b6676f8}{getPosCursor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cursor_a0afc308e4e2765434cedca4533721237}{isCursorSelected}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_af392b53371f613892a532a07f3ee13da}{setCursorSelected}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ cursorSelect);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_aca61e035eae7de51cf7f1f72f2954f9f}{moveCursor}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ offset);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_a4e75c6bc5078b4ae06266f6b0c05fae6}{setCursorText}}(\textcolor{keyword}{const}\ std::string\ cursorsText);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_a27944f4db45e179b34332fa418c2e944}{moveRectangleShape}}(\textcolor{keyword}{const}\ sf::Vector2f\ offset);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ sf::Vector2i\ \mbox{\hyperlink{class_cursor_a9d8de11508e62347d278ce17f3d13bee}{updateCursor}}(sf::Vector2i\ mousePos,\ sf::Vector2i\ prevMousePos,\ \textcolor{keywordtype}{int}\&\ eventKey);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cursor_a0a75aa46a4bca34054a0b8c4cedc165f}{mouseClickedOnCursor}}(sf::Vector2i\ \&prevMousPos);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031fa}{CursorType}}\ \mbox{\hyperlink{class_cursor_ac0340ffde93b03e1e825510d0c96225c}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::array<sf::Vertex,\ 2>\ \_cursorLine;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ sf::RectangleShape\ \_cursorShape;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ sf::Text\ \_cursorText;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ sf::Text\ \_cursorTitleText;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_posCursor;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isCursorSelected;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_cursor_8hpp_abbe637356c8cb749a9726f13658031fa}{CursorType}}\ \_type;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::pair<sf::Keyboard::Key,\ sf::Keyboard::Key>>\ \_keyToPressed;}
+\DoxyCodeLine{00133\ \};}
+
+\end{DoxyCode}

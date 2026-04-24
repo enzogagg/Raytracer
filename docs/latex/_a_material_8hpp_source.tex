@@ -1,0 +1,65 @@
+\doxysection{AMaterial.\+hpp}
+\hypertarget{_a_material_8hpp_source}{}\label{_a_material_8hpp_source}\index{include/materials/AMaterial.hpp@{include/materials/AMaterial.hpp}}
+\mbox{\hyperlink{_a_material_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ AMaterial}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ AMATERIAL\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ AMATERIAL\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ray_8hpp}{Ray.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_color_8hpp}{Color.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_material_ab709695209b5058e28cb9852005cd80c}{AMaterial}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_a_material_ab709695209b5058e28cb9852005cd80c}{AMaterial}}(\textcolor{keyword}{const}\ std::string\ \&name,\ \textcolor{keywordtype}{float}\ ambient,\ \textcolor{keywordtype}{float}\ diffuse,\ \textcolor{keywordtype}{float}\ specular,\ \textcolor{keywordtype}{float}\ shininess);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_a_material_ae81aaadf9d83b1c1d0dec9d677cc3000}{\string~AMaterial}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{class_a_material_ae4217e6c6e0b8fcc5df477c47e64c9c1}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_material_a96819f59b0b96ad0d5604abd9d1a955e}{getAmbient}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_material_a296b32b5c100ec428191308856f5cebe}{getDiffuse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_material_ae603c200bbafec4b96fa1fadbfe073c6}{getSpecular}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_material_abf75da25761d9185a0f77557a15bd0dd}{getShininess}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_material_ad3615c580f6fb8867dc84c3d09397644}{getTransparency}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_material_a54922fbb440d7c78a3a62e412a4447ff}{getRefractionIndex}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_material_aa821225f6c50110077928624676aec61}{setDiffuseColor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&\mbox{\hyperlink{class_a_material_ad0efce2cbd3f7aa106d6d051cd77b7c5}{getDiffuseColor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_material_a3637bca0fd157efb67dacef616cf962d}{setSpecularColor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&color);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_color}{Color}}\ \&\mbox{\hyperlink{class_a_material_a69de427b11d4a73367de50661679dd5b}{getSpecularColor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_material_a0d733c3c905c68b9ea9773adde41748a}{setShininess}}(\textcolor{keywordtype}{float}\ shininess);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_color}{Color}}\ \mbox{\hyperlink{class_a_material_ae13c2bf99854120b2efd732ded01f5bd}{getColorAt}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_math_1_1_point}{Math::Point}}\ \&point)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_material_ac0bf700953a6b4e0e54755cd27b23457}{setTransparency}}(\textcolor{keywordtype}{float}\ transparency);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_material_a57de793a873f62b0e0c70dab0cef3ff9}{setRefractionIndex}}(\textcolor{keywordtype}{float}\ refractionIndex);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_material_a110949d095dbf5e06c4c0287b2213a0e}{loadFromMtlLine}}(\textcolor{keyword}{const}\ std::string\ \&line);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ std::string\ \_name;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_ka;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_kd;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_ks;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_shininess;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_transparency\ =\ 0.0f;\ \textcolor{comment}{//\ 0\ =\ opaque,\ 1\ =\ fully\ transparent}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \_refractionIndex\ =\ 1.0f;\ \textcolor{comment}{//\ Default\ is\ air\ (1.0)}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_diffuseColor\ =\ \mbox{\hyperlink{class_color}{Color}}(255,\ 255,\ 255);\ \textcolor{comment}{//\ Default\ white\ color}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_color}{Color}}\ \_specularColor\ =\ \mbox{\hyperlink{class_color}{Color}}(255,\ 255,\ 255);\ \textcolor{comment}{//\ Default\ white\ color}}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AMATERIAL\_HPP\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,115 @@
+\doxysection{Image Class Reference}
+\hypertarget{class_image}{}\label{class_image}\index{Image@{Image}}
+
+
+A class to represent an image in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_afca55d601e1214742717327c080ff9a3}{Image}} (int width, int height, std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&pixels)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_image}{Image} class. Initializes the image with default settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{\texorpdfstring{$\sim$}{\string~}\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_image}{Image} class. Cleans up resources used by the image. \end{DoxyCompactList}\item 
+std\+::filesystem\+::path \mbox{\hyperlink{class_image_ad06b1962ccf9344d4779208ff05f891f}{create\+Dir\+And\+File\+Name}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Create the dir and the file name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ae7cb0abde81257564d31a6c6ac71f1a6}{save}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Save the image to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent an image in the raytracer project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_image_afca55d601e1214742717327c080ff9a3}\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily \label{class_image_afca55d601e1214742717327c080ff9a3} 
+Image\+::\+Image (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_color}{Color}} $>$ \&}]{pixels}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_image}{Image} class. Initializes the image with default settings. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create an image with default values.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the image. \\
+\hline
+{\em height} & The height of the image. \\
+\hline
+{\em pixels} & The vector of pixels to use for the image. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_image_a0294f63700543e11c0f0da85601c7ae5}\index{Image@{Image}!````~Image@{\texorpdfstring{$\sim$}{\string~}Image}}
+\index{````~Image@{\texorpdfstring{$\sim$}{\string~}Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Image()}{\string~Image()}}
+{\footnotesize\ttfamily \label{class_image_a0294f63700543e11c0f0da85601c7ae5} 
+Image\+::\texorpdfstring{$\sim$}{\string~}\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_image}{Image} class. Cleans up resources used by the image. 
+
+\begin{DoxyNote}{Note}
+This destructor is called when the image object is destroyed. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_image_ad06b1962ccf9344d4779208ff05f891f}\index{Image@{Image}!createDirAndFileName@{createDirAndFileName}}
+\index{createDirAndFileName@{createDirAndFileName}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{createDirAndFileName()}{createDirAndFileName()}}
+{\footnotesize\ttfamily \label{class_image_ad06b1962ccf9344d4779208ff05f891f} 
+std\+::filesystem\+::path Image\+::create\+Dir\+And\+File\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Create the dir and the file name. 
+
+Create the directory and the file name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save the image to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function creates a directory for screenshots and generates a unique file name. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The path to the created file. 
+\end{DoxyReturn}
+\Hypertarget{class_image_ae7cb0abde81257564d31a6c6ac71f1a6}\index{Image@{Image}!save@{save}}
+\index{save@{save}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{class_image_ae7cb0abde81257564d31a6c6ac71f1a6} 
+void Image\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Save the image to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to save the image to.\\
+\hline
+{\em filename} & The name of the file to save the image to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function saves the image to a file in PNG format. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/images/\mbox{\hyperlink{_image_8hpp}{Image.\+hpp}}\item 
+src/images/\mbox{\hyperlink{_image_8cpp}{Image.\+cpp}}\end{DoxyCompactItemize}

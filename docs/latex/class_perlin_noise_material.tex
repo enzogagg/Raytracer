@@ -1,0 +1,135 @@
+\doxysection{Perlin\+Noise\+Material Class Reference}
+\hypertarget{class_perlin_noise_material}{}\label{class_perlin_noise_material}\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+
+
+{\ttfamily \#include $<$Perlin\+Noise.\+hpp$>$}
+
+
+
+Inheritance diagram for Perlin\+Noise\+Material\+:
+% FIG 0
+
+
+Collaboration diagram for Perlin\+Noise\+Material\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_perlin_noise_material_a9494fd43992bfe48781757ae05dcca1d}{Perlin\+Noise\+Material}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for the \doxylink{class_perlin_noise_material}{Perlin\+Noise\+Material} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_perlin_noise_material_aad9352312a4d7bd5ff6c13c49d3807e2}{Perlin\+Noise\+Material}} (const \mbox{\hyperlink{class_color}{Color}} \&color1, const \mbox{\hyperlink{class_color}{Color}} \&color2, double scale=1.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_perlin_noise_material}{Perlin\+Noise\+Material} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_perlin_noise_material_a9612566540efe8f3be9c9657c3eb921d}{\texorpdfstring{$\sim$}{\string~}\+Perlin\+Noise\+Material}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_perlin_noise_material}{Perlin\+Noise\+Material} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_perlin_noise_material_a11955a4518e6f212d6e30974ec33fd60}{get\+Color\+At}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculate the color of the material at a given point using Perlin noise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_material}{AMaterial}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_material_ab709695209b5058e28cb9852005cd80c}{AMaterial}} (const std\+::string \&name, float ambient, float diffuse, float specular, float shininess)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_a_material}{AMaterial} object with given coefficients. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_a_material_ae81aaadf9d83b1c1d0dec9d677cc3000}{\texorpdfstring{$\sim$}{\string~}\+AMaterial}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{class_a_material_ae4217e6c6e0b8fcc5df477c47e64c9c1}{get\+Name}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_a96819f59b0b96ad0d5604abd9d1a955e}{get\+Ambient}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_a296b32b5c100ec428191308856f5cebe}{get\+Diffuse}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_ae603c200bbafec4b96fa1fadbfe073c6}{get\+Specular}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_abf75da25761d9185a0f77557a15bd0dd}{get\+Shininess}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_ad3615c580f6fb8867dc84c3d09397644}{get\+Transparency}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_a54922fbb440d7c78a3a62e412a4447ff}{get\+Refraction\+Index}} () const
+\item 
+void \mbox{\hyperlink{class_a_material_aa821225f6c50110077928624676aec61}{set\+Diffuse\+Color}} (const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Set the diffuse color of the material. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_a_material_ad0efce2cbd3f7aa106d6d051cd77b7c5}{get\+Diffuse\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the diffuse color of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a3637bca0fd157efb67dacef616cf962d}{set\+Specular\+Color}} (const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Set the specular color of the material. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_a_material_a69de427b11d4a73367de50661679dd5b}{get\+Specular\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the specular color of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a0d733c3c905c68b9ea9773adde41748a}{set\+Shininess}} (float shininess)
+\begin{DoxyCompactList}\small\item\em Set the shininess of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_ac0bf700953a6b4e0e54755cd27b23457}{set\+Transparency}} (float transparency)
+\begin{DoxyCompactList}\small\item\em Set the transparency of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a57de793a873f62b0e0c70dab0cef3ff9}{set\+Refraction\+Index}} (float refraction\+Index)
+\begin{DoxyCompactList}\small\item\em Set the refraction index of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a110949d095dbf5e06c4c0287b2213a0e}{load\+From\+Mtl\+Line}} (const std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em Load material properties from a .mtl file line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_perlin_noise_material_a9494fd43992bfe48781757ae05dcca1d}\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}!PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}!PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+\doxysubsubsection{\texorpdfstring{PerlinNoiseMaterial()}{PerlinNoiseMaterial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_perlin_noise_material_a9494fd43992bfe48781757ae05dcca1d} 
+Perlin\+Noise\+Material\+::\+Perlin\+Noise\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for the \doxylink{class_perlin_noise_material}{Perlin\+Noise\+Material} class. 
+
+\Hypertarget{class_perlin_noise_material_aad9352312a4d7bd5ff6c13c49d3807e2}\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}!PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}!PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+\doxysubsubsection{\texorpdfstring{PerlinNoiseMaterial()}{PerlinNoiseMaterial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_perlin_noise_material_aad9352312a4d7bd5ff6c13c49d3807e2} 
+Perlin\+Noise\+Material\+::\+Perlin\+Noise\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{color1}{, }\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{color2}{, }\item[{double}]{scale}{ = {\ttfamily 1.0}}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_perlin_noise_material}{Perlin\+Noise\+Material} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color1} & First color of the Perlin noise \\
+\hline
+{\em color2} & Second color of the Perlin noise \\
+\hline
+{\em scale} & Scale of the Perlin noise \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_perlin_noise_material_a9612566540efe8f3be9c9657c3eb921d}\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}!````~PerlinNoiseMaterial@{\texorpdfstring{$\sim$}{\string~}PerlinNoiseMaterial}}
+\index{````~PerlinNoiseMaterial@{\texorpdfstring{$\sim$}{\string~}PerlinNoiseMaterial}!PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PerlinNoiseMaterial()}{\string~PerlinNoiseMaterial()}}
+{\footnotesize\ttfamily \label{class_perlin_noise_material_a9612566540efe8f3be9c9657c3eb921d} 
+Perlin\+Noise\+Material\+::\texorpdfstring{$\sim$}{\string~}\+Perlin\+Noise\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Destructor for the \doxylink{class_perlin_noise_material}{Perlin\+Noise\+Material} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_perlin_noise_material_a11955a4518e6f212d6e30974ec33fd60}\index{PerlinNoiseMaterial@{PerlinNoiseMaterial}!getColorAt@{getColorAt}}
+\index{getColorAt@{getColorAt}!PerlinNoiseMaterial@{PerlinNoiseMaterial}}
+\doxysubsubsection{\texorpdfstring{getColorAt()}{getColorAt()}}
+{\footnotesize\ttfamily \label{class_perlin_noise_material_a11955a4518e6f212d6e30974ec33fd60} 
+\mbox{\hyperlink{class_color}{Color}} Perlin\+Noise\+Material\+::get\+Color\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculate the color of the material at a given point using Perlin noise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & Intersection point where to calculate the color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_color}{Color} at this point 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_a_material_ae13c2bf99854120b2efd732ded01f5bd}{AMaterial}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/materials/\mbox{\hyperlink{_perlin_noise_8hpp}{Perlin\+Noise.\+hpp}}\item 
+src/materials/\mbox{\hyperlink{_perlin_noise_8cpp}{Perlin\+Noise.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\doxysection{IPrimitive Class Reference}
+\hypertarget{class_i_primitive}{}\label{class_i_primitive}\index{IPrimitive@{IPrimitive}}
+
+
+An interface for primitive shapes in the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$IPrimitive.\+hpp$>$}
+
+
+
+Inheritance diagram for IPrimitive\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the type of the primitive shape. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const =0
+\begin{DoxyCompactList}\small\item\em Check if a ray intersects with the primitive shape. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \mbox{\hyperlink{class_i_primitive_a217077cd8679ec7f3763a5759780e089}{get\+Intersection}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray) const =0
+\begin{DoxyCompactList}\small\item\em This function does exactly what you think it does. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} \mbox{\hyperlink{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}{normal\+\_\+at}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const =0
+\begin{DoxyCompactList}\small\item\em Create a normal vector to the shape. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}{get\+Color}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the color of the primitive shape. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ \mbox{\hyperlink{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}{get\+Material}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the material of the primitive shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for primitive shapes in the raytracer project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897}\index{IPrimitive@{IPrimitive}!````~IPrimitive@{\texorpdfstring{$\sim$}{\string~}IPrimitive}}
+\index{````~IPrimitive@{\texorpdfstring{$\sim$}{\string~}IPrimitive}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IPrimitive()}{\string~IPrimitive()}}
+{\footnotesize\ttfamily \label{class_i_primitive_a8079fb4001c84b6e715ffe521fd45897} 
+virtual IPrimitive\+::\texorpdfstring{$\sim$}{\string~}\+IPrimitive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{class_i_primitive}{IPrimitive} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure proper cleanup of derived classes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13}\index{IPrimitive@{IPrimitive}!getColor@{getColor}}
+\index{getColor@{getColor}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{class_i_primitive_a43bf96a50ed07f52a2a123386b02ac13} 
+virtual \mbox{\hyperlink{class_color}{Color}} IPrimitive\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the color of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The color of the shape. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cone_a9905d5b73186fb42435d9dffcdffc335}{Cone}}, \mbox{\hyperlink{class_cylindre_aa9f2a0ebf9198c18da056d86d46a96a0}{Cylindre}}, \mbox{\hyperlink{class_face_aa99824f2ae07d6c6dddc62d3c169413d}{Face}}, \mbox{\hyperlink{class_infinit_cone_af07127b3a35ef2e3ed33dfd5e70c165a}{Infinit\+Cone}}, \mbox{\hyperlink{class_infinite_cylindre_a3839a3cf800c09a657bf2265442683c7}{Infinite\+Cylindre}}, \mbox{\hyperlink{class_plane_abdccd676cc482b21a4694ebf9dd6e4b5}{Plane}}, \mbox{\hyperlink{class_sphere_acca8daa2b57aee5e921cd8eee75e687a}{Sphere}}, and \mbox{\hyperlink{class_triangle_ac31e9a45f69cccd312497be3d3b2f021}{Triangle}}.
+
+\Hypertarget{class_i_primitive_a217077cd8679ec7f3763a5759780e089}\index{IPrimitive@{IPrimitive}!getIntersection@{getIntersection}}
+\index{getIntersection@{getIntersection}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getIntersection()}{getIntersection()}}
+{\footnotesize\ttfamily \label{class_i_primitive_a217077cd8679ec7f3763a5759780e089} 
+virtual \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} IPrimitive\+::get\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This function does exactly what you think it does. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intersection point between a \doxylink{class_ray}{Ray} and a shape 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cone_ae2d58cfeae2fda7f191af02c0dc7975d}{Cone}}, \mbox{\hyperlink{class_cylindre_abc942c648a329a52805196f57b114771}{Cylindre}}, \mbox{\hyperlink{class_face_ac1e5cb9b458bbb327ef625da0b9fd697}{Face}}, \mbox{\hyperlink{class_infinit_cone_ac667aa44ee0f4a967dc02bb876fa88cb}{Infinit\+Cone}}, \mbox{\hyperlink{class_infinite_cylindre_a8460cae3a8126c92eddc478c2e83c9ba}{Infinite\+Cylindre}}, \mbox{\hyperlink{class_plane_a4d5b44aabc49c295d2fe2bef707ebed8}{Plane}}, \mbox{\hyperlink{class_sphere_a6aa2896fd0c4d247d1b11e8a47351cb4}{Sphere}}, and \mbox{\hyperlink{class_triangle_afc80638be81112093ddf6d0fb2a6e5e6}{Triangle}}.
+
+\Hypertarget{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b}\index{IPrimitive@{IPrimitive}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{class_i_primitive_aece727a8397df157f84c8b571d3d7a7b} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_material}{AMaterial}} $>$ IPrimitive\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the material of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The material of the shape. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cone_afd99b295b95bdb431881d3e1ab9c7dd4}{Cone}}, \mbox{\hyperlink{class_cylindre_aac76762940e7a4c6d5233da63cef3272}{Cylindre}}, \mbox{\hyperlink{class_face_a928865fa28e785f894b46cb86d2f6b58}{Face}}, \mbox{\hyperlink{class_infinit_cone_a0e6797c12056714382598a3f78c26237}{Infinit\+Cone}}, \mbox{\hyperlink{class_infinite_cylindre_aec2565218e9c18cf0f650bfee95975a0}{Infinite\+Cylindre}}, \mbox{\hyperlink{class_plane_a982f80e7f58a905ec6b78811770cf024}{Plane}}, \mbox{\hyperlink{class_sphere_a15ccf54f3975f93614e7186fdc6970cf}{Sphere}}, and \mbox{\hyperlink{class_triangle_ad79ba1187965d022cea88f04e2158b23}{Triangle}}.
+
+\Hypertarget{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5}\index{IPrimitive@{IPrimitive}!getType@{getType}}
+\index{getType@{getType}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_i_primitive_a9bde04e875c3674fc11e9da1f0aea8f5} 
+virtual const std\+::string \& IPrimitive\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the type of the primitive shape. 
+
+\begin{DoxyReturn}{Returns}
+The type of the shape as a string. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cone_ada3c7c2c8a14d2a0ad102a2f85b5f516}{Cone}}, \mbox{\hyperlink{class_cylindre_ad1c171410641537d755ec2477ea65727}{Cylindre}}, \mbox{\hyperlink{class_face_aa65a263f3096de918a5bac162b68fe25}{Face}}, \mbox{\hyperlink{class_infinit_cone_a2a0494177eef18be2ec5346b6cc27215}{Infinit\+Cone}}, \mbox{\hyperlink{class_infinite_cylindre_acd1f463e553e38a11ab3e4cf5ec1016b}{Infinite\+Cylindre}}, \mbox{\hyperlink{class_plane_aa360e9300568bb1188a05757c8f9561c}{Plane}}, \mbox{\hyperlink{class_sphere_aa5aeda0882b74309321401d87cd37218}{Sphere}}, and \mbox{\hyperlink{class_triangle_ab784cf5c051b2ee9765436a49cc4b269}{Triangle}}.
+
+\Hypertarget{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64}\index{IPrimitive@{IPrimitive}!intersect@{intersect}}
+\index{intersect@{intersect}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{class_i_primitive_a4f5d6edeb341acbc7beb45c2aab1ab64} 
+virtual bool IPrimitive\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if a ray intersects with the primitive shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to check for intersection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ray intersects with the shape, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cone_a5f75c10a942a9c01e5a1e5776c41275a}{Cone}}, \mbox{\hyperlink{class_cylindre_a9471b0e82bcbdd263713449b3ff3cfb1}{Cylindre}}, \mbox{\hyperlink{class_face_afe70f4b0daafddde44288eb027ae3022}{Face}}, \mbox{\hyperlink{class_infinit_cone_ab73ef9deac452db54d1d078920467060}{Infinit\+Cone}}, \mbox{\hyperlink{class_infinite_cylindre_afc314d447416d82110538281d900373e}{Infinite\+Cylindre}}, \mbox{\hyperlink{class_plane_abf6a4bbfe957a9e85822060e1dd00be1}{Plane}}, \mbox{\hyperlink{class_sphere_a02dd5d865b852dbe994b76f1a1fc295f}{Sphere}}, and \mbox{\hyperlink{class_triangle_a1c953c2343f3e2f9a34ca3f158bfb01f}{Triangle}}.
+
+\Hypertarget{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0}\index{IPrimitive@{IPrimitive}!normal\_at@{normal\_at}}
+\index{normal\_at@{normal\_at}!IPrimitive@{IPrimitive}}
+\doxysubsubsection{\texorpdfstring{normal\_at()}{normal\_at()}}
+{\footnotesize\ttfamily \label{class_i_primitive_a2f6a755907415502119f1648b7a9a5e0} 
+virtual \mbox{\hyperlink{class_math_1_1_vector}{Math\+::\+Vector}} IPrimitive\+::normal\+\_\+at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create a normal vector to the shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & origin of the normal vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normal vector to the shape 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cone_a7a8b9f32e39e4bacdd5dc0766b62de7b}{Cone}}, \mbox{\hyperlink{class_cylindre_a0ed8a781e098d680a82d9ecacf2aa0f1}{Cylindre}}, \mbox{\hyperlink{class_face_a854e4cea351921ae838d9d600fda4edc}{Face}}, \mbox{\hyperlink{class_infinit_cone_a35aa2d5e126ff5dd946cdeda86b6b98c}{Infinit\+Cone}}, \mbox{\hyperlink{class_infinite_cylindre_a4ef089f2e8d84b1bfa45bc299df44702}{Infinite\+Cylindre}}, \mbox{\hyperlink{class_plane_a1b1e4a97ade621d197ad1d30ebfe1408}{Plane}}, \mbox{\hyperlink{class_sphere_a4cc8d739230691fc260f44876c59c68d}{Sphere}}, and \mbox{\hyperlink{class_triangle_a3e046cad555e712489dfdfe2df0a4024}{Triangle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/interfaces/\mbox{\hyperlink{_i_primitive_8hpp}{IPrimitive.\+hpp}}\end{DoxyCompactItemize}

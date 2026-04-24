@@ -1,0 +1,207 @@
+\doxysection{Core Class Reference}
+\hypertarget{class_core}{}\label{class_core}\index{Core@{Core}}
+
+
+A class to manage the raytracer project.  
+
+
+
+
+{\ttfamily \#include $<$Core.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_core_a14e63188e0aa7c4a6f72d5501384d1f9}{Core}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_core}{Core} class. Initializes the core of the raytracer project. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_core_a776f8c46504b14183883c6273f93eaed}{\texorpdfstring{$\sim$}{\string~}\+Core}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_core}{Core} class. Cleans up the resources used by the core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_ae711d5e66578753e1047be2f2e9360ad}{init}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Initialize the core of the raytracer project. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a6d790cc20ecf986fc0bc04d85fc1412a}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loop the core of the raytracer project. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a29e7fad335fcb7d31475ec6429ebf97d}{create\+Gui\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Create the GUI thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_ac42f1eddc3ca241ca9d2d9bc2d740236}{create\+Render\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Create the render thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a7a8abc309a4b215f3a0b7f4305520cdf}{set\+Ctrl}} ()
+\item 
+void \mbox{\hyperlink{class_core_aa8ae7ac4bdda106f061030818775a84e}{set\+Handle\+Translation}} ()
+\begin{DoxyCompactList}\small\item\em set the pointer to function for the translation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a7e5fbf434f794377670787724194a27b}{set\+Handle\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em set the pointer to function for the translation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a2a50cc0e31a09b2c40c1996f75a25b4a}{notify\+Render\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em notify the render thread that a render update is needed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a27acaac94e3cd49d6b5f5ef4e9223c99}{check\+Scene\+File}} ()
+\begin{DoxyCompactList}\small\item\em check changes in the scene file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_core_a7d1e15af96914db86dc23be602aeeaf3}{reload\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em reload the scene if needed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to manage the raytracer project. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_core_a14e63188e0aa7c4a6f72d5501384d1f9}\index{Core@{Core}!Core@{Core}}
+\index{Core@{Core}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}}
+{\footnotesize\ttfamily \label{class_core_a14e63188e0aa7c4a6f72d5501384d1f9} 
+Core\+::\+Core (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_core}{Core} class. Initializes the core of the raytracer project. 
+
+\begin{DoxyNote}{Note}
+This constructor can be used to create a core with default values. 
+\end{DoxyNote}
+\Hypertarget{class_core_a776f8c46504b14183883c6273f93eaed}\index{Core@{Core}!````~Core@{\texorpdfstring{$\sim$}{\string~}Core}}
+\index{````~Core@{\texorpdfstring{$\sim$}{\string~}Core}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Core()}{\string~Core()}}
+{\footnotesize\ttfamily \label{class_core_a776f8c46504b14183883c6273f93eaed} 
+Core\+::\texorpdfstring{$\sim$}{\string~}\+Core (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_core}{Core} class. Cleans up the resources used by the core. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_core_a27acaac94e3cd49d6b5f5ef4e9223c99}\index{Core@{Core}!checkSceneFile@{checkSceneFile}}
+\index{checkSceneFile@{checkSceneFile}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{checkSceneFile()}{checkSceneFile()}}
+{\footnotesize\ttfamily \label{class_core_a27acaac94e3cd49d6b5f5ef4e9223c99} 
+void Core\+::check\+Scene\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+check changes in the scene file 
+
+Check for changes in the scene file and reload it if modified.
+
+\begin{DoxyNote}{Note}
+This function is used to check changes in the scene file and reload the scene if needed.
+
+Avoids accessing the scene file too soon after changes are detected. 
+\end{DoxyNote}
+\Hypertarget{class_core_a29e7fad335fcb7d31475ec6429ebf97d}\index{Core@{Core}!createGuiThread@{createGuiThread}}
+\index{createGuiThread@{createGuiThread}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{createGuiThread()}{createGuiThread()}}
+{\footnotesize\ttfamily \label{class_core_a29e7fad335fcb7d31475ec6429ebf97d} 
+void Core\+::create\+Gui\+Thread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create the GUI thread. 
+
+\begin{DoxyNote}{Note}
+This function is used to create the GUI thread. 
+\end{DoxyNote}
+\Hypertarget{class_core_ac42f1eddc3ca241ca9d2d9bc2d740236}\index{Core@{Core}!createRenderThread@{createRenderThread}}
+\index{createRenderThread@{createRenderThread}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{createRenderThread()}{createRenderThread()}}
+{\footnotesize\ttfamily \label{class_core_ac42f1eddc3ca241ca9d2d9bc2d740236} 
+void Core\+::create\+Render\+Thread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create the render thread. 
+
+\begin{DoxyNote}{Note}
+This function is used to create the render thread. 
+\end{DoxyNote}
+\Hypertarget{class_core_ae711d5e66578753e1047be2f2e9360ad}\index{Core@{Core}!init@{init}}
+\index{init@{init}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_core_ae711d5e66578753e1047be2f2e9360ad} 
+void Core\+::init (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the core of the raytracer project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load the scene from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is used to initialize the core of the raytracer project. 
+\end{DoxyNote}
+\Hypertarget{class_core_a6d790cc20ecf986fc0bc04d85fc1412a}\index{Core@{Core}!loop@{loop}}
+\index{loop@{loop}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{class_core_a6d790cc20ecf986fc0bc04d85fc1412a} 
+void Core\+::loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loop the core of the raytracer project. 
+
+\begin{DoxyNote}{Note}
+This function is used to loop the core of the raytracer project. 
+\end{DoxyNote}
+\Hypertarget{class_core_a2a50cc0e31a09b2c40c1996f75a25b4a}\index{Core@{Core}!notifyRenderThread@{notifyRenderThread}}
+\index{notifyRenderThread@{notifyRenderThread}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{notifyRenderThread()}{notifyRenderThread()}}
+{\footnotesize\ttfamily \label{class_core_a2a50cc0e31a09b2c40c1996f75a25b4a} 
+void Core\+::notify\+Render\+Thread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+notify the render thread that a render update is needed 
+
+Notify the render thread that a render update is needed.
+
+\begin{DoxyNote}{Note}
+This function is used to notify the render thread that a render update is needed. 
+\end{DoxyNote}
+\Hypertarget{class_core_a7d1e15af96914db86dc23be602aeeaf3}\index{Core@{Core}!reloadScene@{reloadScene}}
+\index{reloadScene@{reloadScene}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{reloadScene()}{reloadScene()}}
+{\footnotesize\ttfamily \label{class_core_a7d1e15af96914db86dc23be602aeeaf3} 
+void Core\+::reload\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+reload the scene if needed 
+
+Reload the scene if needed.
+
+\begin{DoxyNote}{Note}
+This function is used to reload the scene if needed. 
+\end{DoxyNote}
+\Hypertarget{class_core_a7a8abc309a4b215f3a0b7f4305520cdf}\index{Core@{Core}!setCtrl@{setCtrl}}
+\index{setCtrl@{setCtrl}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{setCtrl()}{setCtrl()}}
+{\footnotesize\ttfamily \label{class_core_a7a8abc309a4b215f3a0b7f4305520cdf} 
+void Core\+::set\+Ctrl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_core_a7e5fbf434f794377670787724194a27b}\index{Core@{Core}!setHandleRotation@{setHandleRotation}}
+\index{setHandleRotation@{setHandleRotation}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{setHandleRotation()}{setHandleRotation()}}
+{\footnotesize\ttfamily \label{class_core_a7e5fbf434f794377670787724194a27b} 
+void Core\+::set\+Handle\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+set the pointer to function for the translation 
+
+\Hypertarget{class_core_aa8ae7ac4bdda106f061030818775a84e}\index{Core@{Core}!setHandleTranslation@{setHandleTranslation}}
+\index{setHandleTranslation@{setHandleTranslation}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{setHandleTranslation()}{setHandleTranslation()}}
+{\footnotesize\ttfamily \label{class_core_aa8ae7ac4bdda106f061030818775a84e} 
+void Core\+::set\+Handle\+Translation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+set the pointer to function for the translation 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\mbox{\hyperlink{_core_8hpp}{Core.\+hpp}}\item 
+src/core/\mbox{\hyperlink{_core_8cpp}{Core.\+cpp}}\item 
+src/core/\mbox{\hyperlink{hotreload_8cpp}{hotreload.\+cpp}}\end{DoxyCompactItemize}

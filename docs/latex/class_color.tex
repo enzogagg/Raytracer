@@ -1,0 +1,346 @@
+\doxysection{Color Class Reference}
+\hypertarget{class_color}{}\label{class_color}\index{Color@{Color}}
+
+
+A class to represent a color in RGB format.  
+
+
+
+
+{\ttfamily \#include $<$Color.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_color_a062a245ab7ed2a13fdfa27b504a026e3}{Color}} (double r=0, double g=0, double b=0)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_default}{Default} constructor for \doxylink{class_color}{Color} class. Initializes the color to (0, 0, 0). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_af120872d8445c917e04039f4921279d3}{operator+}} (const \mbox{\hyperlink{class_color}{Color}} \&other) const
+\begin{DoxyCompactList}\small\item\em Addition operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_color_a26fc45655619e26ab7606823e39d80eb}{operator+=}} (const \mbox{\hyperlink{class_color}{Color}} \&other)
+\begin{DoxyCompactList}\small\item\em Addition operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_a185821340c57a5a560507331052a928d}{operator-\/}} (const \mbox{\hyperlink{class_color}{Color}} \&other) const
+\begin{DoxyCompactList}\small\item\em Subtraction operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_a457a855b1394e379aca1c55c1eb9bec1}{operator\texorpdfstring{$\ast$}{*}}} (double scalar) const
+\begin{DoxyCompactList}\small\item\em Scalar multiplication operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_color_a5e3930f1f7bdb19a61b28ff4b05b39ee}{operator\texorpdfstring{$\ast$}{*}=}} (double scalar)
+\begin{DoxyCompactList}\small\item\em Scalar multiplication operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_color_a3a19c1f456cdf6922ab3844a3f75c7ec}{operator/=}} (int divide)
+\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_a94c0d1e5b5e477d3354eab4b1c91bfb6}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{class_color}{Color}} \&other) const
+\begin{DoxyCompactList}\small\item\em Multiplication operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_color_a140e251571fafa581fcc6397c2c2d0ba}{operator\texorpdfstring{$\ast$}{*}=}} (const \mbox{\hyperlink{class_color}{Color}} \&other)
+\begin{DoxyCompactList}\small\item\em Multiplication operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_acab1f0be09a8a7fb66285603ef074733}{operator/}} (double scalar) const
+\begin{DoxyCompactList}\small\item\em Scalar division operator overload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_abd2eb11b27db1c7596299ad5f1601343}{apply\+Intensity}} (double intensity) const
+\begin{DoxyCompactList}\small\item\em Apply the color intensity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_color_ade0fda8485beea72d23b9acd100f78a5}{clamp}} () const
+\begin{DoxyCompactList}\small\item\em Clamp the color values to be within the range \mbox{[}0, 255\mbox{]}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_color_a5f17f7d8bf37b4014e58fd75891e1a09}{getR}} () const
+\begin{DoxyCompactList}\small\item\em Get the red component of the color. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_color_aa200a01480b05b5f56cf27fc6f60004a}{getG}} () const
+\begin{DoxyCompactList}\small\item\em Get the green component of the color. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_color_a8b03c52a801e26f9a304c3f04f841e24}{getB}} () const
+\begin{DoxyCompactList}\small\item\em Get the blue component of the color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_color_afd29d8477e329f5fb49c9160dfb2d4cc}{set\+Color}} (double r, double g, double b)
+\begin{DoxyCompactList}\small\item\em Set the blue component of the color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to represent a color in RGB format. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_color_a062a245ab7ed2a13fdfa27b504a026e3}\index{Color@{Color}!Color@{Color}}
+\index{Color@{Color}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily \label{class_color_a062a245ab7ed2a13fdfa27b504a026e3} 
+Color\+::\+Color (\begin{DoxyParamCaption}\item[{double}]{r}{ = {\ttfamily 0}, }\item[{double}]{g}{ = {\ttfamily 0}, }\item[{double}]{b}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_default}{Default} constructor for \doxylink{class_color}{Color} class. Initializes the color to (0, 0, 0). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The red component of the color. \\
+\hline
+{\em g} & The green component of the color. \\
+\hline
+{\em b} & The blue component of the color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If no parameters are provided, the color is initialized to (0, 0, 0). 
+
+This constructor can be used to create a color with specific RGB values.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The red component of the color. \\
+\hline
+{\em g} & The green component of the color. \\
+\hline
+{\em b} & The blue component of the color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If no parameters are provided, the color is initialized to (0, 0, 0). 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_color_abd2eb11b27db1c7596299ad5f1601343}\index{Color@{Color}!applyIntensity@{applyIntensity}}
+\index{applyIntensity@{applyIntensity}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{applyIntensity()}{applyIntensity()}}
+{\footnotesize\ttfamily \label{class_color_abd2eb11b27db1c7596299ad5f1601343} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::apply\+Intensity (\begin{DoxyParamCaption}\item[{double}]{intensity}{}\end{DoxyParamCaption}) const}
+
+
+
+Apply the color intensity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intensity} & The intensity to apply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the product of this color and the intensity. 
+\end{DoxyReturn}
+\Hypertarget{class_color_ade0fda8485beea72d23b9acd100f78a5}\index{Color@{Color}!clamp@{clamp}}
+\index{clamp@{clamp}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily \label{class_color_ade0fda8485beea72d23b9acd100f78a5} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::clamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Clamp the color values to be within the range \mbox{[}0, 255\mbox{]}. 
+
+Clamp the color components to be in the range \mbox{[}0, 255\mbox{]}.
+
+\begin{DoxyReturn}{Returns}
+A new color with clamped values.
+
+A new color with clamped components. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a8b03c52a801e26f9a304c3f04f841e24}\index{Color@{Color}!getB@{getB}}
+\index{getB@{getB}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getB()}{getB()}}
+{\footnotesize\ttfamily \label{class_color_a8b03c52a801e26f9a304c3f04f841e24} 
+double Color\+::getB (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the blue component of the color. 
+
+\begin{DoxyReturn}{Returns}
+The blue component of the color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_aa200a01480b05b5f56cf27fc6f60004a}\index{Color@{Color}!getG@{getG}}
+\index{getG@{getG}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getG()}{getG()}}
+{\footnotesize\ttfamily \label{class_color_aa200a01480b05b5f56cf27fc6f60004a} 
+double Color\+::getG (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the green component of the color. 
+
+\begin{DoxyReturn}{Returns}
+The green component of the color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a5f17f7d8bf37b4014e58fd75891e1a09}\index{Color@{Color}!getR@{getR}}
+\index{getR@{getR}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{getR()}{getR()}}
+{\footnotesize\ttfamily \label{class_color_a5f17f7d8bf37b4014e58fd75891e1a09} 
+double Color\+::getR (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the red component of the color. 
+
+\begin{DoxyReturn}{Returns}
+The red component of the color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a94c0d1e5b5e477d3354eab4b1c91bfb6}\index{Color@{Color}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_color_a94c0d1e5b5e477d3354eab4b1c91bfb6} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Multiplication operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The color to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the product of this color and the scalar.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The color to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the product of this color and the other color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a457a855b1394e379aca1c55c1eb9bec1}\index{Color@{Color}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_color_a457a855b1394e379aca1c55c1eb9bec1} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{double}]{scalar}{}\end{DoxyParamCaption}) const}
+
+
+
+Scalar multiplication operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the product of this color and the scalar. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a140e251571fafa581fcc6397c2c2d0ba}\index{Color@{Color}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_color_a140e251571fafa581fcc6397c2c2d0ba} 
+\mbox{\hyperlink{class_color}{Color}} \& Color\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Multiplication operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The color to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this color after multiplying by the other color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a5e3930f1f7bdb19a61b28ff4b05b39ee}\index{Color@{Color}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_color_a5e3930f1f7bdb19a61b28ff4b05b39ee} 
+\mbox{\hyperlink{class_color}{Color}} \& Color\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{double}]{scalar}{}\end{DoxyParamCaption})}
+
+
+
+Scalar multiplication operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this color after multiplying by the scalar. 
+\end{DoxyReturn}
+\Hypertarget{class_color_af120872d8445c917e04039f4921279d3}\index{Color@{Color}!operator+@{operator+}}
+\index{operator+@{operator+}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{class_color_af120872d8445c917e04039f4921279d3} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Addition operator overload. 
+
+Get the red component of the color.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The color to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the sum of this color and the other color.
+
+The red component of the color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a26fc45655619e26ab7606823e39d80eb}\index{Color@{Color}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{class_color_a26fc45655619e26ab7606823e39d80eb} 
+\mbox{\hyperlink{class_color}{Color}} \& Color\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Addition operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The color to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this color after adding the other color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a185821340c57a5a560507331052a928d}\index{Color@{Color}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{class_color_a185821340c57a5a560507331052a928d} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_color}{Color}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Subtraction operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The color to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the difference of this color and the other color. 
+\end{DoxyReturn}
+\Hypertarget{class_color_acab1f0be09a8a7fb66285603ef074733}\index{Color@{Color}!operator/@{operator/}}
+\index{operator/@{operator/}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \label{class_color_acab1f0be09a8a7fb66285603ef074733} 
+\mbox{\hyperlink{class_color}{Color}} Color\+::operator/ (\begin{DoxyParamCaption}\item[{double}]{scalar}{}\end{DoxyParamCaption}) const}
+
+
+
+Scalar division operator overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new color that is the quotient of this color and the scalar. 
+\end{DoxyReturn}
+\Hypertarget{class_color_a3a19c1f456cdf6922ab3844a3f75c7ec}\index{Color@{Color}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \label{class_color_a3a19c1f456cdf6922ab3844a3f75c7ec} 
+\mbox{\hyperlink{class_color}{Color}} \& Color\+::operator/= (\begin{DoxyParamCaption}\item[{int}]{divide}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_color_afd29d8477e329f5fb49c9160dfb2d4cc}\index{Color@{Color}!setColor@{setColor}}
+\index{setColor@{setColor}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_color_afd29d8477e329f5fb49c9160dfb2d4cc} 
+void Color\+::set\+Color (\begin{DoxyParamCaption}\item[{double}]{r}{, }\item[{double}]{g}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Set the blue component of the color. 
+
+\begin{DoxyReturn}{Returns}
+The blue component of the color. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilitaries/\mbox{\hyperlink{_color_8hpp}{Color.\+hpp}}\item 
+src/utilitaries/\mbox{\hyperlink{_color_8cpp}{Color.\+cpp}}\end{DoxyCompactItemize}

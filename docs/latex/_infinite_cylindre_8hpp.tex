@@ -1,0 +1,57 @@
+\doxysection{include/plugins/primitives/\+Infinite\+Cylindre.hpp File Reference}
+\hypertarget{_infinite_cylindre_8hpp}{}\label{_infinite_cylindre_8hpp}\index{include/plugins/primitives/InfiniteCylindre.hpp@{include/plugins/primitives/InfiniteCylindre.hpp}}
+{\ttfamily \#include "{}Plugins\+Manager.\+hpp"{}}\newline
+{\ttfamily \#include "{}IPrimitive.\+hpp"{}}\newline
+{\ttfamily \#include "{}AMaterial.\+hpp"{}}\newline
+{\ttfamily \#include "{}Default.\+hpp"{}}\newline
+{\ttfamily \#include "{}Metal.\+hpp"{}}\newline
+{\ttfamily \#include "{}Chessboard.\+hpp"{}}\newline
+{\ttfamily \#include "{}Perlin\+Noise.\+hpp"{}}\newline
+Include dependency graph for Infinite\+Cylindre.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_infinite_cylindre}{Infinite\+Cylindre}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ \mbox{\hyperlink{_infinite_cylindre_8hpp_a1054de0203b7aaa07367873bc1c37118}{create\+Primitive}} (const libconfig\+::\+Setting \&setting)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_infinite_cylindre_8hpp_a5103d5f079a351497d19fb22b5c76683}{register\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Register the \doxylink{class_plane}{Plane} plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_infinite_cylindre_8hpp_a1054de0203b7aaa07367873bc1c37118}\index{InfiniteCylindre.hpp@{InfiniteCylindre.hpp}!createPrimitive@{createPrimitive}}
+\index{createPrimitive@{createPrimitive}!InfiniteCylindre.hpp@{InfiniteCylindre.hpp}}
+\doxysubsubsection{\texorpdfstring{createPrimitive()}{createPrimitive()}}
+{\footnotesize\ttfamily \label{_infinite_cylindre_8hpp_a1054de0203b7aaa07367873bc1c37118} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_primitive}{IPrimitive}} $>$ create\+Primitive (\begin{DoxyParamCaption}\item[{const libconfig\+::\+Setting \&}]{setting}{}\end{DoxyParamCaption})}
+
+
+
+Create a \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} object. 
+
+This function creates a new \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} object. 
+\begin{DoxyParams}{Parameters}
+{\em setting} & The settings for the \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{class_infinite_cylindre}{Infinite\+Cylindre} object. 
+\end{DoxyReturn}
+\Hypertarget{_infinite_cylindre_8hpp_a5103d5f079a351497d19fb22b5c76683}\index{InfiniteCylindre.hpp@{InfiniteCylindre.hpp}!registerPlugin@{registerPlugin}}
+\index{registerPlugin@{registerPlugin}!InfiniteCylindre.hpp@{InfiniteCylindre.hpp}}
+\doxysubsubsection{\texorpdfstring{registerPlugin()}{registerPlugin()}}
+{\footnotesize\ttfamily \label{_infinite_cylindre_8hpp_a5103d5f079a351497d19fb22b5c76683} 
+void register\+Plugin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Register the \doxylink{class_plane}{Plane} plugin. 
+
+This function is called to register the \doxylink{class_plane}{Plane} plugin. 

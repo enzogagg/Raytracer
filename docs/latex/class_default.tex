@@ -1,0 +1,73 @@
+\doxysection{Default Class Reference}
+\hypertarget{class_default}{}\label{class_default}\index{Default@{Default}}
+
+
+{\ttfamily \#include $<$Default.\+hpp$>$}
+
+
+
+Inheritance diagram for Default\+:
+% FIG 0
+
+
+Collaboration diagram for Default\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_default_ab0d6fdb2cfc22b138f9b32801080961e}{Default}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_material}{AMaterial}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_material_ab709695209b5058e28cb9852005cd80c}{AMaterial}} (const std\+::string \&name, float ambient, float diffuse, float specular, float shininess)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_a_material}{AMaterial} object with given coefficients. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_a_material_ae81aaadf9d83b1c1d0dec9d677cc3000}{\texorpdfstring{$\sim$}{\string~}\+AMaterial}} ()=default
+\item 
+const std\+::string \& \mbox{\hyperlink{class_a_material_ae4217e6c6e0b8fcc5df477c47e64c9c1}{get\+Name}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_a96819f59b0b96ad0d5604abd9d1a955e}{get\+Ambient}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_a296b32b5c100ec428191308856f5cebe}{get\+Diffuse}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_ae603c200bbafec4b96fa1fadbfe073c6}{get\+Specular}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_abf75da25761d9185a0f77557a15bd0dd}{get\+Shininess}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_ad3615c580f6fb8867dc84c3d09397644}{get\+Transparency}} () const
+\item 
+float \mbox{\hyperlink{class_a_material_a54922fbb440d7c78a3a62e412a4447ff}{get\+Refraction\+Index}} () const
+\item 
+void \mbox{\hyperlink{class_a_material_aa821225f6c50110077928624676aec61}{set\+Diffuse\+Color}} (const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Set the diffuse color of the material. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_a_material_ad0efce2cbd3f7aa106d6d051cd77b7c5}{get\+Diffuse\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the diffuse color of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a3637bca0fd157efb67dacef616cf962d}{set\+Specular\+Color}} (const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Set the specular color of the material. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_a_material_a69de427b11d4a73367de50661679dd5b}{get\+Specular\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the specular color of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a0d733c3c905c68b9ea9773adde41748a}{set\+Shininess}} (float shininess)
+\begin{DoxyCompactList}\small\item\em Set the shininess of the material. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_a_material_ae13c2bf99854120b2efd732ded01f5bd}{get\+Color\+At}} (const \mbox{\hyperlink{class_math_1_1_point}{Math\+::\+Point}} \&point) const
+\begin{DoxyCompactList}\small\item\em Get the color at a specific point on the surface (for procedural textures) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_ac0bf700953a6b4e0e54755cd27b23457}{set\+Transparency}} (float transparency)
+\begin{DoxyCompactList}\small\item\em Set the transparency of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a57de793a873f62b0e0c70dab0cef3ff9}{set\+Refraction\+Index}} (float refraction\+Index)
+\begin{DoxyCompactList}\small\item\em Set the refraction index of the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_material_a110949d095dbf5e06c4c0287b2213a0e}{load\+From\+Mtl\+Line}} (const std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em Load material properties from a .mtl file line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_default_ab0d6fdb2cfc22b138f9b32801080961e}\index{Default@{Default}!Default@{Default}}
+\index{Default@{Default}!Default@{Default}}
+\doxysubsubsection{\texorpdfstring{Default()}{Default()}}
+{\footnotesize\ttfamily \label{class_default_ab0d6fdb2cfc22b138f9b32801080961e} 
+Default\+::\+Default (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/materials/\mbox{\hyperlink{_default_8hpp}{Default.\+hpp}}\item 
+src/materials/\mbox{\hyperlink{_default_8cpp}{Default.\+cpp}}\end{DoxyCompactItemize}
