@@ -28,44 +28,49 @@ std::string GPURender::loadKernelSource(const std::string &filename) {
 
 bool GPURender::init() {
     cl_uint num_platforms;
-    clGetPlatformIDs(1, &_platform, &num_platforms);
-    clGetDeviceIDs(_platform, CL_DEVICE_TYPE_GPU, 1, &_device, NULL);
+    cl_int err = clGetPlatformIDs(1, &_platform, &num_platforms);
+    if (err != CL_SUCCESS) return false;
 
-    _context = clCreateContext(NULL, 1, &_device, NULL, NULL, NULL);
+    err = clGetDeviceIDs(_platform, CL_DEVICE_TYPE_ALL, 1, &_device, NULL);
+    if (err != CL_SUCCESS) return false;
+
+    char deviceName[128];
+    clGetDeviceInfo(_device, CL_DEVICE_NAME, 128, deviceName, NULL);
+    std::cout << "[GPU] Using device: " << deviceName << std::endl;
+
+    _context = clCreateContext(NULL, 1, &_device, NULL, NULL, &err);
+    if (err != CL_SUCCESS) return false;
     
     #ifdef __APPLE__
-    _queue = clCreateCommandQueue(_context, _device, 0, NULL);
+    _queue = clCreateCommandQueue(_context, _device, 0, &err);
     #else
-    _queue = clCreateCommandQueueWithProperties(_context, _device, NULL, NULL);
+    _queue = clCreateCommandQueueWithProperties(_context, _device, NULL, &err);
     #endif
+    if (err != CL_SUCCESS) return false;
 
     std::string source = loadKernelSource("src/core/kernels/raytracer.cl");
     const char *src_ptr = source.c_str();
     size_t src_len = source.length();
-    _program = clCreateProgramWithSource(_context, 1, &src_ptr, &src_len, NULL);
+    _program = clCreateProgramWithSource(_context, 1, &src_ptr, &src_len, &err);
     
-    if (clBuildProgram(_program, 1, &_device, NULL, NULL, NULL) != CL_SUCCESS) {
+    err = clBuildProgram(_program, 1, &_device, NULL, NULL, NULL);
+    if (err != CL_SUCCESS) {
         char log[4096];
         clGetProgramBuildInfo(_program, _device, CL_PROGRAM_BUILD_LOG, 4096, log, NULL);
-        std::cerr << "OpenCL Build Error: " << log << std::endl;
+        std::cerr << "[GPU] Kernel Build Error: " << log << std::endl;
         return false;
     }
 
-    _kernel = clCreateKernel(_program, "render_scene", NULL);
-    return true;
+    _kernel = clCreateKernel(_program, "render_scene", &err);
+    return err == CL_SUCCESS;
 }
 
 void GPURender::render(Scene &scene, std::vector<Color> &pixels) {
-    std::cout << "[GPU] Rendering frame (" << scene.getPrimitives().size() << " primitives)..." << std::endl;
     std::vector<GPUSphere> gpuSpheres;
     
-    // Extract spheres from scene
     for (const auto &primitive : scene.getPrimitives()) {
         if (primitive->getType() == "sphere") {
             GPUSphere s;
-            // Since we can't easily access Sphere-specific members from IPrimitive,
-            // we use the bounding box to infer center and radius as a fallback/shortcut
-            // for this proof of concept. 
             auto bbox = primitive->getBoundingBox();
             s.x = (bbox.min().getX() + bbox.max().getX()) / 2.0f;
             s.y = (bbox.min().getY() + bbox.max().getY()) / 2.0f;
@@ -79,34 +84,52 @@ void GPURender::render(Scene &scene, std::vector<Color> &pixels) {
     }
 
     if (gpuSpheres.empty()) {
-        // Fallback to black if no spheres found for GPU rendering
-        std::fill(pixels.begin(), pixels.end(), Color(0, 0, 0));
+        std::fill(pixels.begin(), pixels.end(), Color(0, 0, 1)); // Blue if no spheres
         return;
     }
 
-    // Set arguments
-    cl_mem spheres_buf = clCreateBuffer(_context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, 
-                                        sizeof(GPUSphere) * gpuSpheres.size(), gpuSpheres.data(), NULL);
-    cl_mem pixels_buf = clCreateBuffer(_context, CL_MEM_WRITE_ONLY, 
-                                       sizeof(float) * _width * _height * 3, NULL, NULL);
+    if (gpuSpheres.size() > 0) {
+        static bool logged = false;
+        if (!logged) {
+            std::cout << "[GPU] First Sphere: pos(" << gpuSpheres[0].x << "," << gpuSpheres[0].y << "," << gpuSpheres[0].z << ") r=" << gpuSpheres[0].radius << std::endl;
+            logged = true;
+        }
+    }
 
-    float camPos[3] = { (float)scene.getCamera().getPosition().getX(), 
-                        (float)scene.getCamera().getPosition().getY(), 
-                        (float)scene.getCamera().getPosition().getZ() };
+    cl_int err;
+    cl_mem spheres_buf = clCreateBuffer(_context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, 
+                                        sizeof(GPUSphere) * gpuSpheres.size(), gpuSpheres.data(), &err);
+    cl_mem pixels_buf = clCreateBuffer(_context, CL_MEM_WRITE_ONLY, 
+                                       sizeof(float) * _width * _height * 3, NULL, &err);
+
+    float camPosX = (float)scene.getCamera().getPosition().getX();
+    float camPosY = (float)scene.getCamera().getPosition().getY();
+    float camPosZ = (float)scene.getCamera().getPosition().getZ();
     
-    float camDir[3] = { 0.0f, 0.0f, 1.0f }; 
+    float camDirX = 0.0f;
+    float camDirY = 0.0f;
+    float camDirZ = 1.0f; 
 
     int numSpheres = gpuSpheres.size();
     clSetKernelArg(_kernel, 0, sizeof(int), &_width);
     clSetKernelArg(_kernel, 1, sizeof(int), &_height);
-    clSetKernelArg(_kernel, 2, sizeof(float) * 3, camPos);
-    clSetKernelArg(_kernel, 3, sizeof(float) * 3, camDir);
-    clSetKernelArg(_kernel, 4, sizeof(cl_mem), &spheres_buf);
-    clSetKernelArg(_kernel, 5, sizeof(int), &numSpheres);
-    clSetKernelArg(_kernel, 6, sizeof(cl_mem), &pixels_buf);
+    clSetKernelArg(_kernel, 2, sizeof(float), &camPosX);
+    clSetKernelArg(_kernel, 3, sizeof(float), &camPosY);
+    clSetKernelArg(_kernel, 4, sizeof(float), &camPosZ);
+    clSetKernelArg(_kernel, 5, sizeof(float), &camDirX);
+    clSetKernelArg(_kernel, 6, sizeof(float), &camDirY);
+    clSetKernelArg(_kernel, 7, sizeof(float), &camDirZ);
+    clSetKernelArg(_kernel, 8, sizeof(cl_mem), &spheres_buf);
+    clSetKernelArg(_kernel, 9, sizeof(int), &numSpheres);
+    clSetKernelArg(_kernel, 10, sizeof(cl_mem), &pixels_buf);
 
     size_t global_size[2] = { (size_t)_width, (size_t)_height };
-    clEnqueueNDRangeKernel(_queue, _kernel, 2, NULL, global_size, NULL, 0, NULL, NULL);
+    err = clEnqueueNDRangeKernel(_queue, _kernel, 2, NULL, global_size, NULL, 0, NULL, NULL);
+    if (err != CL_SUCCESS) {
+        std::cerr << "[GPU] Execution Error: " << err << std::endl;
+    }
+
+    clFinish(_queue);
     
     std::vector<float> host_pixels(_width * _height * 3);
     clEnqueueReadBuffer(_queue, pixels_buf, CL_TRUE, 0, sizeof(float) * host_pixels.size(), host_pixels.data(), 0, NULL, NULL);

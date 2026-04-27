@@ -96,6 +96,8 @@ void Render::computeRender(std::vector<Color> &pixelsRender)
 {
     if (_useGPU) {
         _gpuRender->render(_scene, pixelsRender);
+        if (_progressCallback)
+            _progressCallback();
         return;
     }
     _stopThread = false;
