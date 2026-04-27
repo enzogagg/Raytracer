@@ -34,17 +34,7 @@ Color::Color(double r, double g, double b)
 
 Color Color::operator+(const Color &other) const
 {
-    double colorR;
-    double colorB;
-    double colorG;
-    double max = 255;
-
-    colorR = std::min(this->_r + other._r, max);
-    colorB = std::min(this->_b + other._b, max);
-    colorG = std::min(this->_g + other._g, max);
-
-    Color result(colorR, colorB, colorG);
-    return result;
+    return Color(this->_r + other._r, this->_g + other._g, this->_b + other._b);
 }
 
 Color &Color::operator+=(const Color &other)
@@ -66,45 +56,35 @@ Color &Color::operator/=(int divide)
 Color Color::operator-(const Color &other) const
 {
     double colorR;
-    double colorB;
     double colorG;
+    double colorB;
     double min = 0;
 
     colorR = std::max(this->_r - other._r, min);
-    colorB = std::max(this->_b - other._b, min);
     colorG = std::max(this->_g - other._g, min);
+    colorB = std::max(this->_b - other._b, min);
 
-    Color result(colorR, colorB, colorG);
+    Color result(colorR, colorG, colorB);
     return result;
 }
 
 Color Color::operator/(double scalar) const
 {
     double colorR;
-    double colorB;
     double colorG;
+    double colorB;
 
     colorR = (scalar != 0) ? this->_r / scalar : 0;
-    colorB = (scalar != 0) ? this->_b / scalar : 0;
     colorG = (scalar != 0) ? this->_g / scalar : 0;
+    colorB = (scalar != 0) ? this->_b / scalar : 0;
 
-    Color result(colorR, colorB, colorG);
+    Color result(colorR, colorG, colorB);
     return result;
 }
 
 Color Color::operator*(double scalar) const
 {
-    double colorR;
-    double colorB;
-    double colorG;
-    double max = 255;
-
-    colorR = std::min(this->_r * scalar, max);
-    colorB = std::min(this->_b * scalar, max);
-    colorG = std::min(this->_g * scalar, max);
-
-    Color result(colorR, colorB, colorG);
-    return result;
+    return Color(this->_r * scalar, this->_g * scalar, this->_b * scalar);
 }
 
 Color &Color::operator*=(double scalar)
@@ -137,8 +117,8 @@ Color Color::operator*(const Color &other) const
 Color &Color::operator*=(const Color &other)
 {
     this->_r *= other._r;
-    this->_b *= other._b;
     this->_g *= other._g;
+    this->_b *= other._b;
 
     return *this;
 }
@@ -151,14 +131,14 @@ Color &Color::operator*=(const Color &other)
 Color Color::applyIntensity(double intensity) const
 {
     double colorR;
-    double colorB;
     double colorG;
+    double colorB;
 
     colorR = this->_r * intensity;
-    colorB = this->_b * intensity;
     colorG = this->_g * intensity;
+    colorB = this->_b * intensity;
 
-    Color result(colorR, colorB, colorG);
+    Color result(colorR, colorG, colorB);
     return result;
 }
 

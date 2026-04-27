@@ -60,6 +60,39 @@ bool Triangle::intersect(const Ray &ray) const
     return t > epsilon;
 }
 
+/**
+ * @brief Get the bounding box of the triangle.
+ * @return The AABB of the triangle.
+ */
+Math::AABB Triangle::getBoundingBox() const
+{
+    double min_x = std::min({_v0.getX(), _v1.getX(), _v2.getX()});
+    double min_y = std::min({_v0.getY(), _v1.getY(), _v2.getY()});
+    double min_z = std::min({_v0.getZ(), _v1.getZ(), _v2.getZ()});
+    double max_x = std::max({_v0.getX(), _v1.getX(), _v2.getX()});
+    double max_y = std::max({_v0.getY(), _v1.getY(), _v2.getY()});
+    double max_z = std::max({_v0.getZ(), _v1.getZ(), _v2.getZ()});
+
+    double epsilon = 1e-4;
+    return Math::AABB(
+        Math::Point(min_x - epsilon, min_y - epsilon, min_z - epsilon),
+        Math::Point(max_x + epsilon, max_y + epsilon, max_z + epsilon)
+    );
+}
+
+std::shared_ptr<IPrimitive> Triangle::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
 Math::Point Triangle::getIntersection(const Ray &ray) const
 {
     const double epsilon = 1e-6;

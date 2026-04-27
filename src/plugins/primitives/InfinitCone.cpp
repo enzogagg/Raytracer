@@ -55,6 +55,31 @@ const std::string &InfinitCone::getType() const
 }
 
 /**
+ * @brief Get the bounding box of the InfinitCone.
+ * @return The AABB of the InfinitCone.
+ */
+Math::AABB InfinitCone::getBoundingBox() const
+{
+    return Math::AABB(
+        Math::Point(-std::numeric_limits<double>::max(), -std::numeric_limits<double>::max(), -std::numeric_limits<double>::max()),
+        Math::Point(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max())
+    );
+}
+
+std::shared_ptr<IPrimitive> InfinitCone::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
+/**
  * @brief Check if a ray intersects with the primitive shape.
  * @param ray The ray to check for intersection.
  * @return True if the ray intersects with the shape, false otherwise.

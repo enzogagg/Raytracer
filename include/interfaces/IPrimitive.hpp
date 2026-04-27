@@ -20,12 +20,15 @@
 #include "Point.hpp"
 #include "Vector.hpp"
 #include "AMaterial.hpp"
+#include "AABB.hpp"
+
+#include <memory>
 
 /**
  * @class IPrimitive
  * @brief An interface for primitive shapes in the raytracer project.
  */
-class IPrimitive {
+class IPrimitive : public std::enable_shared_from_this<IPrimitive> {
     public:
         /**
          * @brief Virtual destructor for IPrimitive class.
@@ -45,6 +48,21 @@ class IPrimitive {
          * @return True if the ray intersects with the shape, false otherwise.
          */
         virtual bool intersect(const Ray &ray) const = 0;
+
+        /**
+         * @brief Get the closest primitive intersected by the ray.
+         * @param ray The ray to check.
+         * @param t Closest distance found so far (updated if a closer one is found).
+         * @param t_min Minimum distance to consider (to avoid self-intersection).
+         * @return Pointer to the closest primitive, or nullptr.
+         */
+        virtual std::shared_ptr<IPrimitive> getClosestPrimitive(const Ray& ray, double& t, double t_min = 1e-4) const = 0;
+
+        /**
+         * @brief Get the bounding box of the primitive.
+         * @return The AABB of the primitive.
+         */
+        virtual Math::AABB getBoundingBox() const = 0;
 
         /**
          * @brief This function does exactly what you think it does

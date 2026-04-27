@@ -65,7 +65,7 @@ std::filesystem::path Image::createDirAndFileName(const std::string &filename)
 /**
  * @brief Save the image to a file.
  * @param filename The name of the file to save the image to.
- * @note This function saves the image to a file in PNG format.
+ * @note This function saves the image to a PNG format.
  */
 void Image::save(const std::string &filename)
 {

@@ -61,6 +61,31 @@ bool Sphere::intersect(const Ray &ray) const
 }
 
 /**
+ * @brief Get the bounding box of the sphere.
+ * @return The AABB of the sphere.
+ */
+Math::AABB Sphere::getBoundingBox() const
+{
+    return Math::AABB(
+        Math::Point(_center.getX() - _radius, _center.getY() - _radius, _center.getZ() - _radius),
+        Math::Point(_center.getX() + _radius, _center.getY() + _radius, _center.getZ() + _radius)
+    );
+}
+
+std::shared_ptr<IPrimitive> Sphere::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
+/**
  * @brief This function does exactly what you think it does
  * @param ray The ray to check for intersection.
  * @return the intersection point between a Ray and a shape
@@ -86,7 +111,7 @@ Math::Point Sphere::getIntersection(const Ray &ray) const
     double t1 = (-b - sqrt_disc) / (2.0 * a);
     double t2 = (-b + sqrt_disc) / (2.0 * a);
 
-    const double epsilon = 1e-4;
+    const double epsilon = 1e-6;
     double t = -1;
     if (t1 > epsilon && t2 > epsilon)
         t = std::min(t1, t2);

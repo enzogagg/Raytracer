@@ -13,7 +13,7 @@ CXX                 := g++
 # OS Detection
 UNAME_S := $(shell uname -s)
 
-CXXFLAGS            := -Wall -Wextra -fPIC -std=c++20 -Wno-deprecated-declarations -Wno-return-type-c-linkage \
+CXXFLAGS            := -Wall -Wextra -fPIC -std=c++20 -O3 -ffast-math -march=native -Wno-deprecated-declarations -Wno-return-type-c-linkage \
                        -I./include -I./include/core -I./include/images \
                        -I./include/interfaces -I./include/loader \
                        -I./include/plugins -I./include/plugins/lights \

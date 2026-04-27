@@ -68,6 +68,7 @@ Scene SceneLoader::parseSceneFile(const std::string &filename)
     } catch (...) {
         std::cerr << "An unknown error occurred while parsing the scene file." << std::endl;
     }
+    scene.buildBVH();
     return scene;
 }
 

@@ -56,6 +56,20 @@ class Face : public IPrimitive {
         bool intersect(const Ray &ray) const override;
 
         /**
+         * @brief Get the closest primitive intersected by the ray.
+         * @param ray The ray to check.
+         * @param t Closest distance found so far.
+         * @return Pointer to the closest primitive, or nullptr.
+         */
+        std::shared_ptr<IPrimitive> getClosestPrimitive(const Ray& ray, double& t, double t_min = 1e-4) const override;
+
+        /**
+         * @brief Get the bounding box of the face.
+         * @return The AABB of the face.
+         */
+        Math::AABB getBoundingBox() const override;
+
+        /**
          * @brief This function does exactly what you think it does
          * @param ray The ray to check for intersection.
          * @return the intersection point between a Ray and a shape
