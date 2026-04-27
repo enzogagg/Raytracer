@@ -160,26 +160,22 @@ public:
                        int maxHeight, int depth);
 
 private:
+  struct Tile {
+    int x, y, width, height;
+  };
+
   /**
-   * @brief Worker thread function to process a range of pixels.
+   * @brief Worker thread function to process tiles.
    * @param pixelsRender The vector to store the rendered pixels.
-   * @param start The starting index of the range.
-   * @param end The ending index of the range.
-   * @note This function is executed by each worker thread
-   *   to process a specific range of pixels in parallel.
    */
   void workerThread(std::vector<Color> &pixelsRender);
 
   /**
-   * @brief Function to compute the render columns.
+   * @brief Function to compute a specific tile.
    * @param pixelsRender The vector to store the rendered pixels.
-   * @param start The starting index of the range.
-   * @param end The ending index of the range.
-   * @note This function computes the render columns
-   *   and stores the result in the provided vector.
+   * @param tile The tile to compute.
    */
-  void computeRenderColumns(std::vector<Color> &pixelsRender, int start,
-                            int end);
+  void computeTile(std::vector<Color> &pixelsRender, const Tile &tile);
 
   int _width;
   int _height;
@@ -194,7 +190,7 @@ private:
   std::mutex renderMutex;
 
   std::condition_variable _queueCondition;
-  std::queue<std::pair<int, int>> _queue;
+  std::queue<Tile> _queue;
 
   std::function<void()> _progressCallback;
 

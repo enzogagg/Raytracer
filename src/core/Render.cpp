@@ -41,17 +41,14 @@ Render::~Render()
 }
 
 /**
- * @brief Function to compute the render columns.
+ * @brief Function to compute a specific tile.
  * @param pixelsRender The vector to store the rendered pixels.
- * @param start The starting index of the range.
- * @param end The ending index of the range.
- * @note This function computes the render columns
- *   and stores the result in the provided vector.
+ * @param tile The tile to compute.
  */
-void Render::computeRenderColumns(std::vector<Color> &pixelsRender, int start, int end)
+void Render::computeTile(std::vector<Color> &pixelsRender, const Tile &tile)
 {
-    for (int y = 0; y < _height; y++) {
-        for (int x = start; x < end; x++) {
+    for (int y = tile.y; y < tile.y + tile.height; y++) {
+        for (int x = tile.x; x < tile.x + tile.width; x++) {
             Color pixel = renderPixel(x, y, _width, _height);
             int index = (_height - 1 - y) * _width + x;
             if (index >= 0 && index < static_cast<int>(pixelsRender.size())) {
@@ -59,22 +56,17 @@ void Render::computeRenderColumns(std::vector<Color> &pixelsRender, int start, i
             }
         }
     }
-    if (_progressCallback)
-        _progressCallback();
 }
 
 /**
  * @brief Worker thread function for rendering.
  * @param pixelsRender The vector to store the rendered pixels.
- * @param threadId The ID of the thread.
- * @note This function is executed by each worker thread
- *      to compute the render of the scene.
  */
 void Render::workerThread(std::vector<Color> &pixelsRender)
 {
     while (true)
     {
-        std::pair<int, int> range;
+        Tile tile;
 
         {
             std::unique_lock<std::mutex> lock(_queueMutex);
@@ -83,10 +75,10 @@ void Render::workerThread(std::vector<Color> &pixelsRender)
             if (_stopThread && _queue.empty())
                 return;
 
-            range = _queue.front();
+            tile = _queue.front();
             _queue.pop();
         }
-        computeRenderColumns(pixelsRender, range.first, range.second);
+        computeTile(pixelsRender, tile);
     }
 }
 
@@ -101,13 +93,18 @@ void Render::computeRender(std::vector<Color> &pixelsRender)
     _stopThread = false;
     {
         std::lock_guard<std::mutex> lock(_queueMutex);
-        for (int startColumn = 0; startColumn < _width; startColumn += RENDER_COLOMNS_DIVISION_PIXEL)
+        for (int y = 0; y < _height; y += TILE_SIZE)
         {
-            int endColumn = std::min(startColumn + RENDER_COLOMNS_DIVISION_PIXEL, _width);
-            if (startColumn >= endColumn)
-                continue;
-            _queue.emplace(startColumn, endColumn);
-            ++_tasksRemaining;
+            for (int x = 0; x < _width; x += TILE_SIZE)
+            {
+                Tile tile;
+                tile.x = x;
+                tile.y = y;
+                tile.width = std::min(TILE_SIZE, _width - x);
+                tile.height = std::min(TILE_SIZE, _height - y);
+                _queue.push(tile);
+                ++_tasksRemaining;
+            }
         }
     }
     for (int i = 0; i < THREADS_NUMBER; ++i)
@@ -115,7 +112,7 @@ void Render::computeRender(std::vector<Color> &pixelsRender)
         _threads.emplace_back([this, &pixelsRender]()
                               {
             while (true) {
-                std::pair<int, int> range;
+                Tile tile;
                 {
                     std::unique_lock<std::mutex> lock(_queueMutex);
                     _queueCondition.wait(lock, [this] {
@@ -123,11 +120,13 @@ void Render::computeRender(std::vector<Color> &pixelsRender)
                     });
                     if (_stopThread && _queue.empty())
                         return;
-                    range = _queue.front();
+                    tile = _queue.front();
                     _queue.pop();
                 }
-                computeRenderColumns(pixelsRender, range.first, range.second);
+                computeTile(pixelsRender, tile);
                 _tasksRemaining.fetch_sub(1, std::memory_order_relaxed);
+                if (_progressCallback)
+                    _progressCallback();
             } });
     }
     _queueCondition.notify_all();

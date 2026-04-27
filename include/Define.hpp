@@ -7,7 +7,7 @@
 
 #define FAST_RENDER_RATIO 0.15
 #define THREADS_NUMBER 36
-#define RENDER_COLOMNS_DIVISION_PIXEL 20
+#define TILE_SIZE 32
 #define FONT "./ressources/BebasNeue-Regular.ttf"
 #define BACKGROUNDCOLOR Color(0, 0, 0)
 #define OCCLUSION_SAMPLE_PX 8
