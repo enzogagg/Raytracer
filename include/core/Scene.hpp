@@ -19,6 +19,7 @@
 #include "Vector.hpp"
 #include "ILight.hpp"
 #include "IPrimitive.hpp"
+#include "BVHNode.hpp"
 #include "Define.hpp"
 
 /**
@@ -39,6 +40,17 @@ class Scene {
          * Cleans up the resources used by the scene.
          */
         ~Scene();
+
+        /**
+         * @brief Build the BVH for the scene.
+         */
+        void buildBVH();
+
+        /**
+         * @brief Get the BVH root.
+         * @return The BVH root primitive.
+         */
+        std::shared_ptr<IPrimitive> getBVH() const;
 
         /**
          * @brief Add a camera to the scene.
@@ -106,6 +118,7 @@ class Scene {
         Camera _camera;
         std::vector<std::shared_ptr <ILight>> _lights;
         std::vector<std::shared_ptr <IPrimitive>> _primitives;
+        std::shared_ptr<IPrimitive> _bvhRoot;
 
         double _diffuse = 0.0f;
 };

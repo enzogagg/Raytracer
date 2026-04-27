@@ -8,6 +8,6 @@
 #include "Metal.hpp"
 
 Metal::Metal()
-    : AMaterial("metal", 0.7, 1.9, 10.0, 0.2)
+    : AMaterial("metal", 0.08, 0.18, 0.95, 96.0)
 {
 }

@@ -111,6 +111,20 @@ class Cone : public IPrimitive {
         Math::Vector normal_at(const Math::Point &point) const override;
 
         /**
+         * @brief Get the bounding box of the cone.
+         * @return The AABB of the cone.
+         */
+        Math::AABB getBoundingBox() const override;
+
+        /**
+         * @brief Get the closest primitive intersected by the ray.
+         * @param ray The ray to check.
+         * @param t Closest distance found so far.
+         * @return Pointer to the closest primitive, or nullptr.
+         */
+        std::shared_ptr<IPrimitive> getClosestPrimitive(const Ray& ray, double& t, double t_min = 1e-4) const override;
+
+        /**
          * @brief Get the color of the primitive shape.
          * @return The color of the shape.
          */

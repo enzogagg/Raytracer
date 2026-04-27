@@ -63,6 +63,20 @@ class Cylindre : public IPrimitive {
         bool intersect(const Ray &ray) const override;
 
         /**
+         * @brief Get the bounding box of the Cylindre.
+         * @return The AABB of the Cylindre.
+         */
+        Math::AABB getBoundingBox() const override;
+
+        /**
+         * @brief Get the closest primitive intersected by the ray.
+         * @param ray The ray to check.
+         * @param t Closest distance found so far.
+         * @return Pointer to the closest primitive, or nullptr.
+         */
+        std::shared_ptr<IPrimitive> getClosestPrimitive(const Ray& ray, double& t, double t_min = 1e-4) const override;
+
+        /**
          * @brief Get the intersection point with the base of the Cylindre (represented by a circle)
          * @param ray The ray to check for intersection.
          * @param cap_center Center of the bottom cap of the Cylindre

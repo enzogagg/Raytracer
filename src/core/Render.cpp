@@ -53,8 +53,7 @@ void Render::computeRenderColumns(std::vector<Color> &pixelsRender, int start, i
     for (int y = 0; y < _height; y++) {
         for (int x = start; x < end; x++) {
             Color pixel = renderPixel(x, y, _width, _height);
-            pixel *= 255;
-            int index = (_height - y) * _width + (_width - x);
+            int index = (_height - 1 - y) * _width + x;
             if (index >= 0 && index < static_cast<int>(pixelsRender.size())) {
                 pixelsRender[index] = pixel;
             }
@@ -161,11 +160,9 @@ void Render::computeFastRender(std::vector<Color> &pixelsFastRender)
 
     for (int y = 0; y < fastHeight; ++y) {
         for (int x = 0; x < fastWidth; ++x) {
-            Color pixel(0, 0, 0);
-            pixel = renderPixel(x, y, fastWidth, fastHeight);
-            int index = (fastHeight - y) * fastWidth + (fastWidth - x);
+            Color pixel = renderPixel(x, y, fastWidth, fastHeight);
+            int index = (fastHeight - 1 - y) * fastWidth + x;
             if (index >= 0 && index < static_cast<int>(pixelsFastRender.size())) {
-                pixel *= 255;
                 pixelsFastRender[index] = pixel;
             }
         }

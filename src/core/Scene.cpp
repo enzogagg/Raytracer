@@ -43,6 +43,17 @@ void Scene::addCamera(const Camera &camera)
     _camera = camera;
 }
 
+void Scene::buildBVH()
+{
+    if (_primitives.empty()) return;
+    _bvhRoot = std::make_shared<Math::BVHNode>(_primitives, 0, _primitives.size());
+}
+
+std::shared_ptr<IPrimitive> Scene::getBVH() const
+{
+    return _bvhRoot;
+}
+
 /**
  * @brief Add a light to the scene.
  * @param light The light to add to the scene.

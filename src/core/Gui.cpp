@@ -126,9 +126,9 @@ void Gui::createImage(sf::Image &image, const std::vector<Color> &pixels, int wi
         for (int x = 0; x < width; ++x) {
             const Color &color = pixels[y * width + x];
             sf::Color sf_color(
-                static_cast<sf::Uint8>(color.getR()),
-                static_cast<sf::Uint8>(color.getG()),
-                static_cast<sf::Uint8>(color.getB())
+                static_cast<sf::Uint8>(std::clamp(color.getR() * 255.0, 0.0, 255.0)),
+                static_cast<sf::Uint8>(std::clamp(color.getG() * 255.0, 0.0, 255.0)),
+                static_cast<sf::Uint8>(std::clamp(color.getB() * 255.0, 0.0, 255.0))
             );
             image.setPixel(x, y, sf_color);
         }

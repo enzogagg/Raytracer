@@ -84,6 +84,31 @@ bool Cylindre::intersect(const Ray &ray) const
 }
 
 /**
+ * @brief Get the bounding box of the Cylindre.
+ * @return The AABB of the Cylindre.
+ */
+Math::AABB Cylindre::getBoundingBox() const
+{
+    return Math::AABB(
+        Math::Point(_center.getX() - _radius, _center.getY(), _center.getZ() - _radius),
+        Math::Point(_center.getX() + _radius, _center.getY() + _height, _center.getZ() + _radius)
+    );
+}
+
+std::shared_ptr<IPrimitive> Cylindre::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
+/**
  * @brief Get the intersection point with the base of the Cylindre (represented by a circle)
  * @param ray The ray to check for intersection.
  * @param cap_center Center of the bottom cap of the Cylindre

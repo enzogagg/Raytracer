@@ -57,6 +57,42 @@ bool Plane::intersect(const Ray &ray) const
 }
 
 /**
+ * @brief Get the bounding box of the plane.
+ * @return The AABB of the plane.
+ */
+Math::AABB Plane::getBoundingBox() const
+{
+    // For an infinite plane, we use a very large but finite box.
+    // This allows the BVH to work while still covering a huge area.
+    double min_x = std::min({_a.getX(), _b.getX(), _c.getX()}) - 1000.0;
+    double max_x = std::max({_a.getX(), _b.getX(), _c.getX()}) + 1000.0;
+    double min_y = std::min({_a.getY(), _b.getY(), _c.getY()}) - 1000.0;
+    double max_y = std::max({_a.getY(), _b.getY(), _c.getY()}) + 1000.0;
+    double min_z = std::min({_a.getZ(), _b.getZ(), _c.getZ()}) - 1000.0;
+    double max_z = std::max({_a.getZ(), _b.getZ(), _c.getZ()}) + 1000.0;
+
+    // Add a small thickness if the plane is axis-aligned
+    if (std::abs(max_x - min_x) < 0.1) { min_x -= 0.1; max_x += 0.1; }
+    if (std::abs(max_y - min_y) < 0.1) { min_y -= 0.1; max_y += 0.1; }
+    if (std::abs(max_z - min_z) < 0.1) { min_z -= 0.1; max_z += 0.1; }
+
+    return Math::AABB(Math::Point(min_x, min_y, min_z), Math::Point(max_x, max_y, max_z));
+}
+
+std::shared_ptr<IPrimitive> Plane::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
+/**
  * @brief This function does exactly what you think it does
  * @param ray The ray to check for intersection.
  * @return the intersection point between a Ray and a shape

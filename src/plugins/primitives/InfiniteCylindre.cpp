@@ -67,6 +67,31 @@ bool InfiniteCylindre::intersect(const Ray &ray) const
 }
 
 /**
+ * @brief Get the bounding box of the InfiniteCylindre.
+ * @return The AABB of the InfiniteCylindre.
+ */
+Math::AABB InfiniteCylindre::getBoundingBox() const
+{
+    return Math::AABB(
+        Math::Point(-std::numeric_limits<double>::max(), -std::numeric_limits<double>::max(), -std::numeric_limits<double>::max()),
+        Math::Point(std::numeric_limits<double>::max(), std::numeric_limits<double>::max(), std::numeric_limits<double>::max())
+    );
+}
+
+std::shared_ptr<IPrimitive> InfiniteCylindre::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
+/**
  * @brief This function does exactly what you think it does
  * @param ray The ray to check for intersection.
  * @return the intersection point between a Ray and a shape

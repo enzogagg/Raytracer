@@ -55,6 +55,39 @@ const std::string &Cone::getType() const
 }
 
 /**
+ * @brief Get the bounding box of the cone.
+ * @return The AABB of the cone.
+ */
+Math::AABB Cone::getBoundingBox() const
+{
+    double h = _height.length();
+    double radius = h * std::tan(_radiant);
+    Math::Point base_center = _tip + _height;
+    
+    double min_x = std::min(_tip.getX(), base_center.getX() - radius);
+    double min_y = std::min(_tip.getY(), base_center.getY() - radius);
+    double min_z = std::min(_tip.getZ(), base_center.getZ() - radius);
+    double max_x = std::max(_tip.getX(), base_center.getX() + radius);
+    double max_y = std::max(_tip.getY(), base_center.getY() + radius);
+    double max_z = std::max(_tip.getZ(), base_center.getZ() + radius);
+    
+    return Math::AABB(Math::Point(min_x, min_y, min_z), Math::Point(max_x, max_y, max_z));
+}
+
+std::shared_ptr<IPrimitive> Cone::getClosestPrimitive(const Ray& ray, double& t, double t_min) const
+{
+    if (this->intersect(ray)) {
+        Math::Point hit = this->getIntersection(ray);
+        double dist = (hit - ray.getOrigin()).length();
+        if (dist > t_min && dist < t) {
+            t = dist;
+            return std::const_pointer_cast<IPrimitive>(shared_from_this());
+        }
+    }
+    return nullptr;
+}
+
+/**
  * @brief Check if a ray intersect with the base of the cone (represented by a circle)
  * @param ray The ray to check for intersection.
  * @return true if it does, false if not
