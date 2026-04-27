@@ -27,11 +27,11 @@ LDFLAGS             := -lconfig++ -ldl
 ifeq ($(UNAME_S), Darwin)
     # macOS specific setup
     CXXFLAGS += -I/opt/homebrew/include
-    LDFLAGS  += -L/opt/homebrew/lib
+    LDFLAGS  += -L/opt/homebrew/lib -framework OpenCL
     PLUGIN_LDFLAGS := -shared -undefined dynamic_lookup
 else
     # Linux specific setup
-    LDFLAGS  += -rdynamic
+    LDFLAGS  += -rdynamic -lOpenCL
     PLUGIN_LDFLAGS := -shared
 endif
 

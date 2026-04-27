@@ -23,7 +23,11 @@
 Render::Render(int width, int height, Scene &scene)
     : _width(width), _height(height), _scene(scene)
 {
-    return;
+    _gpuRender = std::make_shared<GPURender>(width, height);
+    if (_gpuRender->init()) {
+        std::cout << "[Hardware Acceleration] GPU Render initialized (OpenCL)" << std::endl;
+        _useGPU = true;
+    }
 }
 
 /**
@@ -90,6 +94,10 @@ void Render::workerThread(std::vector<Color> &pixelsRender)
  */
 void Render::computeRender(std::vector<Color> &pixelsRender)
 {
+    if (_useGPU) {
+        _gpuRender->render(_scene, pixelsRender);
+        return;
+    }
     _stopThread = false;
     {
         std::lock_guard<std::mutex> lock(_queueMutex);
