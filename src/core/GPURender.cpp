@@ -56,19 +56,45 @@ bool GPURender::init() {
 }
 
 void GPURender::render(Scene &scene, std::vector<Color> &pixels) {
+    std::cout << "[GPU] Rendering frame (" << scene.getPrimitives().size() << " primitives)..." << std::endl;
     std::vector<GPUSphere> gpuSpheres;
-    // Extract spheres from scene (simplified for now)
-    // In a real project, we would iterate through primitives and check if they are spheres
-    // For this proof of concept, we assume atonium scene has some spheres
     
+    // Extract spheres from scene
+    for (const auto &primitive : scene.getPrimitives()) {
+        if (primitive->getType() == "sphere") {
+            GPUSphere s;
+            // Since we can't easily access Sphere-specific members from IPrimitive,
+            // we use the bounding box to infer center and radius as a fallback/shortcut
+            // for this proof of concept. 
+            auto bbox = primitive->getBoundingBox();
+            s.x = (bbox.min().getX() + bbox.max().getX()) / 2.0f;
+            s.y = (bbox.min().getY() + bbox.max().getY()) / 2.0f;
+            s.z = (bbox.min().getZ() + bbox.max().getZ()) / 2.0f;
+            s.radius = (bbox.max().getX() - bbox.min().getX()) / 2.0f;
+            s.r = primitive->getColor().getR();
+            s.g = primitive->getColor().getG();
+            s.b = primitive->getColor().getB();
+            gpuSpheres.push_back(s);
+        }
+    }
+
+    if (gpuSpheres.empty()) {
+        // Fallback to black if no spheres found for GPU rendering
+        std::fill(pixels.begin(), pixels.end(), Color(0, 0, 0));
+        return;
+    }
+
     // Set arguments
     cl_mem spheres_buf = clCreateBuffer(_context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, 
                                         sizeof(GPUSphere) * gpuSpheres.size(), gpuSpheres.data(), NULL);
     cl_mem pixels_buf = clCreateBuffer(_context, CL_MEM_WRITE_ONLY, 
                                        sizeof(float) * _width * _height * 3, NULL, NULL);
 
-    float camPos[3] = { (float)scene.getCamera().getPosition().getX(), (float)scene.getCamera().getPosition().getY(), (float)scene.getCamera().getPosition().getZ() };
-    float camDir[3] = { 0, 0, 1 }; // Simplified
+    float camPos[3] = { (float)scene.getCamera().getPosition().getX(), 
+                        (float)scene.getCamera().getPosition().getY(), 
+                        (float)scene.getCamera().getPosition().getZ() };
+    
+    float camDir[3] = { 0.0f, 0.0f, 1.0f }; 
 
     int numSpheres = gpuSpheres.size();
     clSetKernelArg(_kernel, 0, sizeof(int), &_width);

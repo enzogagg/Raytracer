@@ -49,14 +49,46 @@ kernel void render_scene(
         }
     }
 
+    // Basic Plane (y = -1)
+    float t_plane = (-1.0f - camPos.y) / rayDir.y;
+    if (t_plane > 0.001f && t_plane < closest_t) {
+        closest_t = t_plane;
+        closest_sphere = -2; // Marker for plane
+    }
+
     int idx = (y * width + x) * 3;
-    if (closest_sphere != -1) {
-        pixels[idx] = spheres[closest_sphere].r;
-        pixels[idx+1] = spheres[closest_sphere].g;
-        pixels[idx+2] = spheres[closest_sphere].b;
+    if (closest_sphere == -2) {
+        // Simple checkerboard for plane
+        float hit_x = camPos.x + rayDir.x * closest_t;
+        float hit_z = camPos.z + rayDir.z * closest_t;
+        int checkers = ((int)(floor(hit_x)) + (int)(floor(hit_z))) & 1;
+        float col = checkers ? 0.3f : 0.1f;
+        pixels[idx] = col; pixels[idx+1] = col; pixels[idx+2] = col;
+    } else if (closest_sphere != -1) {
+        // Simple diffuse lighting
+        Vector3 hitPoint = { camPos.x + rayDir.x * closest_t, camPos.y + rayDir.y * closest_t, camPos.z + rayDir.z * closest_t };
+        Vector3 normal = { hitPoint.x - spheres[closest_sphere].center.x, hitPoint.y - spheres[closest_sphere].center.y, hitPoint.z - spheres[closest_sphere].center.z };
+        float n_len = sqrt(normal.x*normal.x + normal.y*normal.y + normal.z*normal.z);
+        normal.x /= n_len; normal.y /= n_len; normal.z /= n_len;
+        
+        Vector3 lightDir = { 0.5f, 0.7f, -0.5f }; // Hardcoded light
+        float diff = max(0.1f, normal.x*lightDir.x + normal.y*lightDir.y + normal.z*lightDir.z);
+
+        // Specular
+        Vector3 viewDir = { -rayDir.x, -rayDir.y, -rayDir.z };
+        Vector3 halfDir = { lightDir.x + viewDir.x, lightDir.y + viewDir.y, lightDir.z + viewDir.z };
+        float h_len = sqrt(halfDir.x*halfDir.x + halfDir.y*halfDir.y + halfDir.z*halfDir.z);
+        halfDir.x /= h_len; halfDir.y /= h_len; halfDir.z /= h_len;
+        float spec = pow(max(0.0f, normal.x*halfDir.x + normal.y*halfDir.y + normal.z*halfDir.z), 32.0f);
+
+        pixels[idx] = spheres[closest_sphere].r * diff + spec * 0.5f;
+        pixels[idx+1] = spheres[closest_sphere].g * diff + spec * 0.5f;
+        pixels[idx+2] = spheres[closest_sphere].b * diff + spec * 0.5f;
     } else {
-        pixels[idx] = 0.0f;
-        pixels[idx+1] = 0.0f;
-        pixels[idx+2] = 0.2f; // Background
+        // Gradient background (Magenta to Blue)
+        float t = (rayDir.y + 1.0f) * 0.5f;
+        pixels[idx] = (1.0f - t); // R
+        pixels[idx+1] = 0.0f;     // G
+        pixels[idx+2] = 1.0f;     // B
     }
 }

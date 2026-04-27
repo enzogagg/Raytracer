@@ -186,6 +186,11 @@ void Core::loop()
                 _shear.get()->shear(_scene);
                 notifyRenderThread();
             }
+            if (_eventKey == sf::Keyboard::G) {
+                _render->toggleGPU();
+                notifyRenderThread();
+                _eventKey = -1;
+            }
         }
     }
 }

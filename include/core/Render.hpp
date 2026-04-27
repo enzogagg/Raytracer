@@ -21,6 +21,7 @@
 #include "IPrimitive.hpp"
 #include "PluginsManager.hpp"
 #include "Scene.hpp"
+#include "GPURender.hpp"
 
 /**
  * @class Render
@@ -159,7 +160,13 @@ public:
   Color adaptiveSample(double x, double y, double x1, double y1, int maxWidth,
                        int maxHeight, int depth);
 
+  void computeGPURender(std::vector<Color> &pixelsRender);
+
+  void toggleGPU() { _useGPU = !_useGPU; std::cout << "[GPU] " << (_useGPU ? "Enabled" : "Disabled") << std::endl; }
+
 private:
+  std::shared_ptr<GPURender> _gpuRender;
+  bool _useGPU = false;
   struct Tile {
     int x, y, width, height;
   };
