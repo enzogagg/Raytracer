@@ -26,7 +26,7 @@ Plane::Plane(Math::Point p0, Math::Point p1, Math::Point p2, const Color &color,
 {
     Math::Vector edge1 = _a - _b;
     Math::Vector edge2 = _a - _c;
-    _normal = edge1.crossProduct(edge2);
+    _normal = edge1.crossProduct(edge2).normalize();
     return;
 }
 
@@ -118,7 +118,7 @@ Math::Point Plane::getIntersection(const Ray &ray) const
 Math::Vector Plane::normal_at(const Math::Point &point) const
 {
     static_cast<void>(point);
-    return _normal;
+    return _normal.normalize();
 }
 
 /**

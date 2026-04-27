@@ -149,9 +149,9 @@ Color Color::applyIntensity(double intensity) const
 Color Color::clamp() const
 {
     return Color(
-        std::clamp(_r, 0.0, 255.0),
-        std::clamp(_g, 0.0, 255.0),
-        std::clamp(_b, 0.0, 255.0)
+        std::max(0.0, std::min(_r, 255.0)),
+        std::max(0.0, std::min(_g, 255.0)),
+        std::max(0.0, std::min(_b, 255.0))
     );
 }
 

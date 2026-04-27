@@ -13,7 +13,7 @@ ChessboardMaterial::ChessboardMaterial()
 }
 
 ChessboardMaterial::ChessboardMaterial(const Color &color1, const Color &color2, double scale)
-    : AMaterial("chessboard", 0.7, 0.8, 2.0, 0.1), _color1(color1), _color2(color2), _scale(scale)
+    : AMaterial("chessboard", 0.12, 0.7, 0.2, 24.0), _color1(color1), _color2(color2), _scale(scale)
 {
 }
 

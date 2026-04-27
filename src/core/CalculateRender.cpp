@@ -40,6 +40,15 @@ static T clampValue(T value, T minimum, T maximum)
   return std::max(minimum, std::min(value, maximum));
 }
 
+static Color normalizeSceneColor(const Color &color)
+{
+  double maxComponent = std::max({color.getR(), color.getG(), color.getB()});
+
+  if (maxComponent <= 1.0)
+    return color;
+  return color * (1.0 / 255.0);
+}
+
 Math::Vector Render::reflect(Math::Vector incident, Math::Vector normal) {
   return incident - 2.0 * incident.dot(normal) * normal;
 }
@@ -63,7 +72,7 @@ Color Render::ComputePixelColor(std::shared_ptr<IPrimitive> closest_object,
   for (const auto &light : _scene.getLights()) {
     if (!light) continue;
     
-    Color lightColor = light->getColor() * (1.0 / 255.0);
+    Color lightColor = normalizeSceneColor(light->getColor());
     float intensity = light->getIntensity();
 
     if (light->getType() == "ambient") {
@@ -94,14 +103,12 @@ Color Render::ComputePixelColor(std::shared_ptr<IPrimitive> closest_object,
     }
   }
 
-  Color modelColor(closest_object->getColor().getR() / 255.0,
-                   closest_object->getColor().getG() / 255.0,
-                   closest_object->getColor().getB() / 255.0);
+  Color modelColor = normalizeSceneColor(closest_object->getColor());
 
   if (closest_object->getMaterial()->getName() != "default" &&
       closest_object->getMaterial()->getName() != "Transparent" &&
       closest_object->getMaterial()->getName() != "Metal") {
-    modelColor = closest_object->getMaterial()->getColorAt(hit_point) * (1.0 / 255.0);
+    modelColor = normalizeSceneColor(closest_object->getMaterial()->getColorAt(hit_point));
   }
 
   Color result = modelColor * (ambientColor * materialKa + totalDiffuse) + totalSpecular;
@@ -253,11 +260,9 @@ void Render::sendRay(Ray &ray, Color &pixel, Camera &cam, int depthReflexion,
 
       Color reflection = renderReflection(closest_object, ray, cam, depthReflexion);
       Color baseLighting = ComputePixelColor(closest_object, cam, ray, ao);
-      Color baseColor(closest_object->getColor().getR() / 255.0,
-                      closest_object->getColor().getG() / 255.0,
-                      closest_object->getColor().getB() / 255.0);
+      Color baseColor = normalizeSceneColor(closest_object->getColor());
 
-      pixel = reflection * (0.55f + 0.45f * fresnel) + baseLighting * 0.05 + baseColor * 0.02;
+      pixel = reflection * (0.6f + 0.4f * fresnel) + baseLighting * 0.4 + baseColor * 0.05;
     } else if (matName == "Transparent" || matName == "transparent") {
       // Fresnel / Schlick's approximation
       Math::Point hit_point = closest_object->getIntersection(ray);
@@ -276,9 +281,7 @@ void Render::sendRay(Ray &ray, Color &pixel, Camera &cam, int depthReflexion,
           renderRefraction(closest_object, ray, cam, depthReflexion);
 
       // Base color tint (Green from config, normalized to 0-1)
-      Color baseColor(closest_object->getColor().getR() / 255.0,
-                      closest_object->getColor().getG() / 255.0,
-                      closest_object->getColor().getB() / 255.0);
+      Color baseColor = normalizeSceneColor(closest_object->getColor());
 
       // Mix: reflections on edges, refraction in center, tinted by object color
       pixel = reflection * fresnel +
@@ -286,7 +289,7 @@ void Render::sendRay(Ray &ray, Color &pixel, Camera &cam, int depthReflexion,
 
       // Add specular highlights (subtle)
       Color lighting = ComputePixelColor(closest_object, cam, ray, ao);
-      pixel = pixel + lighting * 0.3;
+      pixel = pixel + lighting * 0.8;
     } else {
       pixel = ComputePixelColor(closest_object, cam, ray, ao);
     }

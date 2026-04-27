@@ -8,6 +8,6 @@
 #include "Default.hpp"
 
 Default::Default()
-    : AMaterial("default", 0.7, 1.9, 10.0, 0.2)
+    : AMaterial("default", 0.15, 0.75, 0.25, 32.0)
 {
 }

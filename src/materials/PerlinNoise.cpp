@@ -17,7 +17,7 @@ PerlinNoiseMaterial::PerlinNoiseMaterial()
 }
 
 PerlinNoiseMaterial::PerlinNoiseMaterial(const Color &color1, const Color &color2, double scale)
-    : AMaterial("perlin", 0.7, 0.8, 2.0, 0.1), _color1(color1), _color2(color2), _scale(scale)
+    : AMaterial("perlin", 0.12, 0.7, 0.2, 24.0), _color1(color1), _color2(color2), _scale(scale)
 {
     _p.resize(256);
     std::iota(_p.begin(), _p.end(), 0);
